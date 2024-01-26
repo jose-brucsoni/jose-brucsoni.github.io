@@ -1,0 +1,61 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+.Contenedor_Elementos_HorizontalYVertical{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px;
+    text-align: center;
+}
+.Contenedor_tabla{
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.Contenedor_de_2_Elementos_en_Horizontal{
+    display: block;
+}
+
+.Grafico{
+    display: none;
+ }
+ .modal{
+    background-color: rgba(0, 0, 0, 0.5);
+ }
+ .OcultarElemento{
+    display: none;
+ }
+/*MEDIAS QUERY MEDIDAS DE PANTALLAS */
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 575px) {
+    /* Tus estilos para pantallas pequeñas aquí */
+    .Contenedor_de_2_Elementos_en_Horizontal div{
+        width: 100%;
+        height: 100%;
+    }
+   
+    .OcultarElementoPorTamano{
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    .Grafico{
+        display: block;
+    }
+}
+/* Estilos para pantallas medianas (tablets y algunos teléfonos) */
+@media (min-width: 576px) {
+    /* Tus estilos para pantallas medianas aquí */
+    
+    .Contenedor_de_2_Elementos_en_Horizontal {
+        display: flex;
+    }
+    .Contenedor_de_2_Elementos_en_Horizontal div{
+        width: 50%;
+        height: auto;
+    }
+    
+        
+    
+}

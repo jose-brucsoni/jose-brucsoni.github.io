@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link id="iconoEncabezado" rel="icon" href="./svg/icono_logoUtepsa-rojo.svg" type="image/svg+xml">
+    <link id="Link_Estilos_Generales" rel="stylesheet" href="./css/bootstrap-simplex.css">
+    <link rel="stylesheet" href="./css/EstilosContenedores.css">
+    <link rel="stylesheet" href="./css/estilos-Adicionales.css">
+    <link rel="stylesheet" href="./css/acciones-reacciones.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="display: flex ; justify-content:  center; align-items: center;" href="#">
+        <img style="width: 25px; height: 25px;" src="./svg/ISOLOGO.svg" alt="iconoUtepsa">
+
+        Lab. Sistemas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inventario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Prestamos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reportes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Configuracion</a>
+          </li>
+        </ul>
+          <div class="form-group d-flex">
+            <select class="form-select" id="Temas_Selector">
+              <option disabled selected>Temas</option>
+              <option value="cerulean">Cerulean</option>
+              <option value="cosmo">Cosmo</option>
+              <option value="cyborg">Cyborg</option>
+              <option value="darkly">Darkly</option>
+              <option value="flatly">Flatly</option>
+              <option value="journal">Journal</option>
+              <option value="litera">Litera</option>
+              <option value="lumen">Lumen</option>
+              <option value="lux">Lux</option>
+              <option value="materia">Materia</option>
+              <option value="minty">Minty</option>
+              <option value="morph">Morph</option>
+              <option value="pulse">Pulse</option>
+              <option value="quartz">Quartz</option>
+              <option value="sandstone">Sandstone</option>
+              <option value="simplex">Simplex</option>
+              <option value="sketchy">Sketchy</option>
+              <option value="slate">Slate</option>
+              <option value="solar">Solar</option>
+              <option value="spacelab">Spacelab</option>
+              <option value="superhero">Superhero</option>
+              <option value="united">United</option>
+              <option value="yeti">Yeti</option>
+              <option value="vapor">Vapor</option>
+              <option value="zephyr">Zephyr</option>
+            </select>
+          </div>
+      </div>
+    </div>
+</nav>
+<body id="body">
+  
+    <div class="Contenedor_Elementos_HorizontalYVertical">
+      <button type="button" class="btn btn_design btn-outline-primary" onclick="Mostrar_Modal('Agregar_SolicitudDeReserva')">Agregar Solicitud De Reserva</button>
+      <button type="button" class="btn btn_design btn-outline-primary" onclick="Mostrar_Modal('Agregar_Soporte')">Agregar Soporte</button>
+      <button type="button" class="btn btn_design btn-outline-primary" onclick="Mostrar_Modal('Agregar_Materia')">Agregar Materia</button>
+      <button type="button" class="btn btn_design btn-outline-primary" onclick="Mostrar_Modal('Agregar_Docente')">Agregar Docente</button>
+      <button type="button" class="btn btn_design btn-outline-primary" onclick="Mostrar_Modal('Asignar_Tarea')">Asignar Tarea</button>
+    </div>
+    <div class="Contenedor_Elementos_HorizontalYVertical" style="justify-content: space-evenly;">
+        <div class="card bg-light mb-3 Estilo_Elementos_De_Diseno_De_Cartas" style="max-width: 20rem;">
+            <div class="card-header text-white bg-success">Reservas Para Hoy</div>
+            <div class="card-body">
+              <h4 class="card-title">0</h4>
+            </div>
+        </div><div class="card bg-light mb-3  Estilo_Elementos_De_Diseno_De_Cartas" style="max-width: 20rem;">
+        <div class="card-header bg-warning text-white">Tareas Pendientes</div>
+        <div class="card-body">
+            <h4 class="card-title">0</h4>
+            
+        </div>
+        </div><div class="card bg-light mb-3 Estilo_Elementos_De_Diseno_De_Cartas" style="max-width: 20rem;">
+        <div class="card-header bg-warning text-white">Solicitudes de Lab.</div>
+        <div class="card-body">
+            <h4 class="card-title">0</h4>
+            
+        </div>
+        </div><div class="card bg-light mb-3 Estilo_Elementos_De_Diseno_De_Cartas" style="max-width: 20rem;">
+        <div class="card-header text-white bg-danger ">Encargos Urgentes</div>
+        <div class="card-body">
+            <h4 class="card-title">0</h4>
+            
+        </div>
+        </div>
+    </div>
+    <div class="Contenedor_tabla">
+      <h6 class="text-primary">Tareas Pendientes</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th class="OcultarElementoPorTamano" scope="col">Nro</th>
+            <th scope="col">Operador</th>
+            <th class="OcultarElementoPorTamano" scope="col">Asignado Por</th>
+            <th class="OcultarElementoPorTamano" scope="col">Fecha de Asignacion</th>
+            <th scope="col">Fecha Limite</th>
+            <th class="OcultarElementoPorTamano" scope="col">Descripcion</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <th class="OcultarElementoPorTamano" scope="row">#</th>
+            <td>Content</td>
+            <td class="OcultarElementoPorTamano" >Content</td>
+            <td class="OcultarElementoPorTamano" >00/00/0000</td>
+            <td>00/00/0000</td>
+            <td class="OcultarElementoPorTamano">#</td>
+            <td >#</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    <div class="Contenedor_de_2_Elementos_en_Horizontal">
+      <div class="Contenedor_tabla">
+        <h6 class="text-primary">Cant. de Soportes Realizados</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Nro</th>
+              <th scope="col">Operador</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light">
+              <th scope="row">#</th>
+              <td>Content</td>
+              <td>#</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+      <div class="Contenedor_tabla">
+        <h6 class="text-primary">Soportes Frecuentes</h6>
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Nro</th>
+              <th scope="col">Motivo</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light">
+              <th scope="row">#</th>
+              <td>Content</td>
+              <td>#</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="Contenedor_Elementos_HorizontalYVertical" style="justify-content: space-evenly;">
+      <div id="donutchart" class="Grafico" style="width: 900px; height: 500px;"></div>
+      <div id="top_x_div" class="Grafico" style="width: 900px; height: 500px;"></div>
+    </div>
+   
+    <div class="Contenedor_tabla" >
+      <h5 class="text-primary">Soportes De Hoy</h5>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th class="OcultarElementoPorTamano" scope="col">Nro</th>
+            <th scope="col">Operador</th>
+            <th class="OcultarElementoPorTamano" scope="col">Usuario</th>
+            <th class="OcultarElementoPorTamano" scope="col">Medio</th>
+            <th class="OcultarElementoPorTamano" scope="col">Motivo</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <th  class="OcultarElementoPorTamano" scope="row">#</th>
+            <td>Content</td>
+            <td  class="OcultarElementoPorTamano">Content</td>
+            <td  class="OcultarElementoPorTamano">Content</td>
+            <td  class="OcultarElementoPorTamano">Content</td>
+            <td>Content</td>
+            <td>#</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    <div class="Contenedor_tabla" >
+      <h5 class="text-primary">Solicitudes De Laboratorio</h5>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Materia / Titulo</th>
+            <th scope="col">Docente</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Fecha Inicio - Final</th>
+            <th scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <td>Content</td>
+            <td>Content</td>
+            <td>00:00 - 00:00</td>
+            <td>00/00/0000 - 00/00/0000</td>
+            <td>#</td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+
+</body>
+<!-- Modals, Ventanas Emergentes para Agregar/Editar/Eliminar -->
+<div class="modal" id="Ventana_AgregarReserva">
+  <div class="modal-dialog" role="document">
+    <form action="<?php echo SERVERURL; ?>controladores/agregar_usoDeLaboratorio_Controlador.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar Reserva</h5>
+        <button type="button" onclick="recargarPagina()" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <!-- Contenido de Modal -->
+          
+          <div class="form-group">
+            <label class="form-label mt-4">Seleccione la Materia:</label>
+            <select class="form-select" name="materiaSeleccionada_reg" id="select_Materias" >
+              <option value="Seleccione" disabled selected>Seleccione una Materia</option>
+              <option value="NO_ES_MATERIA">---NO ES MATERIA---</option>
+              <option value="45">---OTRA MATERIA---</option>
+              <!-- <?php $usoLaboratorio_Controlador->ExtraerTablas("Materias para un Select"); ?> -->
+            </select>
+          </div>
+          <div class="form-group OcultarElemento" id="div_tituloDeReserva">
+            <label class="col-form-label mt-4" for="inputDefault">Titulo de Reserva:</label>
+            <input type="text" class="form-control" name="tituloDeLaReserva_reg">
+          </div>
+          <div class="form-group OcultarElemento" id="div_DocentesExtraidos">
+            <label class="form-label mt-4">Seleccione el Docente\Encargado:</label>
+            <select class="form-select" name="docenteSeleccionado_reg" >
+              <option value="Seleccione" disabled selected>Seleccione un Docente</option>
+              <option value="6">---OTRO DOCENTE---</option>
+              <!--<?php $usoLaboratorio_Controlador->ExtraerTablas("Docentes para un Select") ?> -->
+            </select>
+          </div>
+          <div class="form-group OcultarElemento" id="div_selectModalidadDeReserva">
+            <label class="form-label mt-4">Modalidad de Reserva:</label>
+            <select class="form-select" name="docenteSeleccionado_reg" id="select_Modalidad" >
+              <option value="Seleccione" disable selected>Seleccione un tipo de Reserva</option>
+              <option value="Fecha_Especifica">Fecha Especifica</option>
+              <option value="Presencial">Presencial(Modular)</option>
+              <option value="SemiPresencial(Martes-Jueves)">SemiPresencial(Martes-Jueves)</option>
+              <option value="SemiPresencial(Lunes-Miercoles)">SemiPresencial(Lunes-Miercoles)</option>
+              <option value="SemiPresencial(Sabados)">SemiPresencial(Sabados)</option>
+            </select>
+          </div>
+          <div class="form-group OcultarElemento" id="div_Cont_gestion">
+            <label class="form-label mt-4">Gestion:</label>
+            <select class="form-select" name="gestionSeleccionada_reg">
+              <option value="Seleccione">Seleccione</option>
+              <option value="2023" selected>2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </div>
+          <div class="Contenedor_de_2_Elementos_en_Horizontal">
+
+            <div class="form-group OcultarElemento" id="div_Cont_semestre">
+              <label class="form-label mt-4">Semestre:</label>
+              <select class="form-select" name="semestreSeleccionado_reg">
+                <option value="Seleccione" selected>Seleccione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+  
+            <div class="form-group OcultarElemento" id="div_Cont_modulo">
+              <label class="form-label mt-4">Modulo:</label>
+              <select class="form-select" name="moduloSeleccionado_reg">
+                <option value="Seleccione" selected>Seleccione</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+          <div class="Contenedor_de_2_Elementos_en_Horizontal">
+            <div class="form-group OcultarElemento" id="inputFechaInicio">
+              <label class="col-form-label mt-4" for="inputDefault">Fecha Inicio:</label>
+              <input type="date" class="form-control" name="fechaInicioSeleccionada_reg">
+            </div>
+            <div class="form-group OcultarElemento" id="inputFechaFinal">
+              <label class="col-form-label mt-4" for="inputDefault">Fecha Final:</label>
+              <input type="date" class="form-control" name="fechaFinalSeleccionada_reg">
+            </div>
+          </div>
+          <div class="Contenedor_de_2_Elementos_en_Horizontal">
+            <div class="form-group OcultarElemento" id="div_cont_horaInicio">
+              <label class="col-form-label mt-4" for="inputDefault">Hora Inicio:</label>
+              <input type="time" class="form-control" name="horaInicioSeleccionada_reg">
+            </div>
+            <div class="form-group OcultarElemento" id="div_cont_horaFinal">
+              <label class="col-form-label mt-4" for="inputDefault">Hora Final:</label>
+              <input type="time" class="form-control" name="horaFinalSeleccionada_reg">
+            </div>
+          </div>
+          <div class="Contenedor_de_2_Elementos_en_Horizontal">
+            <div class="form-group OcultarElemento" id="div_horario">
+              <label class="form-label mt-4">Horario:</label>
+              <select class="form-select" name="horarioSeleccionado_reg">
+                <option value="Seleccione" selected>Seleccione</option>
+                <option value="07:15_10:00">07:15 - 10:00</option>
+                <option value="10:15_13:00">10:15 - 13:00</option>
+                <option value="13:15_16:00">13:15 - 16:00</option>
+                <option value="15:00_19:00">15:00 - 19:00</option>
+                <option value="16:15_19:00">16:15 - 19:00</option>
+                <option value="19:15_21:45">19:15 - 21:45</option>
+              </select>
+            </div>
+            <div class="form-group OcultarElemento" id="div_cont_cantDeAsistentes">
+              <label class="col-form-label mt-4" for="inputDefault">Cantidad de Estudiantes:</label>
+              <input type="number" class="form-control" name="cantidadDeAsistentes_reg">
+            </div>
+          </div>
+          <div class="form-group OcultarElemento" id="div_cont_requerimientos">
+            <label for="exampleTextarea" class="form-label mt-4">Requerimientos:</label>
+            <textarea class="form-control"name="requerimientos_reg" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="accion" id="accion" value="Agregar_Solicitud_de_Reserva">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" onclick="recargarPagina()" id="btn_CerrarVentana"  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="Ventana_AgregarSoporte">
+  <div class="modal-dialog" role="document">
+    <form action="<?php echo SERVERURL; ?>controladores/agregar_usoDeLaboratorio_Controlador.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar Soporte</h5>
+        <button type="button" class="btn-close" onclick="recargarPagina()" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <!-- Contenido de Modal -->
+        
+          <div class="Contenedor_de_2_Elementos_en_Horizontal">
+
+            <div class="form-group">
+              <label class="form-label mt-4">Soporte A:</label>
+              <select class="form-select" name="select_SoporteA_spte_reg" id="select_SoporteA_spte" >
+                <option value="Seleccione" disabled selected>Seleccione</option>
+                <option value="Docente">Docente</option>
+                <option value="Estudiante">Estudiante</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <label class="form-label mt-4">Medio de Atención:</label>
+              <select class="form-select" name="select_MedioDeAtencion_spte_reg" id="select_MedioDeAtencion_spte"  >
+  
+                <option value="Seleccione" disabled selected>Seleccione</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Cafe Internet">Cafe Internet</option>
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Otros Medios">Otros Medios</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group OcultarElemento" id="div_DocentesExtraidos_spte">
+            <label class="form-label mt-4">Seleccione el docente:</label>
+            <select class="form-select" name="docenteSeleccionado_spte_reg" id="select_Docente_spte" >
+              <option disabled value="Seleccione" selected>Seleccione un Docente</option>
+              <option value="6">---OTRO DOCENTE---</option>
+              <!-- <?php $usoLaboratorio_Controlador->ExtraerTablas("Docentes para un Select") ?> -->
+            </select>
+          </div>
+          <div class="form-group OcultarElemento" id="div_NroDeRegistro_spte">
+            <label class="col-form-label mt-4" for="inputDefault">Nro de Registro:</label>
+            <input type="text" class="form-control" placeholder="Ej: 12345A" name="input_NroDeRegistro_spte_reg">
+          </div>
+          <div class="form-group OcultarElemento" id="div_HoraInicio_spte">
+            <label class="col-form-label mt-4" for="inputDefault">Hora Inicio:</label>
+            <input type="time" class="form-control" name="input_HoraInicio_spte_reg">
+          </div>
+          <div class="form-group OcultarElemento" id="div_HoraFinal_spte">
+            <label class="col-form-label mt-4" for="inputDefault">Hora Final:</label>
+            <input type="time" class="form-control" name="input_HoraFinal_spte_reg">
+          </div>
+          <div class="form-group OcultarElemento" id="div_Problema_spte">
+            <label class="col-form-label mt-4" for="input_Problema_spte_reg">Problema:</label>
+            <input type="text" class="form-control" name="input_Problema_spte_reg" list="datalist_SugerenciasDeProblemas">
+            <datalist id="datalist_SugerenciasDeProblemas">
+              <!-- Añadir los problemas frecuentas desde la base de datos -->
+              <option value="ENCENDER AIRE A/C">
+              <option value="PROBLEMAS CON EL EQUIPO">
+              <option value="SOLICITUD DE INTERNET">
+              <option value="MAS SILLAS">
+          </datalist>
+          </div>
+          <div class="form-group OcultarElemento" id="div_Motivo_spte">
+            <label class="col-form-label mt-4" for="inputDefault">Motivo:</label>
+            <input type="text" class="form-control" name="input_Motivo_spte_reg">
+          </div>
+          <div class="form-group OcultarElemento" id="div_Solucion_spte">
+            <label class="col-form-label mt-4" for="input_Problema_spte_reg">Solución:</label>
+            <input type="text" class="form-control" name="input_Solucion_spte_reg" list="datalist_SugerenciasDeSoluciones">
+            <datalist id="datalist_SugerenciasDeSoluciones">
+              <option value="Sin Solución">
+            </datalist>
+          </div>
+          <div class="form-group OcultarElemento" id="div_Observaciones_spte">
+            <label for="exampleTextarea" class="form-label mt-4">Observaciones</label>
+            <textarea class="form-control"name="input_Observaciones_spte_reg" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="accion" id="accion" value="Agregar_Soporte">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" onclick="recargarPagina()" id="btn_CerrarVentana"  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="Ventana_AgregarMateria">
+  <div class="modal-dialog" role="document">
+    <form action="<?php echo SERVERURL; ?>controladores/agregar_usoDeLaboratorio_Controlador.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar Materia</h5>
+        <button type="button" class="btn-close" onclick="recargarPagina()" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="input_NombreMateria_reg" >
+          <label for="floatingInput">Ej: REDES I</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="accion" id="accion" value="Agregar_Materia">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" onclick="recargarPagina()" id="btn_CerrarVentana"  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="Ventana_Agregar_Docente">
+  <div class="modal-dialog" role="document">
+    <form action="<?php echo SERVERURL; ?>controladores/agregar_usoDeLaboratorio_Controlador.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar Docente</h5>
+        <button type="button" class="btn-close" onclick="recargarPagina()" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Nombre Completo Del Docente:*</label>
+            <input type="text" class="form-control" placeholder="Jose Suarez" name="input_NombreDocente_reg">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Correo:</label>
+            <input type="email" class="form-control" placeholder="Ejemplo@email.com" name="input_CorreoDocente_reg">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Número de Teléfono:</label>
+            <input type="number" class="form-control" placeholder="00000000" name="input_NroTelefonoDocente_reg">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Profesión:</label>
+            <input type="text" class="form-control" placeholder="Ingenieria/Doctor/Licenciada/o" name="input_ProfesionDocente_reg">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Usuario:*</label>
+            <input type="text" class="form-control" placeholder="Jcsuarez / Xsanchez" name="input_UsuarioDocente_reg">
+          </div>
+          <p class="text-info">Para el "Usuario", son las iniciales de los nombres, más el primer apellido Ej:(Jcsuarez o Jsuarez)</p>
+          <p class="text-info">Los Marcados con (*) son Obligatorios</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="accion" id="accion" value="Agregar_Docente">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" onclick="recargarPagina()" id="btn_CerrarVentana"  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal" id="Ventana_Asignar_Tarea">
+  <div class="modal-dialog" role="document">
+    <form action="<?php echo SERVERURL; ?>controladores/agregar_usoDeLaboratorio_Controlador.php" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Asignar Tarea</h5>
+        <button type="button" class="btn-close" onclick="recargarPagina()" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+
+          <!-- Contenido de Modal -->
+
+          <div class="form-group">
+            <label class="form-label mt-4">Asignar Tarea A:</label>
+            <select class="form-select" name="select_Usuario_Tarea_Asignada_reg" id="select_Usuario_Tarea_Asignada" >
+              <option value="Seleccione" disabled selected>Seleccione</option>
+              <option value="#">Usuario1</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Fecha Limite</label>
+            <input type="date" class="form-control" name="input_Fecha_Limite_Tarea_reg">
+          </div>
+
+          <div class="form-group" id="div_Descripcion_Tarea_spte">
+            <label for="exampleTextarea" class="form-label mt-4">Descripcion de la Tarea a realizar:</label>
+            <textarea class="form-control"name="input_Descripcion_Tarea_spte_reg" rows="3"></textarea>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="accion" id="accion" value="Agregar_Docente">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="button" onclick="recargarPagina()" id="btn_CerrarVentana"  class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Referencias de Scripts -->
+<script type="text/javascript" src="./js/FuncionesGenerales.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="./js/graficos.js"></script>
+<script type="text/javascript" src="./js/custom.js"></script>
+<script type="text/javascript" src="./js/prism.js"></script>
+<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./js/Uso_De_Laboratorio_Funciones.js"></script>
+</html>
