@@ -1,0 +1,79 @@
+.portfolio-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card .card-header {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+}
+
+.project-card .card-body {
+    padding: 25px;
+}
+
+.project-card .btn-primary {
+    background-color: #dc3545;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.project-card .btn-primary:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.project-tech {
+    margin-top: 15px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.section-title .line {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #dc3545;
+    margin: 20px auto;
+} 
