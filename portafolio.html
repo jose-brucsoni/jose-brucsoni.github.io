@@ -3,69 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Proyectos</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .card {
-            margin: 20px;
-        }
-        .card-header {
-            background-color: #007bff;
-            color: white;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-    </style>
+    <title>Portafolio - Jose Brucsoni</title>
+    <!-- Fuente de iconos -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/estilosInicio_y_Bootstrapp.css">
+    <!-- Estilos del portafolio -->
+    <link rel="stylesheet" href="assets/css/portafolio.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center my-4">Portafolio de Proyectos</h1>
-        <div class="row">
-            <!-- Proyecto 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        Proyecto 1
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Descripción breve del proyecto 1.</p>
-                        <a href="https://enlace-proyecto1.com" class="btn btn-primary">Ver Proyecto</a>
+    <!-- Navbar similar al index -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Jose Brucsoni</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Volver al Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mi Portafolio de Proyectos</h2>
+                <span class="line"></span>
+                <p class="text-muted">Explora algunos de mis trabajos más destacados</p>
+            </div>
+
+            <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4">
+                    <div class="project-card card">
+                        <img src="assets/imgs/proyecto1.jpg" class="project-img card-img-top" alt="Proyecto 1">
+                        <div class="card-header">
+                            Sistema de Gestión Académica
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sistema completo para la gestión de estudiantes, profesores y cursos. Incluye módulos de calificaciones y asistencia.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/tu-proyecto-1" class="btn btn-primary mt-3">
+                                <i class="ti-github mr-2"></i>Ver Proyecto
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Proyecto 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        Proyecto 2
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Descripción breve del proyecto 2.</p>
-                        <a href="https://enlace-proyecto2.com" class="btn btn-primary">Ver Proyecto</a>
+
+                <!-- Proyecto 2 -->
+                <div class="col-md-4">
+                    <div class="project-card card">
+                        <img src="assets/imgs/proyecto2.jpg" class="project-img card-img-top" alt="Proyecto 2">
+                        <div class="card-header">
+                            App de Seguridad
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Aplicación móvil para análisis de vulnerabilidades y monitoreo de seguridad en redes empresariales.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <a href="https://github.com/tu-proyecto-2" class="btn btn-primary mt-3">
+                                <i class="ti-github mr-2"></i>Ver Proyecto
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Proyecto 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        Proyecto 3
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Descripción breve del proyecto 3.</p>
-                        <a href="https://enlace-proyecto3.com" class="btn btn-primary">Ver Proyecto</a>
+
+                <!-- Proyecto 3 -->
+                <div class="col-md-4">
+                    <div class="project-card card">
+                        <img src="assets/imgs/proyecto3.jpg" class="project-img card-img-top" alt="Proyecto 3">
+                        <div class="card-header">
+                            Portal Web Empresarial
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sitio web corporativo con panel de administración, blog y sistema de gestión de contenidos.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/tu-proyecto-3" class="btn btn-primary mt-3">
+                                <i class="ti-github mr-2"></i>Ver Proyecto
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                &copy; <script>document.write(new Date().getFullYear())</script> Derechos Reservados <span class="text-danger">Jose Brucsoni</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 </body>
 </html>
