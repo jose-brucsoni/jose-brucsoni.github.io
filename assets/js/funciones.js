@@ -89,12 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Asegurar que el elemento del CV tenga el tamaño correcto y sea visible
     if (element) {
-      const paddingInPx = 15 * 3.7795275591; // 15mm en píxeles
+      const paddingTopBottom = 12 * 3.7795275591; // 12mm en píxeles (arriba/abajo)
+      const paddingLeftRight = 15 * 3.7795275591; // 15mm en píxeles (izquierda/derecha)
       
       element.style.setProperty('width', widthInPx + 'px', 'important');
       element.style.setProperty('max-width', widthInPx + 'px', 'important');
       element.style.setProperty('margin', '0', 'important');
-      element.style.setProperty('padding', paddingInPx + 'px', 'important');
+      element.style.setProperty('padding', paddingTopBottom + 'px ' + paddingLeftRight + 'px', 'important');
       element.style.setProperty('box-sizing', 'border-box', 'important');
       element.style.setProperty('overflow', 'visible', 'important');
       element.style.setProperty('position', 'relative', 'important');
