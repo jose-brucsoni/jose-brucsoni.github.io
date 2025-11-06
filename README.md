@@ -139,6 +139,9 @@ Mi experiencia abarca desde la optimización de bases de datos SQL Server (reduc
 [![GitHub](https://img.shields.io/badge/GitHub-jose--brucsoni-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jose-brucsoni)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Mi%20Portafolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jose-brucsoni.github.io/)
 
+**📱 Teléfono:** +591 70918874  
+**📅 Fecha de Nacimiento:** 15/03/1999 (25 años)
+
 </div>
 
 ---

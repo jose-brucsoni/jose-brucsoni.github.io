@@ -1,6 +1,36 @@
 
-// smooth scroll
+// Función para calcular la edad
+function calcularEdad(fechaNacimiento) {
+    var hoy = new Date();
+    var nacimiento = new Date(fechaNacimiento);
+    var edad = hoy.getFullYear() - nacimiento.getFullYear();
+    var mes = hoy.getMonth() - nacimiento.getMonth();
+    
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
+    
+    return edad;
+}
+
+// Actualizar edad al cargar la página
 $(document).ready(function(){
+    // Calcular edad
+    var edad = calcularEdad('1999-03-15');
+    
+    // Actualizar edad en el HTML principal
+    var elementoEdad = document.getElementById('edad');
+    if (elementoEdad) {
+        elementoEdad.textContent = edad;
+    }
+    
+    // Actualizar edad en el CV PDF
+    var elementoEdadCV = document.getElementById('edad-cv');
+    if (elementoEdadCV) {
+        elementoEdadCV.textContent = edad;
+    }
+    
+    // smooth scroll
     $(".navbar .nav-link").on('click', function(event) {
 
         if (this.hash !== "") {

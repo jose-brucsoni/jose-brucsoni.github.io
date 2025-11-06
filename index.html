@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Estilos -->
 	<link rel="stylesheet" href="assets/css/estilosInicio_y_Bootstrapp.css">
+    <!-- Estilos para CV PDF -->
+    <link rel="stylesheet" href="assets/css/cv-pdf.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <header class="header">
@@ -29,7 +31,7 @@
                 <h1 class="header-title">Jose Brucsoni</h1>
                 <h6 class="header-mono" > Desarrollador Full Stack | Python, C#, PHP y JavaScript</h6>
                 <p class="header-description mt-3">5+ años de experiencia creando soluciones de software de alto impacto</p>
-                <button onclick="DescargarCV()" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Descargar CV</button>
+                <button onclick="DescargarCV(event)" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Descargar CV</button>
             </div>
         </div>
     </header>
@@ -269,7 +271,7 @@
                 <p class="mt-20">Mi experiencia abarca desde la optimización de bases de datos SQL Server (reduciendo tiempos de consulta de <strong>10 minutos a 10 segundos</strong>) hasta el desarrollo web full-stack con Python, PHP y JavaScript. Además, he desarrollado y publicado aplicaciones Android nativas usando Java y Firebase.</p>
                 
                 <p class="mt-20"><strong>Busco aplicar mi capacidad para crear soluciones completas y mi enfoque en la optimización de procesos para contribuir a un equipo de desarrollo dinámico.</strong></p>
-                <button  onclick="DescargarCV()"  class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Descargar CV</button>
+                <button onclick="DescargarCV(event)" class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Descargar CV</button>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Información Personal</h3>
@@ -278,7 +280,8 @@
                     <li><span>Correo</span> : <a href="mailto:joseca6520@gmail.com" class="text-danger">joseca6520@gmail.com</a></li>
                     <li><span>Dirección</span> :  Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
                     <li><span>Ciudad</span> :  Santa Cruz de la Sierra, Bolivia</li>
-                    <li><span>Teléfono</span> : + (591) 709-18874</li>
+                    <li><span>Teléfono</span> : <a href="tel:+59170918874" class="text-danger">+591 70918874</a></li>
+                    <li><span>Fecha de Nacimiento</span> : 15/03/1999 (<span id="edad">25</span> años)</li>
                     <li><span>GitHub</span> : <a href="https://github.com/jose-brucsoni" target="_blank" class="text-danger">github.com/jose-brucsoni</a></li>
                     <li><span>Portafolio</span> : <a href="https://jose-brucsoni.github.io/" target="_blank" class="text-danger">jose-brucsoni.github.io</a></li>
 
@@ -505,7 +508,195 @@
     <!-- Isotope  -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
     
+    <!-- html2pdf.js para generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
     <script src="assets/js/jcsuarez.js"></script>
     <script src="assets/js/funciones.js"></script>
+
+    <!-- Contenedor oculto para el CV en PDF -->
+    <div id="cv-pdf-container">
+        <div class="cv-pdf" id="cv-pdf">
+            <div class="cv-header">
+                <h1>José Carlo Suárez Brucsoni</h1>
+                <h2>Desarrollador Full Stack | Python, C#, PHP y JavaScript</h2>
+                <div class="cv-contact">
+                    <span><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</span>
+                    <span><strong>📧 Email:</strong> joseca6520@gmail.com</span>
+                    <span><strong>📱 Teléfono:</strong> +591 70918874</span>
+                    <span><strong>📅 Fecha de Nacimiento:</strong> 15/03/1999 (<span id="edad-cv">25</span> años)</span>
+                    <span><strong>💼 LinkedIn:</strong> linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272</span>
+                    <span><strong>🔗 GitHub:</strong> github.com/jose-brucsoni</span>
+                    <span><strong>🌐 Portafolio:</strong> jose-brucsoni.github.io</span>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Perfil Profesional</div>
+                <p style="text-align: justify; font-size: 13px; line-height: 1.6;">
+                    Desarrollador Full Stack con <strong>5+ años de experiencia</strong> demostrada en la creación de soluciones de software de alto impacto. 
+                    Mi logro principal es el diseño y desarrollo de <strong>"DANTE"</strong>, una aplicación C# que digitalizó los procesos de cobro para 
+                    <strong>+50 empleados</strong> y redujo el procesamiento manual en un <strong>90%</strong>. Mi experiencia abarca desde la optimización de 
+                    bases de datos SQL Server (reduciendo tiempos de consulta de <strong>10 minutos a 10 segundos</strong>) hasta el desarrollo web full-stack 
+                    con Python, PHP y JavaScript. Además, he desarrollado y publicado aplicaciones Android nativas usando Java y Firebase.
+                </p>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Experiencia Profesional</div>
+                
+                <div class="cv-experience-item">
+                    <h3>Auxiliar de Programación - Área de TI</h3>
+                    <div class="company">Universidad Tecnológica Privada de Santa Cruz</div>
+                    <div class="date">Julio 2023 - Presente (2 años 5 meses)</div>
+                    <ul>
+                        <li>Desarrollé <strong>"DANTE"</strong>: aplicación C# que digitalizó procesos de cobro para <strong>+50 empleados</strong>, reduciendo el tiempo de procesamiento manual en un <strong>90%</strong></li>
+                        <li>Gestión de <strong>10,000 registros diarios</strong> en el sistema</li>
+                        <li>Optimización de consultas SQL Server: reducción de tiempos de <strong>10 minutos a 10 segundos</strong> (mejora del <strong>90%</strong>)</li>
+                        <li>Administración de base de datos académica principal con <strong>20 tablas</strong> y <strong>+10,000 registros estudiantiles</strong></li>
+                        <li>Diseñé y automaticé <strong>+10 reportes clave</strong> para Dirección Académica y Gerencia Financiera</li>
+                        <li>Reportes de métricas críticas: tasa de deserción, tasa de pagos, inscripciones por carrera</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>Auxiliar de Laboratorio de Redes y Sistemas</h3>
+                    <div class="company">Universidad Tecnológica Privada de Santa Cruz</div>
+                    <div class="date">Agosto 2020 - Junio 2023 (2 años 11 meses)</div>
+                    <ul>
+                        <li>Soporte técnico integral a <strong>4 laboratorios</strong>, atendiendo a <strong>+20 docentes</strong> y <strong>+100 estudiantes</strong></li>
+                        <li>Gestión de parque informático de <strong>72 computadoras</strong> con <strong>90% de operatividad</strong></li>
+                        <li>Instalación y configuración de infraestructura de red para <strong>21 laboratorios de cómputo</strong></li>
+                        <li>Desarrollé aplicación web de gestión de soportes e inventario, reduciendo tiempo manual en <strong>80%</strong></li>
+                        <li>Impartí <strong>10 talleres técnicos</strong> sobre Ciberseguridad, Hacking Ético, Programación y Git</li>
+                        <li>Capacité a <strong>+50 estudiantes</strong> en habilidades técnicas fundamentales</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>Freelance - Desarrollador Autónomo</h3>
+                    <div class="company">Autónomo</div>
+                    <div class="date">Enero 2019 - Julio 2020 (1 año 7 meses)</div>
+                    <ul>
+                        <li><strong>"Encuentrame"</strong> - App de Clasificados: Aplicación Android nativa en Java con <strong>120 descargas</strong> durante fase de distribución local. Implementé Firebase (Auth y Firestore) para gestión de perfiles y publicaciones en tiempo real</li>
+                        <li><strong>"Anglarill-Fitness"</strong> - Gestor Nutricional B2C: Aplicación Android en Java para nutricionista, gestionando <strong>20 pacientes activos</strong>. Utilicé Firebase Realtime Database para sincronización instantánea</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Educación</div>
+                <div class="cv-education-item">
+                    <h3>Ingeniería en Sistemas</h3>
+                    <div class="institution">Universidad Tecnológica Privada de Santa Cruz</div>
+                    <div class="date">2021 - Diciembre 2026</div>
+                </div>
+                <div class="cv-education-item">
+                    <h3>Bachiller de Humanidades</h3>
+                    <div class="institution">Colegio "Henry Prince"</div>
+                    <div class="date">2016</div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Habilidades Técnicas</div>
+                <div class="cv-skills">
+                    <div class="cv-skill-item">
+                        <h4>C#</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>SQL Server</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>PHP</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>Python</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>JavaScript</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>Java (Android)</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>Firebase</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>HTML5 & CSS3</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Logros Destacados</div>
+                <div class="cv-projects">
+                    <div class="cv-project-item">
+                        <h4>DANTE - Sistema de Gestión</h4>
+                        <p><strong>+50 empleados</strong> utilizan la aplicación</p>
+                        <p><strong>10,000 registros</strong> gestionados diariamente</p>
+                        <p><strong>90%</strong> de reducción en tiempo de procesamiento</p>
+                    </div>
+                    <div class="cv-project-item">
+                        <h4>Optimización SQL Server</h4>
+                        <p>Mejora de velocidad de <strong>90%</strong></p>
+                        <p>Reducción de <strong>10 minutos a 10 segundos</strong></p>
+                    </div>
+                    <div class="cv-project-item">
+                        <h4>Automatización de Reportes</h4>
+                        <p><strong>+10 reportes</strong> automatizados</p>
+                        <p>Apoyo a decisiones financieras estratégicas</p>
+                    </div>
+                    <div class="cv-project-item">
+                        <h4>Apps Android</h4>
+                        <p><strong>120+ descargas</strong> en distribución local</p>
+                        <p><strong>20 pacientes activos</strong> gestionados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <div class="cv-section-title">Idiomas</div>
+                <div class="cv-skills">
+                    <div class="cv-skill-item">
+                        <h4>Español</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="cv-skill-item">
+                        <h4>Inglés</h4>
+                        <div class="cv-skill-bar">
+                            <div class="cv-skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
