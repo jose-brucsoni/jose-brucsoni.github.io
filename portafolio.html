@@ -1,120 +1,128 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" data-meta-title="meta.portfolioTitle" data-meta-desc="meta.portfolioDescription">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Jose Brucsoni</title>
-    <!-- Fuente de iconos -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Estilos -->
-    <link rel="stylesheet" href="assets/css/estilosInicio_y_Bootstrapp.css">
-    <!-- Estilos del portafolio -->
-    <link rel="stylesheet" href="assets/css/portafolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project portfolio - Jose Carlo Suarez Brucsoni | DANTE CXC Module, Encuentrame, Anglarill-Fitness">
+  <title>Portfolio - Jose Brucsoni</title>
+  <link rel="icon" href="/assets/imgs/icono.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-    <!-- Navbar similar al index -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">Jose Brucsoni</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Volver al Inicio</a>
-                    </li>
-                </ul>
-            </div>
+<body class="bg-gray-50 overflow-x-hidden">
+
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16 gap-4">
+        <a href="index.html" class="font-display font-bold text-dark text-lg truncate">Jose Brucsoni</a>
+        <div class="flex items-center gap-3 shrink-0">
+          <div id="lang-switcher" class="flex items-center gap-1">
+            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">EN</button>
+            <span class="text-gray-300">|</span>
+            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">ES</button>
+          </div>
+          <a href="index.html" class="nav-link flex items-center gap-2 text-sm sm:text-base">
+            <i class="ti-arrow-left"></i> <span data-i18n="nav.backHome">Back to Home</span>
+          </a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <section class="portfolio-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Mi Portafolio de Proyectos</h2>
-                <span class="line"></span>
-                <p class="text-muted">Explora algunos de mis trabajos más destacados</p>
-            </div>
+  <section class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10 sm:mb-16">
+        <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-2" data-i18n="portfolio.subtitle">Featured projects in backend, databases, and mobile development with real impact.</p>
+      </div>
 
-            <div class="row">
-                <!-- Proyecto 1 -->
-                <div class="col-md-4">
-                    <div class="project-card card">
-                        <img src="assets/imgs/proyecto1.jpg" class="project-img card-img-top" alt="Proyecto 1">
-                        <div class="card-header">
-                            Sistema de Gestión Académica
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Sistema completo para la gestión de estudiantes, profesores y cursos. Incluye módulos de calificaciones y asistencia.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Bootstrap</span>
-                            </div>
-                            <a href="https://github.com/tu-proyecto-1" class="btn btn-primary mt-3">
-                                <i class="ti-github mr-2"></i>Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-                <!-- Proyecto 2 -->
-                <div class="col-md-4">
-                    <div class="project-card card">
-                        <img src="assets/imgs/proyecto2.jpg" class="project-img card-img-top" alt="Proyecto 2">
-                        <div class="card-header">
-                            App de Seguridad
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Aplicación móvil para análisis de vulnerabilidades y monitoreo de seguridad en redes empresariales.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Android</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
-                            <a href="https://github.com/tu-proyecto-2" class="btn btn-primary mt-3">
-                                <i class="ti-github mr-2"></i>Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="col-md-4">
-                    <div class="project-card card">
-                        <img src="assets/imgs/proyecto3.jpg" class="project-img card-img-top" alt="Proyecto 3">
-                        <div class="card-header">
-                            Portal Web Empresarial
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Sitio web corporativo con panel de administración, blog y sistema de gestión de contenidos.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            <a href="https://github.com/tu-proyecto-3" class="btn btn-primary mt-3">
-                                <i class="ti-github mr-2"></i>Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer py-3">
-        <div class="container">
-            <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Derechos Reservados <span class="text-danger">Jose Brucsoni</span>
+        <!-- DANTE CXC Module -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/imgs/Portada_GeneracionDeReportes.png" alt="DANTE CXC Module - Accounts Receivable" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full" data-i18n="portfolio.danteBadge">Enterprise Module</span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.danteTitle">Accounts Receivable (CXC) Module — DANTE</h2>
+            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.danteDesc">
+              Module developed in C# (.NET) within the DANTE system to digitize accounts receivable workflows.
+              Used by <strong>50+ users</strong> with <strong>10,000+ daily records</strong> and
+              <strong>90%</strong> reduction in manual processing.
             </p>
-        </div>
-    </footer>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+            <p class="text-xs text-gray-400 italic" data-i18n="portfolio.danteNote">Internal DANTE module — no public repository</p>
+          </div>
+        </article>
 
-    <!-- Scripts -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+        <!-- Encuentrame -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/imgs/portada_encuentrame.png" alt="Encuentrame - Classifieds App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full">Android</span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.encuentrameTitle">Encuentrame — Classifieds App</h2>
+            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.encuentrameDesc">
+              Native Android app in Java for job listings and property/vehicle sales.
+              Firebase Auth and Firestore. <strong>120 downloads</strong> in local distribution. Project paused, not on Play Store.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+            <a href="https://github.com/jose-brucsoni/Materia_AplicacionesMoviles" target="_blank" rel="noopener" class="btn-primary text-sm">
+              <i class="ti-github"></i> <span data-i18n="portfolio.viewGithub">View on GitHub</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Anglarill-Fitness -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
+          <div class="relative h-48 overflow-hidden">
+            <img src="assets/imgs/portada_nutricion.png" alt="Anglarill-Fitness - Nutrition Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full">Android B2C</span>
+          </div>
+          <div class="p-5 sm:p-6">
+            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.anglarillTitle">Anglarill-Fitness — Nutrition Manager</h2>
+            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.anglarillDesc">
+              Android app for nutritionist Jose Alberto Anglarill. Patients track weight, meals, and hydration;
+              the nutritionist publishes plans and recipes. Firebase Realtime Database with <strong>20 active patients</strong>.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">Firebase RTDB</span>
+            </div>
+            <a href="https://github.com/jose-brucsoni/AnglarillFitness" target="_blank" rel="noopener" class="btn-primary text-sm">
+              <i class="ti-github"></i> <span data-i18n="portfolio.viewGithub">View on GitHub</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Jose Carlo Suarez Brucsoni</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

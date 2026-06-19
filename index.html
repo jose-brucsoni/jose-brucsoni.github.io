@@ -1,702 +1,593 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="José Carlo Suárez Brucsoni - Desarrollador Full Stack | Python, C#, PHP y JavaScript | 5+ años de experiencia creando soluciones de software de alto impacto">
-    <meta name="author" content="Jose Carlo Suarez Brucsoni">
-    <meta name="keywords" content="Desarrollador Full Stack, Python, C#, PHP, JavaScript, SQL Server, Android, Firebase, DANTE">
-    <title>Jose Brucsoni</title>
-    <link rel="icon" href="/assets/imgs/icono.png" type="image/png">
-    <!-- Fuente de iconos -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Estilos -->
-	<link rel="stylesheet" href="assets/css/estilosInicio_y_Bootstrapp.css">
-    <!-- Estilos para CV PDF -->
-    <link rel="stylesheet" href="assets/css/cv-pdf.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jose Carlo Suarez Brucsoni - Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus">
+  <meta name="author" content="Jose Carlo Suarez Brucsoni">
+  <meta name="keywords" content="Backend Developer, C#, .NET, Python, SQL Server, Firebase, Cybersecurity, DANTE">
+  <title>Jose Brucsoni | Backend Developer</title>
+  <link rel="icon" href="/assets/imgs/icono.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/cv-pdf.css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <header class="header">
-        <div class="container">
-            <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" href="https://www.facebook.com/josecarlo.suarezbrucsoni?mibextid=ZbWKwL"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://twitter.com/JBrucsoni"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://drive.google.com/drive/folders/1Idf0LullQ1Lxe9dz_yM9RAgy0OewogIK?usp=sharing"><i class="ti-google" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/jose_brucsoni/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://github.com/jose-brucsoni"><i class="ti-github" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-            </ul>  
-            <div class="header-content">
-                <h4 class="header-subtitle" >¡Hola!, soy</h4>
-                <h1 class="header-title">Jose Brucsoni</h1>
-                <h6 class="header-mono" > Desarrollador Full Stack | Python, C#, PHP y JavaScript</h6>
-                <p class="header-description mt-3">5+ años de experiencia creando soluciones de software de alto impacto</p>
-                <button onclick="DescargarCV(event)" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Descargar CV</button>
-            </div>
-        </div>
-    </header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">Sobre Mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resume" class="nav-link">Experiencia & Conocimientos</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav brand">
-                    <img src="assets/imgs/avatar.jpg" alt="José Carlo Suárez Brucsoni" class="brand-img">
-                    <li class="brand-txt">
-                        <h5 class="brand-title">José Carlo Suárez Brucsoni</h5>
-                        <div class="brand-subtitle"> Desarrollador Full Stack</div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#service" class="nav-link">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portafolio</a>
-                    </li>
-                    
-                    <li class="nav-item last-item">
-                        <a href="#about" class="nav-link">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gray-50" id="home">
 
-    <!--Resume Section-->
-    <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5">Experiencia <span class="text-danger">&</span>  Conocimientos</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Experiencia</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">Julio 2023 - Presente</h6>
-                            <P><strong>Auxiliar de Programación - Área de TI</strong></P>
-                            <P class="subtitle">Universidad Tecnológica Privada de Santa Cruz</P>
-                            <P class="subtitle">• Desarrollé "DANTE": aplicación C# que digitalizó procesos de cobro para +50 empleados<br>
-                            • Reducción del 90% en tiempo de procesamiento manual<br>
-                            • Gestión de 10,000 registros diarios<br>
-                            • Optimización de consultas SQL Server: de 10 minutos a 10 segundos<br>
-                            • Diseñé y automaticé +10 reportes clave para Dirección Académica y Gerencia Financiera</P>
-                            <hr>
-                            <h6 class="title text-danger">Agosto 2020 - Junio 2023</h6>
-                            <P><strong>Auxiliar de Laboratorio de Redes y Sistemas</strong></P>
-                            <P class="subtitle">Universidad Tecnológica Privada de Santa Cruz</P>
-                            <P class="subtitle">• Soporte técnico a 4 laboratorios, +20 docentes y +100 estudiantes<br>
-                            • Gestión de parque informático de 72 computadoras (90% operatividad)<br>
-                            • Instalación de infraestructura de red para 21 laboratorios<br>
-                            • Desarrollé aplicación web de gestión reduciendo tiempo manual en 80%<br>
-                            • Impartí 10 talleres técnicos capacitando a +50 estudiantes</P>
-                            <hr>
-                            <h6 class="title text-danger">Enero 2019 - Julio 2020</h6>
-                            <P><strong>Freelance - Desarrollador Autónomo</strong></P>
-                            <P class="subtitle">• Desarrollo de aplicaciones Android nativas (Java + Firebase)<br>
-                            • App "Encuentrame": 120 descargas locales<br>
-                            • App "Anglarill-Fitness": gestor nutricional para 20 pacientes activos</P>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Educación</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2016</h6>
-                            <P>Bachiller de Humanidades</P>
-                            <P class="subtitle">Graduado del colegio "Henry Prince"</P>
-                            <hr>
-                            <h6 class="title text-danger">2021 - Diciembre 2026</h6>
-                            <P>Ingeniería en Sistemas</P>
-                            <P class="subtitle">Universidad Tecnológica Privada de Santa Cruz<br>
-                            Actualmente estudiando, tratando de exprimir cada gota de conocimiento de la universidad</P>
-                            <hr>
-                            <h6 class="title text-danger">2022 - Presente</h6>
-                            <P>Certificados & Reconocimientos</P>
-                            <P class="subtitle">El hambre por el conocimiento es persistente, convirtiéndome en autodidacta y tratando de buscar la solución más eficiente con las nuevas tecnologías que surgen cada día.</P>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Habilidades en Programacion</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           
-                            <h6>C#</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>SQL Server</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>PHP</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Python</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div> 
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Java (Android)</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Firebase</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>HTML5 & CSS3</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Idiomas</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                            <h6>Español</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                           <h6>Inglés</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section bg-dark text-center">
-        <div class="container">
-            <div class="row text-center">
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">+10</h1>
-                            <p class="text-light mb-1">Proyectos Completados</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row ">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">5+</h1>
-                            <p class="text-light mb-1">Años de Experiencia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-bookmark-alt icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">+10</h1>
-                            <p class="text-light mb-1">Certificados  & Reconocimientos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="row">
-                        <div class="col-5 text-right text-light border-right py-3">
-                            <div class="m-auto"><i class="ti-user icon-xl"></i></div>
-                        </div>
-                        <div class="col-7 text-left py-3">
-                            <h1 class="text-danger font-weight-bold font40">+50</h1>
-                            <p class="text-light mb-1">Empleados Usando DANTE</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="container-fluid">
-        <div id="about" class="row about-section">
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">¿Quién soy?</h3>
-                <span class="line mb-5"></span>
-                <h5 class="mb-3"> Desarrollador Full Stack | Python, C#, PHP y JavaScript</h5>
-                <p class="mt-20">Desarrollador Full Stack con <strong>5+ años de experiencia</strong> demostrada en la creación de soluciones de software de alto impacto. Mi logro principal es el diseño y desarrollo de <strong>"DANTE"</strong>, una aplicación C# que digitalizó los procesos de cobro para <strong>+50 empleados</strong> y redujo el procesamiento manual en un <strong>90%</strong>.</p>
-                
-                <p class="mt-20">Mi experiencia abarca desde la optimización de bases de datos SQL Server (reduciendo tiempos de consulta de <strong>10 minutos a 10 segundos</strong>) hasta el desarrollo web full-stack con Python, PHP y JavaScript. Además, he desarrollado y publicado aplicaciones Android nativas usando Java y Firebase.</p>
-                
-                <p class="mt-20"><strong>Busco aplicar mi capacidad para crear soluciones completas y mi enfoque en la optimización de procesos para contribuir a un equipo de desarrollo dinámico.</strong></p>
-                <button onclick="DescargarCV(event)" class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Descargar CV</button>
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Información Personal</h3>
-                <span class="line mb-5"></span>
-                <ul class="mt40 info list-unstyled">
-                    <li><span>Correo</span> : <a href="mailto:joseca6520@gmail.com" class="text-danger">joseca6520@gmail.com</a></li>
-                    <li><span>Dirección</span> :  Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
-                    <li><span>Ciudad</span> :  Santa Cruz de la Sierra, Bolivia</li>
-                    <li><span>Teléfono</span> : <a href="tel:+59170918874" class="text-danger">+591 70918874</a></li>
-                    <li><span>Fecha de Nacimiento</span> : 15/03/1999 (<span id="edad">25</span> años)</li>
-                    <li><span>GitHub</span> : <a href="https://github.com/jose-brucsoni" target="_blank" class="text-danger">github.com/jose-brucsoni</a></li>
-                    <li><span>Portafolio</span> : <a href="https://jose-brucsoni.github.io/" target="_blank" class="text-danger">jose-brucsoni.github.io</a></li>
-
-                </ul>
-                <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="https://www.facebook.com/josecarlo.suarezbrucsoni?mibextid=ZbWKwL" target="_blank"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://twitter.com/JBrucsoni" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://drive.google.com/drive/folders/1Idf0LullQ1Lxe9dz_yM9RAgy0OewogIK?usp=sharing" target="_blank"><i class="ti-google" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://www.instagram.com/jose_brucsoni/" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://github.com/jose-brucsoni" target="_blank"><i class="ti-github" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                </ul>  
-            </div>
-            <div class="col-lg-4 about-card">
-                <h3 class="font-weight-light">Mis Conocimientos</h3>
-                <span class="line mb-5"></span>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-world icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Desarrollo Web Full Stack</h6>
-                        <p class="subtitle">Frontend & Backend con Python, PHP, JavaScript, C#</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-tablet icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Desarrollo de Aplicaciones Móviles</h6>
-                        <p class="subtitle">Android nativo (Java) + Firebase (Auth, Firestore, Realtime DB)</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-server icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Bases de Datos & Optimización</h6>
-                        <p class="subtitle">SQL Server, optimización de consultas (90% mejora de rendimiento)</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-bar-chart icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Análisis de Datos & Reportes</h6>
-                        <p class="subtitle">Automatización de reportes, análisis de métricas críticas</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1 text-danger pt-1"><i class="ti-lock icon-lg"></i></div>
-                    <div class="col-10 ml-auto mr-3">
-                        <h6>Ciberseguridad & Pentesting</h6>
-                        <p class="subtitle">Escaneo de vulnerabilidades, hacking ético, talleres técnicos</p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Hero -->
+  <header class="hero-bg relative min-h-[80vh] flex items-center text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-20 sm:py-24 md:py-32 w-full">
+      <p class="text-lg md:text-2xl font-light opacity-90 mb-2" data-i18n="hero.greeting">Hi, I'm</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 break-words">Jose Brucsoni</h1>
+      <p class="text-sm sm:text-base md:text-lg font-medium opacity-90 max-w-3xl mb-4 normal-case leading-relaxed break-words" data-i18n="hero.tagline">
+        Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus
+      </p>
+      <p class="text-base md:text-lg opacity-80 max-w-2xl mb-6 break-words" data-i18n="hero.subtitle">
+        2+ years building high-impact backend systems. Open to remote opportunities.
+      </p>
+      <button onclick="DescargarCV(event)" class="btn-primary mb-8">
+        <i class="ti-printer"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+      </button>
+      <ul class="flex flex-wrap gap-3">
+        <li><a class="social-link" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
+        <li><a class="social-link" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti-github"></i></a></li>
+        <li><a class="social-link" href="mailto:joseca6520@gmail.com" aria-label="Email"><i class="ti-email"></i></a></li>
+        <li><a class="social-link" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti-instagram"></i></a></li>
+      </ul>
     </div>
+  </header>
 
-    
-    <!-- Logros Destacados -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="mb-5 text-center"><span class="text-danger">Logros</span> Destacados</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-desktop text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">DANTE - Sistema de Gestión</h5>
-                            <p class="card-text">Aplicación C# que digitalizó procesos de cobro para <strong>+50 empleados</strong>, reduciendo el tiempo de procesamiento manual en un <strong>90%</strong> y gestionando <strong>10,000 registros diarios</strong>.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-dashboard text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">Optimización SQL Server</h5>
-                            <p class="card-text">Optimización de consultas críticas mejorando la velocidad de respuesta en un <strong>90%</strong>, reduciendo tiempos de consulta de <strong>10 minutos a 10 segundos</strong>.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-bar-chart text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">Automatización de Reportes</h5>
-                            <p class="card-text">Diseñé y automaticé <strong>+10 reportes clave</strong> para Dirección Académica y Gerencia Financiera, proporcionando datos que apoyaron decisiones estratégicas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-tablet text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">Apps Android Publicadas</h5>
-                            <p class="card-text">Desarrollo de aplicaciones Android nativas con <strong>120+ descargas</strong> y gestión de <strong>20 pacientes activos</strong> usando Firebase (Auth, Firestore, Realtime DB).</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-user text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">Capacitación Técnica</h5>
-                            <p class="card-text">Impartí <strong>10 talleres técnicos</strong> sobre Ciberseguridad, Hacking Ético, Programación y Git, capacitando a <strong>+50 estudiantes</strong> en habilidades técnicas fundamentales.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="ti-server text-danger icon-xl mb-3"></i>
-                            <h5 class="card-title">Gestión de Infraestructura</h5>
-                            <p class="card-text">Soporte técnico integral a <strong>4 laboratorios</strong>, gestión de parque informático de <strong>72 computadoras</strong> con <strong>90% de operatividad</strong> y configuración de red para <strong>21 laboratorios</strong>.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 relative">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="#home" class="flex items-center gap-3 min-w-0">
+          <img src="assets/imgs/avatar.jpg" alt="Jose Carlo Suarez Brucsoni" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/30 shrink-0">
+          <div class="hidden sm:block min-w-0">
+            <p class="font-display font-semibold text-dark text-sm leading-tight truncate max-w-[140px] md:max-w-none">Jose Carlo Suarez Brucsoni</p>
+            <p class="text-xs text-gray-500" data-i18n="nav.role">Backend Developer</p>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-2">
+          <div id="lang-switcher" class="flex items-center gap-1">
+            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">English</button>
+            <span class="text-gray-300">|</span>
+            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">Español</button>
+          </div>
+          <button id="nav-toggle" class="lg:hidden p-2 text-gray-700" data-i18n-aria="nav.openMenu" aria-label="Open menu" aria-expanded="false">
+            <i class="ti-menu text-2xl"></i>
+          </button>
         </div>
-    </section>
 
-    <section class="section" id="service">
-        <div class="container">
-            <h2 class="mb-5 pb-4"><span class="text-danger">Mis</span> Servicios de Freelancer</h2>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-world text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Desarrollo de Sitios Web</h5>
-                            <P class="subtitle">Desarrollo full-stack de aplicaciones web escalables con Python, PHP, JavaScript y C#. Optimización de rendimiento y bases de datos.</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-tablet text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Desarrollo de Aplicaciones Móviles</h5>
-                            <P class="subtitle">Aplicaciones Android nativas en Java con integración de Firebase (Auth, Firestore, Realtime Database). Experiencia con apps publicadas y más de 120 descargas.</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-lock text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Analista de CiberSeguridad</h5>
-                            <P class="subtitle">Escaneo de vulnerabilidades, pentesting y análisis de seguridad. Impartí 10 talleres técnicos sobre ciberseguridad y hacking ético.</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-desktop text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Soporte Técnico</h5>
-                            <P class="subtitle">Soporte integral a laboratorios, gestión de parque informático (72 equipos), mantenimiento preventivo y correctivo con 90% de operatividad.</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-write text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Consultoría y Asesoramiento</h5>
-                            <P class="subtitle">Optimización de bases de datos, automatización de procesos, análisis de datos y generación de reportes para toma de decisiones estratégicas.</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                       <div class="card-header has-icon">
-                            <i class="ti-support text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Tutoría</h5>
-                            <P class="subtitle">Capacitación técnica: Ciberseguridad, Hacking Ético, Programación y Git. Más de 50 estudiantes capacitados en habilidades técnicas fundamentales.</P>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-dark py-5">
-        <div class="container text-center">
-            <h2 class="text-light mb-5 font-weight-normal">Portafolio</h2>
-            <button class="btn bg-primary w-lg text-light"> Abrir Portafolio <a onclick="" href="/portafolio.html" class="ti-archive"></a></button>
-        </div>
-    </section>
-
-  
-
-
-    <footer class="footer py-3">
-        <div class="container">
-            <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Derechos Reservados <a href="#home"><span class="text-danger" title="Desarrollador Full Stack">José Carlo Suárez Brucsoni</span></a> | Desarrollador Full Stack apasionado por crear soluciones que generan impacto real
-            </p>
-        </div>
-    </footer>
-
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Isotope  -->
-    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
-    
-    <!-- html2pdf.js para generar PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    
-    <script src="assets/js/jcsuarez.js"></script>
-    <script src="assets/js/funciones.js"></script>
-
-    <!-- Contenedor oculto para el CV en PDF -->
-    <div id="cv-pdf-container">
-        <div class="cv-pdf" id="cv-pdf">
-            <div class="cv-header">
-                <h1>José Carlo Suárez Brucsoni</h1>
-                <h2>Desarrollador Full Stack | Python, C#, PHP y JavaScript</h2>
-                <div class="cv-contact">
-                    <span><strong>📍 Ubicación:</strong> Santa Cruz de la Sierra, Bolivia</span>
-                    <span><strong>📧 Email:</strong> joseca6520@gmail.com</span>
-                    <span><strong>📱 Teléfono:</strong> +591 70918874</span>
-                    <span><strong>📅 Fecha de Nacimiento:</strong> 15/03/1999 (<span id="edad-cv">25</span> años)</span>
-                    <span><strong>💼 LinkedIn:</strong> linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272</span>
-                    <span><strong>🔗 GitHub:</strong> github.com/jose-brucsoni</span>
-                    <span><strong>🌐 Portafolio:</strong> jose-brucsoni.github.io</span>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Perfil Profesional</div>
-                <p style="text-align: justify; font-size: 13px; line-height: 1.6;">
-                    Desarrollador Full Stack con <strong>5+ años de experiencia</strong> demostrada en la creación de soluciones de software de alto impacto. 
-                    Mi logro principal es el diseño y desarrollo de <strong>"DANTE"</strong>, una aplicación C# que digitalizó los procesos de cobro para 
-                    <strong>+50 empleados</strong> y redujo el procesamiento manual en un <strong>90%</strong>. Mi experiencia abarca desde la optimización de 
-                    bases de datos SQL Server (reduciendo tiempos de consulta de <strong>10 minutos a 10 segundos</strong>) hasta el desarrollo web full-stack 
-                    con Python, PHP y JavaScript. Además, he desarrollado y publicado aplicaciones Android nativas usando Java y Firebase.
-                </p>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Experiencia Profesional</div>
-                
-                <div class="cv-experience-item">
-                    <h3>Auxiliar de Programación - Área de TI</h3>
-                    <div class="company">Universidad Tecnológica Privada de Santa Cruz</div>
-                    <div class="date">Julio 2023 - Presente (2 años 5 meses)</div>
-                    <ul>
-                        <li>Desarrollé <strong>"DANTE"</strong>: aplicación C# que digitalizó procesos de cobro para <strong>+50 empleados</strong>, reduciendo el tiempo de procesamiento manual en un <strong>90%</strong></li>
-                        <li>Gestión de <strong>10,000 registros diarios</strong> en el sistema</li>
-                        <li>Optimización de consultas SQL Server: reducción de tiempos de <strong>10 minutos a 10 segundos</strong> (mejora del <strong>90%</strong>)</li>
-                        <li>Administración de base de datos académica principal con <strong>20 tablas</strong> y <strong>+10,000 registros estudiantiles</strong></li>
-                        <li>Diseñé y automaticé <strong>+10 reportes clave</strong> para Dirección Académica y Gerencia Financiera</li>
-                        <li>Reportes de métricas críticas: tasa de deserción, tasa de pagos, inscripciones por carrera</li>
-                    </ul>
-                </div>
-
-                <div class="cv-experience-item">
-                    <h3>Auxiliar de Laboratorio de Redes y Sistemas</h3>
-                    <div class="company">Universidad Tecnológica Privada de Santa Cruz</div>
-                    <div class="date">Agosto 2020 - Junio 2023 (2 años 11 meses)</div>
-                    <ul>
-                        <li>Soporte técnico integral a <strong>4 laboratorios</strong>, atendiendo a <strong>+20 docentes</strong> y <strong>+100 estudiantes</strong></li>
-                        <li>Gestión de parque informático de <strong>72 computadoras</strong> con <strong>90% de operatividad</strong></li>
-                        <li>Instalación y configuración de infraestructura de red para <strong>21 laboratorios de cómputo</strong></li>
-                        <li>Desarrollé aplicación web de gestión de soportes e inventario, reduciendo tiempo manual en <strong>80%</strong></li>
-                        <li>Impartí <strong>10 talleres técnicos</strong> sobre Ciberseguridad, Hacking Ético, Programación y Git</li>
-                        <li>Capacité a <strong>+50 estudiantes</strong> en habilidades técnicas fundamentales</li>
-                    </ul>
-                </div>
-
-                <div class="cv-experience-item">
-                    <h3>Freelance - Desarrollador Autónomo</h3>
-                    <div class="company">Autónomo</div>
-                    <div class="date">Enero 2019 - Julio 2020 (1 año 7 meses)</div>
-                    <ul>
-                        <li><strong>"Encuentrame"</strong> - App de Clasificados: Aplicación Android nativa en Java con <strong>120 descargas</strong> durante fase de distribución local. Implementé Firebase (Auth y Firestore) para gestión de perfiles y publicaciones en tiempo real</li>
-                        <li><strong>"Anglarill-Fitness"</strong> - Gestor Nutricional B2C: Aplicación Android en Java para nutricionista, gestionando <strong>20 pacientes activos</strong>. Utilicé Firebase Realtime Database para sincronización instantánea</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Educación</div>
-                <div class="cv-education-item">
-                    <h3>Ingeniería en Sistemas</h3>
-                    <div class="institution">Universidad Tecnológica Privada de Santa Cruz</div>
-                    <div class="date">2021 - Diciembre 2026</div>
-                </div>
-                <div class="cv-education-item">
-                    <h3>Bachiller de Humanidades</h3>
-                    <div class="institution">Colegio "Henry Prince"</div>
-                    <div class="date">2016</div>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Habilidades Técnicas</div>
-                <div class="cv-skills">
-                    <div class="cv-skill-item">
-                        <h4>C#</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>SQL Server</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>PHP</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>Python</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>JavaScript</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>Java (Android)</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>Firebase</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>HTML5 & CSS3</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 100%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Logros Destacados</div>
-                <div class="cv-projects">
-                    <div class="cv-project-item">
-                        <h4>DANTE - Sistema de Gestión</h4>
-                        <p><strong>+50 empleados</strong> utilizan la aplicación</p>
-                        <p><strong>10,000 registros</strong> gestionados diariamente</p>
-                        <p><strong>90%</strong> de reducción en tiempo de procesamiento</p>
-                    </div>
-                    <div class="cv-project-item">
-                        <h4>Optimización SQL Server</h4>
-                        <p>Mejora de velocidad de <strong>90%</strong></p>
-                        <p>Reducción de <strong>10 minutos a 10 segundos</strong></p>
-                    </div>
-                    <div class="cv-project-item">
-                        <h4>Automatización de Reportes</h4>
-                        <p><strong>+10 reportes</strong> automatizados</p>
-                        <p>Apoyo a decisiones financieras estratégicas</p>
-                    </div>
-                    <div class="cv-project-item">
-                        <h4>Apps Android</h4>
-                        <p><strong>120+ descargas</strong> en distribución local</p>
-                        <p><strong>20 pacientes activos</strong> gestionados</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <div class="cv-section-title">Idiomas</div>
-                <div class="cv-skills">
-                    <div class="cv-skill-item">
-                        <h4>Español</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="cv-skill-item">
-                        <h4>Inglés</h4>
-                        <div class="cv-skill-bar">
-                            <div class="cv-skill-progress" style="width: 50%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul id="nav-menu" class="hidden lg:flex items-center gap-1 absolute lg:static top-full left-0 right-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-t lg:border-0 border-gray-100 flex-col lg:flex-row p-4 lg:p-0">
+          <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#resume" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#service" class="nav-link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#about" class="nav-link text-primary font-semibold" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Experience & Skills -->
+  <section class="py-20" id="resume">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title" data-i18n-html="resume.title">Experience <span>&</span> Skills</h2>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Experience -->
+        <div class="card-panel">
+          <h3 class="text-xl font-bold text-dark mb-4 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.experience">Experience</h3>
+
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.job1Date">July 2023 - Present</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
+            <p class="text-gray-500 text-sm mb-3" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1Backend">Backend & Software Development</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n-html="resume.job1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing and financial management workflows</li>
+              <li data-i18n="resume.job1b2">90% reduction in manual processing time for 50+ active users</li>
+              <li data-i18n="resume.job1b3">System handling 10,000+ daily records with high reliability</li>
+            </ul>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1db">Database Engineering & SQL Optimization</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n="resume.job1d1">Academic database with 20+ tables and 10,000+ records in SQL Server</li>
+              <li data-i18n="resume.job1d2">Optimized queries: from 10 minutes to 10 seconds (90% improvement)</li>
+            </ul>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1data">Data Analysis & Reporting</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n="resume.job1a1">10+ automated analytical reports for academic and financial leadership</li>
+              <li data-i18n="resume.job1a2">Retention, payment, and enrollment metrics for strategic decisions</li>
+            </ul>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.job2Date">August 2020 - June 2023</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
+            <p class="text-gray-500 text-sm mb-3" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2Auto">Process Automation & Web Development</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n="resume.job2a1">Web system for technical support and inventory (80% less manual workload)</li>
+            </ul>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2infra">Infrastructure & Systems Management</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n="resume.job2i1">Maintenance of 72 workstations with 90% availability</li>
+              <li data-i18n="resume.job2i2">Network infrastructure across 21 computer labs</li>
+            </ul>
+
+            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2cyber">Cybersecurity & Technical Training</p>
+            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+              <li data-i18n="resume.job2c1">10+ workshops on cybersecurity, ethical hacking, and Git</li>
+              <li data-i18n="resume.job2c2">Trained 50+ students</li>
+            </ul>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div>
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.job3Date">January 2019 - July 2020</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.job3Title">Freelance - Independent Developer</p>
+            <ul class="text-sm text-gray-600 space-y-2 mt-2 list-disc list-outside pl-4">
+              <li data-i18n-html="resume.job3b1"><strong>Encuentrame</strong>: Android classifieds app, 120 local downloads. Project paused, code on GitHub</li>
+              <li data-i18n-html="resume.job3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager for 20 active patients with Firebase</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="card-panel">
+          <h3 class="text-xl font-bold text-dark mb-4 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.education">Education</h3>
+
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu1Date">2021 - December 2026</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.edu1Title">Systems Engineering</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu2Date">2016</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.edu2Title">High School Diploma</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.edu2School">Henry Prince School</p>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div>
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.certDate">Ongoing</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.certTitle">Certificates & Recognition</p>
+            <p class="text-gray-600 text-sm mt-2" data-i18n="resume.certDesc">Self-taught learner focused on modern technologies, cybersecurity, and data analysis.</p>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div>
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.languages">Languages</p>
+            <div class="space-y-3 mt-3">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-medium text-dark" data-i18n="resume.langEsName">Spanish</span>
+                  <span class="text-gray-400" data-i18n="resume.native">Native</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-medium text-dark" data-i18n="resume.langEnName">English</span>
+                  <span class="text-gray-400" data-i18n="resume.intermediate">Intermediate</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width:50%"></div></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="tech-tag" data-i18n="resume.langEs">Spanish — Native</span>
+              <span class="tech-tag" data-i18n="resume.langEn">English — Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="card-panel">
+          <h3 class="text-xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.skills">Technical Skills</h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>C# / .NET</span><span class="text-gray-400">95%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>SQL Server</span><span class="text-gray-400">95%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Python</span><span class="text-gray-400">85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>REST APIs</span><span class="text-gray-400">80%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Firebase</span><span class="text-gray-400">75%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Java (Android)</span><span class="text-gray-400">70%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Git</span><span class="text-gray-400">85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="tech-tag" data-i18n="resume.tagFullStack">Full Stack Development</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 sm:py-16 bg-dark text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+        <div class="stat-card">
+          <i class="ti-layers-alt"></i>
+          <div class="stat-card-content">
+            <p class="stat-card-value">+10</p>
+            <p class="stat-card-label" data-i18n="stats.projects">Completed Projects</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="ti-alarm-clock"></i>
+          <div class="stat-card-content">
+            <p class="stat-card-value">5+</p>
+            <p class="stat-card-label" data-i18n="stats.years">Years of Experience</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="ti-bookmark-alt"></i>
+          <div class="stat-card-content">
+            <p class="stat-card-value">+10</p>
+            <p class="stat-card-label" data-i18n="stats.reports">Automated Reports</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="ti-user"></i>
+          <div class="stat-card-content">
+            <p class="stat-card-value">+50</p>
+            <p class="stat-card-label" data-i18n="stats.users">DANTE CXC Module Users</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-20 bg-white" id="about">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-6 lg:gap-10">
+
+        <div>
+          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.who">Who am I?</h3>
+          <div class="w-12 h-1 bg-primary mb-6"></div>
+          <p class="text-primary font-semibold mb-4" data-i18n="about.roleLine">Backend Developer | C# (.NET) & Python | SQL & Data Systems</p>
+          <p class="text-gray-600 mb-4 leading-relaxed" data-i18n-html="about.p1">
+            Backend Developer with <strong>2+ years of experience</strong> building and optimizing data-driven systems with <strong>C# (.NET)</strong> and <strong>SQL Server</strong>. I designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, which digitized billing workflows for <strong>50+ users</strong> and reduced manual processing by <strong>90%</strong>.
+          </p>
+          <p class="text-gray-600 mb-4 leading-relaxed" data-i18n-html="about.p2">
+            My experience spans database optimization (queries from <strong>10 minutes to 10 seconds</strong>), report automation, and Android app development with Firebase. I am currently expanding my expertise in <strong>Python</strong>, data analysis, and <strong>cybersecurity</strong>.
+          </p>
+          <p class="text-gray-600 mb-6 leading-relaxed" data-i18n-html="about.p3">
+            <strong>I am open to remote opportunities</strong> where I can contribute to high-impact projects with modern technologies.
+          </p>
+          <button onclick="DescargarCV(event)" class="btn-outline">
+            <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+          </button>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.personal">Personal Information</h3>
+          <div class="w-12 h-1 bg-primary mb-6"></div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><span class="font-semibold text-dark" data-i18n="about.email">Email:</span> <a href="mailto:joseca6520@gmail.com" class="text-primary hover:underline">joseca6520@gmail.com</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.address">Address:</span> Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
+            <li><span class="font-semibold text-dark" data-i18n="about.city">City:</span> Santa Cruz de la Sierra, Bolivia</li>
+            <li><span class="font-semibold text-dark" data-i18n="about.phone">Phone:</span> <a href="tel:+59170918874" class="text-primary hover:underline">+591 70918874</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.birth">Date of Birth:</span> 15/03/1999 (<span id="edad">27</span> <span data-i18n="about.yearsOld">years old</span>)</li>
+            <li><span class="font-semibold text-dark" data-i18n="about.github">GitHub:</span> <a href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" class="text-primary hover:underline break-all">github.com/jose-brucsoni</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.linkedin">LinkedIn:</span> <a href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" class="text-primary hover:underline break-all">linkedin.com/in/jose-carlo-suarez-brucsoni</a></li>
+          </ul>
+          <ul class="flex gap-3 mt-6">
+            <li><a class="social-link-dark" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener"><i class="ti-linkedin"></i></a></li>
+            <li><a class="social-link-dark" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener"><i class="ti-github"></i></a></li>
+            <li><a class="social-link-dark" href="mailto:joseca6520@gmail.com"><i class="ti-email"></i></a></li>
+            <li><a class="social-link-dark" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener"><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.knowledge">My Skills</h3>
+          <div class="w-12 h-1 bg-primary mb-6"></div>
+          <div class="space-y-5">
+            <div class="flex gap-4 min-w-0">
+              <i class="ti-server text-primary text-xl mt-1 shrink-0"></i>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-dark" data-i18n="about.k1Title">Backend & APIs</h4>
+                <p class="text-sm text-gray-500" data-i18n="about.k1Desc">C#, .NET, Python, REST APIs, scalable architecture</p>
+              </div>
+            </div>
+            <div class="flex gap-4 min-w-0">
+              <i class="ti-stats-up text-primary text-xl mt-1 shrink-0"></i>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-dark" data-i18n="about.k2Title">Databases & Optimization</h4>
+                <p class="text-sm text-gray-500" data-i18n="about.k2Desc">SQL Server, transactional queries, data integrity</p>
+              </div>
+            </div>
+            <div class="flex gap-4 min-w-0">
+              <i class="ti-bar-chart text-primary text-xl mt-1 shrink-0"></i>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-dark" data-i18n="about.k3Title">Data Analysis & Reporting</h4>
+                <p class="text-sm text-gray-500" data-i18n="about.k3Desc">Report automation and operational metrics</p>
+              </div>
+            </div>
+            <div class="flex gap-4 min-w-0">
+              <i class="ti-tablet text-primary text-xl mt-1 shrink-0"></i>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-dark" data-i18n="about.k4Title">Mobile Development</h4>
+                <p class="text-sm text-gray-500" data-i18n="about.k4Desc">Android (Java) + Firebase (Auth, Firestore, Realtime DB)</p>
+              </div>
+            </div>
+            <div class="flex gap-4 min-w-0">
+              <i class="ti-lock text-primary text-xl mt-1 shrink-0"></i>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-dark" data-i18n="about.k5Title">Cybersecurity</h4>
+                <p class="text-sm text-gray-500" data-i18n="about.k5Desc">Ethical hacking, security fundamentals, and technical workshops</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title text-center" data-i18n-html="achievements.title"><span>Achievements</span> Highlights</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-desktop text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a1Title">DANTE CXC Module</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a1Desc">The Accounts Receivable module digitized billing workflows for <strong>50+ users</strong>, with <strong>10,000+ daily records</strong> and <strong>90%</strong> less processing time.</p>
+        </div>
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-dashboard text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a2Title">SQL Server Optimization</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a2Desc">Critical queries from <strong>10 minutes to 10 seconds</strong>, improving performance by <strong>90%</strong>.</p>
+        </div>
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-bar-chart text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a3Title">Report Automation</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a3Desc"><strong>10+ reports</strong> for academic and financial leadership with actionable data.</p>
+        </div>
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-tablet text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a4Title">Android Apps</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a4Desc"><strong>120 downloads</strong> on Encuentrame and <strong>20 active patients</strong> on Anglarill-Fitness with Firebase.</p>
+        </div>
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-user text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a5Title">Technical Training</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a5Desc"><strong>10+ workshops</strong> on cybersecurity, ethical hacking, and Git for <strong>50+ students</strong>.</p>
+        </div>
+        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-server text-4xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a6Title">Infrastructure Management</h4>
+          <p class="text-sm text-gray-600" data-i18n-html="achievements.a6Desc"><strong>72 workstations</strong> with 90% availability and networking across <strong>21 labs</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-20 bg-white" id="service">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title" data-i18n-html="services.title"><span>My</span> Services</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-server text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s1Title">Backend Development</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s1Desc">Scalable systems with C#, .NET, Python, and REST APIs. Performance optimization and data architecture.</p>
+        </div>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-stats-up text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s2Title">Databases & SQL</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s2Desc">SQL Server design, administration, and optimization. High-performance transactional queries.</p>
+        </div>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-bar-chart text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s3Title">Data Analysis & Reporting</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s3Desc">Report automation and transforming complex data into actionable insights.</p>
+        </div>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-tablet text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s4Title">Mobile Development</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s4Desc">Native Android apps in Java with Firebase for real-time synchronization.</p>
+        </div>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-lock text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s5Title">Cybersecurity</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s5Desc">Vulnerability analysis, ethical hacking, and security training.</p>
+        </div>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
+          <i class="ti-write text-3xl text-primary mb-4 block"></i>
+          <h4 class="font-bold text-dark mb-2" data-i18n="services.s6Title">Technical Consulting</h4>
+          <p class="text-sm text-gray-600" data-i18n="services.s6Desc">Process automation, system optimization, and strategic decision support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio CTA -->
+  <section class="py-16 bg-dark text-center" id="portfolio">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-6" data-i18n="portfolioCta.title">Portfolio</h2>
+      <p class="text-gray-400 mb-8 max-w-xl mx-auto" data-i18n="portfolioCta.desc">Explore my featured projects: DANTE CXC Module, Encuentrame, and Anglarill-Fitness.</p>
+      <a href="portafolio.html" class="btn-primary">
+        <i class="ti-archive"></i> <span data-i18n="portfolioCta.btn">View Portfolio</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer.text">Jose Carlo Suarez Brucsoni | Backend Developer passionate about building solutions that create real impact</span></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Hidden CV for PDF -->
+  <div id="cv-pdf-container">
+    <div class="cv-pdf" id="cv-pdf">
+      <div class="cv-header">
+        <h1>Jose Carlo Suarez Brucsoni</h1>
+        <h2>Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus</h2>
+        <div class="cv-contact">
+          <span><strong data-i18n="cv.location">Location:</strong> Santa Cruz de la Sierra, Bolivia</span>
+          <span><strong data-i18n="cv.email">Email:</strong> joseca6520@gmail.com</span>
+          <span><strong data-i18n="cv.phone">Phone:</strong> +591 70918874</span>
+          <span><strong data-i18n="cv.birth">Birth:</strong> 15/03/1999 (<span id="edad-cv">27</span> <span data-i18n="cv.yearsOld">years old</span>)</span>
+          <span><strong>LinkedIn:</strong> linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272</span>
+          <span><strong>GitHub:</strong> github.com/jose-brucsoni</span>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.profileTitle">Professional Profile</div>
+        <p style="text-align: justify; font-size: 13px; line-height: 1.6;" data-i18n-html="cv.profile">
+          Backend Developer with <strong>2+ years of experience</strong> building and optimizing data-driven systems with <strong>C# (.NET)</strong> and <strong>SQL Server</strong>. Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing workflows for <strong>50+ users</strong> with a <strong>90%</strong> reduction in manual processing. Experience in SQL optimization (from <strong>10 minutes to 10 seconds</strong>), report automation, and Android development with Firebase. Expanding expertise in <strong>Python</strong>, data analysis, and <strong>cybersecurity</strong>. <strong>Open to remote opportunities.</strong>
+        </p>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.experienceTitle">Professional Experience</div>
+
+        <div class="cv-experience-item">
+          <h3 data-i18n="cv.exp1Title">Systems Analyst</h3>
+          <div class="company" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
+          <div class="date" data-i18n="cv.exp1Date">July 2023 - Present (3 years)</div>
+          <ul>
+            <li data-i18n-html="cv.exp1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing workflows for <strong>50+ users</strong></li>
+            <li data-i18n-html="cv.exp1b2"><strong>90%</strong> reduction in manual processing time</li>
+            <li data-i18n-html="cv.exp1b3">System with <strong>10,000+ daily records</strong></li>
+            <li data-i18n-html="cv.exp1b4">SQL Server optimization: queries from <strong>10 minutes to 10 seconds</strong></li>
+            <li data-i18n-html="cv.exp1b5">Academic database with <strong>20+ tables</strong> and <strong>10,000+ records</strong></li>
+            <li data-i18n-html="cv.exp1b6">Designed and automated <strong>10+ analytical reports</strong> for academic and financial leadership</li>
+          </ul>
+        </div>
+
+        <div class="cv-experience-item">
+          <h3 data-i18n="cv.exp2Title">Networks & Systems Lab Assistant</h3>
+          <div class="company" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
+          <div class="date" data-i18n="cv.exp2Date">August 2020 - June 2023 (2 years 11 months)</div>
+          <ul>
+            <li data-i18n-html="cv.exp2b1">Technical support and inventory web system: <strong>80%</strong> less manual workload</li>
+            <li data-i18n-html="cv.exp2b2">Maintenance of <strong>72 workstations</strong> with <strong>90%</strong> availability</li>
+            <li data-i18n-html="cv.exp2b3">Network infrastructure across <strong>21 labs</strong></li>
+            <li data-i18n-html="cv.exp2b4"><strong>10+ workshops</strong> on cybersecurity, ethical hacking, and Git</li>
+            <li data-i18n-html="cv.exp2b5">Trained <strong>50+ students</strong></li>
+          </ul>
+        </div>
+
+        <div class="cv-experience-item">
+          <h3 data-i18n="cv.exp3Title">Freelance - Independent Developer</h3>
+          <div class="company" data-i18n="cv.exp3Company">Self-employed</div>
+          <div class="date" data-i18n="cv.exp3Date">January 2019 - July 2020 (1 year 7 months)</div>
+          <ul>
+            <li data-i18n-html="cv.exp3b1"><strong>Encuentrame</strong>: Android classifieds app with <strong>120 downloads</strong>. Firebase Auth and Firestore. Project paused, code on GitHub</li>
+            <li data-i18n-html="cv.exp3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager with <strong>20 active patients</strong>. Firebase Realtime Database</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.educationTitle">Education</div>
+        <div class="cv-education-item">
+          <h3 data-i18n="cv.edu1Title">Systems Engineering</h3>
+          <div class="institution" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
+          <div class="date" data-i18n="resume.edu1Date">2021 - December 2026</div>
+        </div>
+        <div class="cv-education-item">
+          <h3 data-i18n="cv.edu2Title">High School Diploma</h3>
+          <div class="institution" data-i18n="resume.edu2School">Henry Prince School</div>
+          <div class="date" data-i18n="resume.edu2Date">2016</div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.skillsTitle">Technical Skills</div>
+        <div class="cv-skills">
+          <div class="cv-skill-item"><h4>C# / .NET</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:95%"></div></div></div>
+          <div class="cv-skill-item"><h4>SQL Server</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:95%"></div></div></div>
+          <div class="cv-skill-item"><h4>Python</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:85%"></div></div></div>
+          <div class="cv-skill-item"><h4>REST APIs</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:80%"></div></div></div>
+          <div class="cv-skill-item"><h4>Firebase</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:75%"></div></div></div>
+          <div class="cv-skill-item"><h4>Git</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:85%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.highlightsTitle">Key Achievements</div>
+        <div class="cv-projects">
+          <div class="cv-project-item">
+            <h4 data-i18n="cv.hl1Title">DANTE CXC Module</h4>
+            <p data-i18n-html="cv.hl1Desc"><strong>50+ module users</strong>, <strong>10,000 records/day</strong>, <strong>90%</strong> time reduction</p>
+          </div>
+          <div class="cv-project-item">
+            <h4 data-i18n="cv.hl2Title">SQL Optimization</h4>
+            <p data-i18n-html="cv.hl2Desc">Queries from <strong>10 min to 10 sec</strong></p>
+          </div>
+          <div class="cv-project-item">
+            <h4 data-i18n="cv.hl3Title">Reports</h4>
+            <p data-i18n-html="cv.hl3Desc"><strong>10+ automated</strong> reports</p>
+          </div>
+          <div class="cv-project-item">
+            <h4 data-i18n="cv.hl4Title">Android Apps</h4>
+            <p data-i18n-html="cv.hl4Desc"><strong>120 downloads</strong>, <strong>20 active patients</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title" data-i18n="cv.languagesTitle">Languages</div>
+        <div class="cv-skills">
+          <div class="cv-skill-item"><h4 data-i18n="resume.langEsName">Spanish</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:100%"></div></div></div>
+          <div class="cv-skill-item"><h4 data-i18n="resume.langEnName">English</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:50%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
