@@ -14,17 +14,41 @@ function t(key, lang) {
   return value;
 }
 
+function hasStoredLang() {
+  const stored = localStorage.getItem('lang');
+  return stored === 'es' || stored === 'en';
+}
+
 function getLang() {
   const stored = localStorage.getItem('lang');
   return stored === 'es' || stored === 'en' ? stored : DEFAULT_LANG;
 }
 
 function updateLangSwitcherUI(lang) {
-  document.querySelectorAll('[data-lang]').forEach((btn) => {
+  document.querySelectorAll('#lang-switcher [data-lang]').forEach((btn) => {
     const isActive = btn.getAttribute('data-lang') === lang;
     btn.classList.toggle('lang-btn-active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
   });
+}
+
+function showLangGate() {
+  const gate = document.getElementById('lang-gate');
+  if (!gate) return false;
+  gate.hidden = false;
+  gate.classList.remove('hidden');
+  document.body.classList.add('lang-gate-open');
+  const firstBtn = gate.querySelector('[data-lang]');
+  if (firstBtn) firstBtn.focus();
+  return true;
+}
+
+function hideLangGate() {
+  const gate = document.getElementById('lang-gate');
+  if (!gate) return;
+  gate.hidden = true;
+  gate.classList.add('hidden');
+  document.body.classList.remove('lang-gate-open');
 }
 
 function applyLanguage(lang) {
@@ -67,6 +91,7 @@ function setLang(lang) {
   const nextLang = lang === 'es' ? 'es' : 'en';
   localStorage.setItem('lang', nextLang);
   applyLanguage(nextLang);
+  hideLangGate();
 }
 
 function initLangSwitcher() {
@@ -78,12 +103,23 @@ function initLangSwitcher() {
 }
 
 function initI18n() {
-  currentLang = getLang();
-  applyLanguage(currentLang);
   initLangSwitcher();
+
+  if (hasStoredLang()) {
+    applyLanguage(getLang());
+    hideLangGate();
+    return;
+  }
+
+  if (document.getElementById('lang-gate')) {
+    showLangGate();
+    return;
+  }
+
+  applyLanguage(DEFAULT_LANG);
 }
 
-window.i18n = { getLang, setLang, t, applyLanguage };
+window.i18n = { getLang, setLang, t, applyLanguage, hasStoredLang };
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initI18n);

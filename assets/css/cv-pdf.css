@@ -12,17 +12,25 @@
     z-index: -1;
 }
 
-/* Cuando se muestra para generar PDF, estos estilos se sobrescriben con JavaScript */
+/* Cuando se muestra para generar PDF */
 #cv-pdf-container[data-generating="true"] {
     display: block !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: translateX(-100vw) !important;
+    width: 210mm !important;
     visibility: visible !important;
     opacity: 1 !important;
+    z-index: -1 !important;
+    overflow: visible !important;
+    height: auto !important;
 }
 
 .cv-pdf {
     width: 210mm; /* Ancho A4 */
     max-width: 210mm;
-    min-height: 297mm; /* Alto A4 */
+    min-height: auto;
     padding: 12mm 15mm;
     margin: 0;
     background: #ffffff;
@@ -30,7 +38,7 @@
     color: #333;
     line-height: 1.4;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 
@@ -83,10 +91,11 @@
 .cv-section {
     margin-bottom: 12px;
     margin-top: 0;
+    break-inside: avoid;
     page-break-inside: avoid;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .cv-section-title {

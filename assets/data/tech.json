@@ -1,0 +1,190 @@
+{
+  "csharp": {
+    "label": "C#",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+  },
+  "dotnet": {
+    "label": ".NET Core C#",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+  },
+  "blazor": {
+    "label": "Blazor",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg"
+  },
+  "sqlserver": {
+    "label": "SQL Server",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+  },
+  "powerbi": {
+    "label": "Power BI",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg"
+  },
+  "python": {
+    "label": "Python",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+  },
+  "java": {
+    "label": "Java",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+  },
+  "android": {
+    "label": "Android",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+  },
+  "androidstudio": {
+    "label": "Android Studio",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+  },
+  "firebase": {
+    "label": "Firebase",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  "firebaseRtdb": {
+    "label": "Firebase RTDB",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  "git": {
+    "label": "Git",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+  },
+  "github": {
+    "label": "GitHub",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+  },
+  "html": {
+    "label": "HTML",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+  },
+  "css": {
+    "label": "CSS",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+  },
+  "windows": {
+    "label": "Windows",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+  },
+  "windowsserver": {
+    "label": "Windows Server 2022",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+  },
+  "php": {
+    "label": "PHP",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+  },
+  "laravel": {
+    "label": "Laravel",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+  },
+  "django": {
+    "label": "Django",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+  },
+  "linux": {
+    "label": "Linux",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+  },
+  "archlinux": {
+    "label": "Arch Linux",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg"
+  },
+  "kvm": {
+    "label": "KVM",
+    "icon": "generic"
+  },
+  "vmware": {
+    "label": "VMware",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vmware.svg"
+  },
+  "mikrotik": {
+    "label": "MikroTik",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mikrotik.svg"
+  },
+  "figma": {
+    "label": "Figma",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+  },
+  "notion": {
+    "label": "Notion",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
+  },
+  "jira": {
+    "label": "Jira",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+  },
+  "trello": {
+    "label": "Trello",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+  },
+  "tailwind": {
+    "label": "Tailwind",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+  },
+  "bootstrap": {
+    "label": "Bootstrap",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+  },
+  "chartjs": {
+    "label": "Chart.js",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg"
+  },
+  "apexcharts": {
+    "label": "ApexCharts",
+    "icon": "generic"
+  },
+  "picoctf": {
+    "label": "PicoCTF",
+    "icon": "generic"
+  },
+  "githubwriteups": {
+    "label": "GitHub Writeups",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+  },
+  "kalilinux": {
+    "label": "Kali Linux",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kalilinux/kalilinux-original.svg"
+  },
+  "scrum": {
+    "label": "Scrum",
+    "icon": "generic"
+  },
+  "kanban": {
+    "label": "Kanban",
+    "icon": "generic"
+  },
+  "others": {
+    "label": "Others",
+    "icon": "generic"
+  },
+  "rest": {
+    "label": "REST APIs",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg"
+  },
+  "docker": {
+    "label": "Docker",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+  },
+  "kubernetes": {
+    "label": "Kubernetes",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+  },
+  "cloudservices": {
+    "label": "Cloud Services",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+  },
+  "vscode": {
+    "label": "VS Code",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+  },
+  "visualstudio": {
+    "label": "Visual Studio",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+  },
+  "cursor": {
+    "label": "Cursor",
+    "icon": "generic"
+  },
+  "ethicalhacking": {
+    "label": "Ethical Hacking",
+    "icon": "generic"
+  }
+}

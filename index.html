@@ -13,25 +13,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/cv-pdf.css">
 </head>
 <body class="bg-gray-50" id="home">
 
+  <div id="lang-gate" class="lang-gate hidden" hidden role="dialog" aria-modal="true" aria-labelledby="lang-gate-title">
+    <div class="lang-gate-card">
+      <h2 id="lang-gate-title" class="text-2xl font-bold text-dark mb-2">Choose your language / Elige tu idioma</h2>
+      <p class="text-gray-500 text-sm mb-6">Select a language to continue. / Selecciona un idioma para continuar.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <button type="button" data-lang="en" class="lang-gate-btn">English</button>
+        <button type="button" data-lang="es" class="lang-gate-btn">Español</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero -->
-  <header class="hero-bg relative min-h-[80vh] flex items-center text-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 py-20 sm:py-24 md:py-32 w-full">
-      <p class="text-lg md:text-2xl font-light opacity-90 mb-2" data-i18n="hero.greeting">Hi, I'm</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 break-words">Jose Brucsoni</h1>
+  <header id="hero" class="hero-bg relative min-h-screen min-h-[100dvh] lg:min-h-[80vh] flex items-center text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-28 lg:py-32 w-full">
+      <p class="text-base sm:text-lg md:text-2xl font-light opacity-90 mb-2" data-i18n="hero.greeting">Hi, I'm</p>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-3 sm:mb-4 break-words">Jose Brucsoni</h1>
       <p class="text-sm sm:text-base md:text-lg font-medium opacity-90 max-w-3xl mb-4 normal-case leading-relaxed break-words" data-i18n="hero.tagline">
         Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus
       </p>
-      <p class="text-base md:text-lg opacity-80 max-w-2xl mb-6 break-words" data-i18n="hero.subtitle">
-        2+ years building high-impact backend systems. Open to remote opportunities.
-      </p>
-      <button onclick="DescargarCV(event)" class="btn-primary mb-8">
-        <i class="ti-printer"></i> <span data-i18n="hero.downloadCv">Download CV</span>
-      </button>
-      <ul class="flex flex-wrap gap-3">
+      <a href="Profile.pdf" download="Profile.pdf" class="btn-primary mb-6 sm:mb-8">
+        <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+      </a>
+      <ul class="flex flex-wrap gap-2 sm:gap-3">
         <li><a class="social-link" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
         <li><a class="social-link" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti-github"></i></a></li>
         <li><a class="social-link" href="mailto:joseca6520@gmail.com" aria-label="Email"><i class="ti-email"></i></a></li>
@@ -41,33 +48,36 @@
   </header>
 
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+  <nav id="site-nav" class="nav-reveal z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 relative">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="#home" class="flex items-center gap-3 min-w-0">
-          <img src="assets/imgs/avatar.jpg" alt="Jose Carlo Suarez Brucsoni" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/30 shrink-0">
+      <div class="flex items-center justify-between h-14 lg:h-20">
+        <a href="#home" class="flex items-center gap-2 sm:gap-3 min-w-0">
+          <img src="assets/imgs/avatar.jpg" alt="Jose Carlo Suarez Brucsoni" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover ring-2 ring-primary/30 shrink-0">
           <div class="hidden sm:block min-w-0">
-            <p class="font-display font-semibold text-dark text-sm leading-tight truncate max-w-[140px] md:max-w-none">Jose Carlo Suarez Brucsoni</p>
+            <p class="font-display font-semibold text-dark text-xs sm:text-sm leading-tight truncate max-w-[120px] md:max-w-none">Jose Carlo Suarez Brucsoni</p>
             <p class="text-xs text-gray-500" data-i18n="nav.role">Backend Developer</p>
           </div>
         </a>
 
-        <div class="flex items-center gap-2">
-          <div id="lang-switcher" class="flex items-center gap-1">
-            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">English</button>
+        <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+          <div id="lang-switcher" class="flex items-center gap-0.5 sm:gap-1">
+            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">
+              <span class="lg:hidden">EN</span><span class="hidden lg:inline">English</span>
+            </button>
             <span class="text-gray-300">|</span>
-            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">Español</button>
+            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">
+              <span class="lg:hidden">ES</span><span class="hidden lg:inline">Español</span>
+            </button>
           </div>
-          <button id="nav-toggle" class="lg:hidden p-2 text-gray-700" data-i18n-aria="nav.openMenu" aria-label="Open menu" aria-expanded="false">
-            <i class="ti-menu text-2xl"></i>
+          <button id="nav-toggle" class="lg:hidden p-1.5 text-gray-700" data-i18n-aria="nav.openMenu" aria-label="Open menu" aria-expanded="false">
+            <i class="ti-menu text-xl"></i>
           </button>
         </div>
 
-        <ul id="nav-menu" class="hidden lg:flex items-center gap-1 absolute lg:static top-full left-0 right-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-t lg:border-0 border-gray-100 flex-col lg:flex-row p-4 lg:p-0">
+        <ul id="nav-menu" class="hidden lg:flex items-center gap-1 absolute lg:static top-full left-0 right-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-t lg:border-0 border-gray-100 flex-col lg:flex-row p-3 lg:p-0 max-w-full">
           <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
           <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
           <li><a href="#resume" class="nav-link" data-i18n="nav.experience">Experience</a></li>
-          <li><a href="#service" class="nav-link" data-i18n="nav.services">Services</a></li>
           <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
           <li><a href="#about" class="nav-link text-primary font-semibold" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -76,88 +86,121 @@
   </nav>
 
   <!-- Experience & Skills -->
-  <section class="py-20" id="resume">
+  <section class="section-reveal py-12 sm:py-16 lg:py-20" id="resume">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title" data-i18n-html="resume.title">Experience <span>&</span> Skills</h2>
-
-      <div class="grid lg:grid-cols-3 gap-8">
+      <div class="grid lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         <!-- Experience -->
         <div class="card-panel">
-          <h3 class="text-xl font-bold text-dark mb-4 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.experience">Experience</h3>
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.job1Date">July 2023 - Present</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
-            <p class="text-gray-500 text-sm mb-3" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1Backend">Backend & Software Development</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n-html="resume.job1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing and financial management workflows</li>
-              <li data-i18n="resume.job1b2">90% reduction in manual processing time for 50+ active users</li>
-              <li data-i18n="resume.job1b3">System handling 10,000+ daily records with high reliability</li>
-            </ul>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1db">Database Engineering & SQL Optimization</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n="resume.job1d1">Academic database with 20+ tables and 10,000+ records in SQL Server</li>
-              <li data-i18n="resume.job1d2">Optimized queries: from 10 minutes to 10 seconds (90% improvement)</li>
-            </ul>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1data">Data Analysis & Reporting</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n="resume.job1a1">10+ automated analytical reports for academic and financial leadership</li>
-              <li data-i18n="resume.job1a2">Retention, payment, and enrollment metrics for strategic decisions</li>
-            </ul>
+          <div class="flex items-start justify-between gap-2 mb-4">
+            <h3 class="text-xl font-bold text-dark pb-2 border-b-2 border-primary inline-block" data-i18n="resume.experience">Work Experience</h3>
+            <p id="experience-total" class="experience-total text-right max-w-[55%] shrink-0"></p>
           </div>
 
-          <hr class="border-gray-200 my-6">
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.job2Date">August 2020 - June 2023</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
-            <p class="text-gray-500 text-sm mb-3" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2Auto">Process Automation & Web Development</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n="resume.job2a1">Web system for technical support and inventory (80% less manual workload)</li>
-            </ul>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2infra">Infrastructure & Systems Management</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n="resume.job2i1">Maintenance of 72 workstations with 90% availability</li>
-              <li data-i18n="resume.job2i2">Network infrastructure across 21 computer labs</li>
-            </ul>
-
-            <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2cyber">Cybersecurity & Technical Training</p>
-            <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-              <li data-i18n="resume.job2c1">10+ workshops on cybersecurity, ethical hacking, and Git</li>
-              <li data-i18n="resume.job2c2">Trained 50+ students</li>
-            </ul>
-          </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div>
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.job3Date">January 2019 - July 2020</p>
+          <div class="experience-job mb-6" data-start="2019-01-01" data-end="2020-08-01">
+            <p class="text-primary font-semibold text-sm">
+              <span data-i18n="resume.job3Date">January 2019 - July 2020</span><span class="experience-duration"></span>
+            </p>
             <p class="font-bold text-dark mt-1" data-i18n="resume.job3Title">Freelance - Independent Developer</p>
-            <ul class="text-sm text-gray-600 space-y-2 mt-2 list-disc list-outside pl-4">
-              <li data-i18n-html="resume.job3b1"><strong>Encuentrame</strong>: Android classifieds app, 120 local downloads. Project paused, code on GitHub</li>
-              <li data-i18n-html="resume.job3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager for 20 active patients with Firebase</li>
-            </ul>
+            <div class="flex flex-wrap gap-2 mt-3" data-tech="java,android,firebase,figma"></div>
+            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
+            <div class="experience-details hidden">
+              <ul class="text-sm text-gray-600 space-y-2 mt-2 list-disc list-outside pl-4">
+                <li data-i18n-html="resume.job3b1"><strong>Encuentrame</strong>: Android classifieds app, 120 local downloads. Project paused, code on GitHub</li>
+                <li data-i18n-html="resume.job3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager for 20 active patients with Firebase</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="experience-job mb-6" data-start="2020-08-01" data-end="2023-07-01">
+            <p class="text-primary font-semibold text-sm">
+              <span data-i18n="resume.job2Date">August 2020 - June 2023</span><span class="experience-duration"></span>
+            </p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+            <div class="flex flex-wrap gap-2 mt-3" data-tech="laravel,linux,mikrotik"></div>
+            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
+            <div class="experience-details hidden">
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2Auto">Process Automation & Web Development</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n="resume.job2a1">Web system for technical support and inventory (80% less manual workload)</li>
+              </ul>
+
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2infra">Infrastructure & Systems Management</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n="resume.job2i1">Maintenance of 72 workstations with 90% availability</li>
+                <li data-i18n="resume.job2i2">Network infrastructure across 21 computer labs</li>
+              </ul>
+
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2cyber">Cybersecurity & Technical Training</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n="resume.job2c1">10+ workshops on cybersecurity, ethical hacking, and Git</li>
+                <li data-i18n="resume.job2c2">Trained 50+ students</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="experience-job mb-6" data-start="2023-07-01" data-end="">
+            <p class="text-primary font-semibold text-sm">
+              <span data-i18n="resume.job1Date">July 2023 - Present</span><span class="experience-duration"></span>
+            </p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+            <div class="flex flex-wrap gap-2 mt-3" data-tech="blazor,sqlserver,powerbi"></div>
+            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
+            <div class="experience-details hidden">
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1Backend">Backend & Software Development</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n-html="resume.job1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing and financial management workflows</li>
+                <li data-i18n="resume.job1b2">90% reduction in manual processing time for 50+ active users</li>
+                <li data-i18n="resume.job1b3">System handling 10,000+ daily records with high reliability</li>
+              </ul>
+
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1db">Database Engineering & SQL Optimization</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n="resume.job1d1">Academic database with 20+ tables and 10,000+ records in SQL Server</li>
+                <li data-i18n="resume.job1d2">Optimized queries: from 10 minutes to 10 seconds (90% improvement)</li>
+              </ul>
+
+              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1data">Data Analysis & Reporting</p>
+              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
+                <li data-i18n="resume.job1a1">10+ automated analytical reports for academic and financial leadership</li>
+                <li data-i18n="resume.job1a2">Retention, payment, and enrollment metrics for strategic decisions</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="mb-6">
+            <p class="font-bold text-dark" data-i18n="resume.teachingTitle">Teaching</p>
+            <p class="text-primary font-semibold text-sm mt-1" data-i18n="resume.teachingPeriod">August 2023</p>
+            <p class="text-sm text-gray-600 mt-2" data-i18n-html="resume.teachingDesc">During my time as Networks &amp; Systems Lab Assistant, I led <strong>workshops</strong> on cybersecurity and ethical hacking.</p>
+            <div class="flex flex-wrap gap-2 mt-3" data-tech="kalilinux"></div>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="experience-job mb-0">
+            <button type="button" class="experience-toggle experience-toggle-static" data-toggle-static aria-expanded="false">
+              <span class="experience-toggle-title" data-i18n="resume.personalProjectsTitle">Personal Projects</span>
+              <span class="experience-toggle-hint" data-i18n="resume.expand">Expand</span>
+            </button>
+            <div class="experience-details hidden mt-2">
+              <p class="text-primary font-semibold text-sm" data-i18n="resume.personalProjectsPeriod">Indefinite</p>
+              <p class="text-sm text-gray-600 mt-2" data-i18n="resume.personalProjectsDesc">Projects I did at university or in my free time to practice, learn, and solve a proposed problem</p>
+              <div class="flex flex-wrap gap-2 mt-3" data-tech="django,others"></div>
+              <a href="#" class="inline-flex items-center gap-1 text-sm text-primary font-semibold mt-3 hover:underline" data-i18n="resume.viewProject">View projects</a>
+            </div>
           </div>
         </div>
 
         <!-- Education -->
         <div class="card-panel">
           <h3 class="text-xl font-bold text-dark mb-4 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.education">Education</h3>
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu1Date">2021 - December 2026</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.edu1Title">Systems Engineering</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-          </div>
-
-          <hr class="border-gray-200 my-6">
 
           <div class="mb-6">
             <p class="text-primary font-semibold text-sm" data-i18n="resume.edu2Date">2016</p>
@@ -167,76 +210,97 @@
 
           <hr class="border-gray-200 my-6">
 
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu1Date">2021 - December 2026</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.edu1Title">Systems Engineering</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
           <div>
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.certDate">Ongoing</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.certTitle">Certificates & Recognition</p>
-            <p class="text-gray-600 text-sm mt-2" data-i18n="resume.certDesc">Self-taught learner focused on modern technologies, cybersecurity, and data analysis.</p>
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.certDate">Currently</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.certTitle">Practicing</p>
+            <div class="flex flex-wrap gap-2 mt-3" data-tech="kubernetes,cloudservices"></div>
           </div>
 
           <hr class="border-gray-200 my-6">
 
           <div>
             <p class="text-primary font-semibold text-sm" data-i18n="resume.languages">Languages</p>
-            <div class="space-y-3 mt-3">
-              <div>
-                <div class="flex justify-between text-sm mb-1">
-                  <span class="font-medium text-dark" data-i18n="resume.langEsName">Spanish</span>
-                  <span class="text-gray-400" data-i18n="resume.native">Native</span>
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:100%"></div></div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1">
-                  <span class="font-medium text-dark" data-i18n="resume.langEnName">English</span>
-                  <span class="text-gray-400" data-i18n="resume.intermediate">Intermediate</span>
-                </div>
-                <div class="skill-bar"><div class="skill-bar-fill" style="width:50%"></div></div>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-4">
+            <div class="flex flex-wrap gap-2 mt-3">
               <span class="tech-tag" data-i18n="resume.langEs">Spanish — Native</span>
-              <span class="tech-tag" data-i18n="resume.langEn">English — Intermediate</span>
+              <span class="tech-tag" data-i18n="resume.langEn">English — B2</span>
             </div>
           </div>
         </div>
 
-        <!-- Skills -->
+        <!-- Tools -->
         <div class="card-panel">
-          <h3 class="text-xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.skills">Technical Skills</h3>
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>C# / .NET</span><span class="text-gray-400">95%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+          <h3 class="text-xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.skills">Tools and technologies I know</h3>
+          <div class="space-y-5">
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsOrg">Organization</p>
+              <div class="space-y-3">
+                <div class="tools-subgroup">
+                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsPersonal">Personal</p>
+                  <div class="flex flex-wrap gap-2" data-tech="notion"></div>
+                </div>
+                <div class="tools-subgroup">
+                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsTeams">Teams</p>
+                  <div class="flex flex-wrap gap-2" data-tech="jira,trello"></div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>SQL Server</span><span class="text-gray-400">95%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsMethods">Work methodologies</p>
+              <div class="flex flex-wrap gap-2" data-tech="scrum,kanban"></div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>Python</span><span class="text-gray-400">85%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsCodeMgmt">Code management</p>
+              <div class="flex flex-wrap gap-2" data-tech="git,github"></div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>REST APIs</span><span class="text-gray-400">80%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsLangs">Frameworks</p>
+              <div class="space-y-3">
+                <div class="tools-subgroup">
+                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsFrontend">Frontend</p>
+                  <div class="flex flex-wrap gap-2" data-tech="tailwind,bootstrap"></div>
+                </div>
+                <div class="tools-subgroup">
+                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsBackend">Backend</p>
+                  <div class="flex flex-wrap gap-2" data-tech="laravel,django,dotnet"></div>
+                </div>
+                <div class="tools-subgroup">
+                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsFullStack">Full stack</p>
+                  <div class="flex flex-wrap gap-2" data-tech="blazor"></div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>Firebase</span><span class="text-gray-400">75%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsInfra">Infrastructure</p>
+              <div class="flex flex-wrap gap-2" data-tech="archlinux,windowsserver,kvm,vmware,mikrotik"></div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>Java (Android)</span><span class="text-gray-400">70%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsDatabase">Database</p>
+              <div class="flex flex-wrap gap-2" data-tech="sqlserver"></div>
             </div>
-            <div>
-              <div class="flex justify-between text-sm mb-1"><span>Git</span><span class="text-gray-400">85%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsCyber">Cybersecurity</p>
+              <div class="flex flex-wrap gap-2" data-tech="picoctf,githubwriteups,kalilinux"></div>
             </div>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="tech-tag" data-i18n="resume.tagFullStack">Full Stack Development</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Firebase</span>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsData">Data analysis and presentation</p>
+              <div class="flex flex-wrap gap-2" data-tech="powerbi,chartjs,apexcharts"></div>
+            </div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsMobile">Mobile development</p>
+              <div class="flex flex-wrap gap-2" data-tech="androidstudio,java,firebase"></div>
+            </div>
+            <div class="tools-group">
+              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsEditors">Code editors</p>
+              <div class="flex flex-wrap gap-2" data-tech="visualstudio,vscode,cursor"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -246,7 +310,7 @@
   <!-- Stats -->
   <section class="py-12 sm:py-16 bg-dark text-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         <div class="stat-card">
           <i class="ti-layers-alt"></i>
           <div class="stat-card-content">
@@ -262,17 +326,10 @@
           </div>
         </div>
         <div class="stat-card">
-          <i class="ti-bookmark-alt"></i>
+          <i class="ti-cup"></i>
           <div class="stat-card-content">
-            <p class="stat-card-value">+10</p>
-            <p class="stat-card-label" data-i18n="stats.reports">Automated Reports</p>
-          </div>
-        </div>
-        <div class="stat-card">
-          <i class="ti-user"></i>
-          <div class="stat-card-content">
-            <p class="stat-card-value">+50</p>
-            <p class="stat-card-label" data-i18n="stats.users">DANTE CXC Module Users</p>
+            <p class="stat-card-value">1000+</p>
+            <p class="stat-card-label" data-i18n="stats.coffee">Cups of Coffee</p>
           </div>
         </div>
       </div>
@@ -280,176 +337,115 @@
   </section>
 
   <!-- About -->
-  <section class="py-20 bg-white" id="about">
+  <section class="py-12 sm:py-16 lg:py-20 bg-white" id="about">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid lg:grid-cols-3 gap-6 lg:gap-10">
+      <div class="max-w-2xl">
+        <h3 class="text-xl sm:text-2xl font-bold text-dark mb-4" data-i18n="about.personal">Personal Information</h3>
+        <div class="w-12 h-1 bg-primary mb-6"></div>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li><span class="font-semibold text-dark" data-i18n="about.email">Email:</span> <a href="mailto:joseca6520@gmail.com" class="text-primary hover:underline">joseca6520@gmail.com</a></li>
+          <li><span class="font-semibold text-dark" data-i18n="about.address">Address:</span> Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
+          <li><span class="font-semibold text-dark" data-i18n="about.city">City:</span> Santa Cruz de la Sierra, Bolivia</li>
+          <li><span class="font-semibold text-dark" data-i18n="about.phone">Phone:</span> <a href="tel:+59170918874" class="text-primary hover:underline">+591 70918874</a></li>
+          <li><span class="font-semibold text-dark" data-i18n="about.birth">Date of Birth:</span> 15/03/1999 (<span id="edad">27</span> <span data-i18n="about.yearsOld">years old</span>)</li>
+          <li><span class="font-semibold text-dark" data-i18n="about.github">GitHub:</span> <a href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" class="text-primary hover:underline break-all">github.com/jose-brucsoni</a></li>
+          <li><span class="font-semibold text-dark" data-i18n="about.linkedin">LinkedIn:</span> <a href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" class="text-primary hover:underline break-all">linkedin.com/in/jose-carlo-suarez-brucsoni</a></li>
+          <li><span class="font-semibold text-dark" data-i18n="about.license">Driver's license:</span> <span data-i18n="about.licenseValue">Categories A and M</span></li>
+        </ul>
+        <ul class="flex gap-3 mt-6">
+          <li><a class="social-link-dark" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener"><i class="ti-linkedin"></i></a></li>
+          <li><a class="social-link-dark" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener"><i class="ti-github"></i></a></li>
+          <li><a class="social-link-dark" href="mailto:joseca6520@gmail.com"><i class="ti-email"></i></a></li>
+          <li><a class="social-link-dark" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener"><i class="ti-instagram"></i></a></li>
+        </ul>
+        <a href="Profile.pdf" download="Profile.pdf" class="btn-outline mt-8 inline-flex">
+          <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div>
-          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.who">Who am I?</h3>
-          <div class="w-12 h-1 bg-primary mb-6"></div>
-          <p class="text-primary font-semibold mb-4" data-i18n="about.roleLine">Backend Developer | C# (.NET) & Python | SQL & Data Systems</p>
-          <p class="text-gray-600 mb-4 leading-relaxed" data-i18n-html="about.p1">
-            Backend Developer with <strong>2+ years of experience</strong> building and optimizing data-driven systems with <strong>C# (.NET)</strong> and <strong>SQL Server</strong>. I designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, which digitized billing workflows for <strong>50+ users</strong> and reduced manual processing by <strong>90%</strong>.
-          </p>
-          <p class="text-gray-600 mb-4 leading-relaxed" data-i18n-html="about.p2">
-            My experience spans database optimization (queries from <strong>10 minutes to 10 seconds</strong>), report automation, and Android app development with Firebase. I am currently expanding my expertise in <strong>Python</strong>, data analysis, and <strong>cybersecurity</strong>.
-          </p>
-          <p class="text-gray-600 mb-6 leading-relaxed" data-i18n-html="about.p3">
-            <strong>I am open to remote opportunities</strong> where I can contribute to high-impact projects with modern technologies.
-          </p>
-          <button onclick="DescargarCV(event)" class="btn-outline">
-            <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
-          </button>
-        </div>
+  <!-- Competitions -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-gray-50" id="competitions">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="section-title text-center" data-i18n-html="competitions.title"><span>Competition</span> participation</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
-        <div>
-          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.personal">Personal Information</h3>
-          <div class="w-12 h-1 bg-primary mb-6"></div>
-          <ul class="space-y-3 text-sm text-gray-600">
-            <li><span class="font-semibold text-dark" data-i18n="about.email">Email:</span> <a href="mailto:joseca6520@gmail.com" class="text-primary hover:underline">joseca6520@gmail.com</a></li>
-            <li><span class="font-semibold text-dark" data-i18n="about.address">Address:</span> Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
-            <li><span class="font-semibold text-dark" data-i18n="about.city">City:</span> Santa Cruz de la Sierra, Bolivia</li>
-            <li><span class="font-semibold text-dark" data-i18n="about.phone">Phone:</span> <a href="tel:+59170918874" class="text-primary hover:underline">+591 70918874</a></li>
-            <li><span class="font-semibold text-dark" data-i18n="about.birth">Date of Birth:</span> 15/03/1999 (<span id="edad">27</span> <span data-i18n="about.yearsOld">years old</span>)</li>
-            <li><span class="font-semibold text-dark" data-i18n="about.github">GitHub:</span> <a href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" class="text-primary hover:underline break-all">github.com/jose-brucsoni</a></li>
-            <li><span class="font-semibold text-dark" data-i18n="about.linkedin">LinkedIn:</span> <a href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" class="text-primary hover:underline break-all">linkedin.com/in/jose-carlo-suarez-brucsoni</a></li>
-          </ul>
-          <ul class="flex gap-3 mt-6">
-            <li><a class="social-link-dark" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener"><i class="ti-linkedin"></i></a></li>
-            <li><a class="social-link-dark" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener"><i class="ti-github"></i></a></li>
-            <li><a class="social-link-dark" href="mailto:joseca6520@gmail.com"><i class="ti-email"></i></a></li>
-            <li><a class="social-link-dark" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener"><i class="ti-instagram"></i></a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="about.knowledge">My Skills</h3>
-          <div class="w-12 h-1 bg-primary mb-6"></div>
-          <div class="space-y-5">
-            <div class="flex gap-4 min-w-0">
-              <i class="ti-server text-primary text-xl mt-1 shrink-0"></i>
-              <div class="min-w-0">
-                <h4 class="font-semibold text-dark" data-i18n="about.k1Title">Backend & APIs</h4>
-                <p class="text-sm text-gray-500" data-i18n="about.k1Desc">C#, .NET, Python, REST APIs, scalable architecture</p>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0 flex flex-col">
+          <p class="text-primary font-semibold text-sm" data-i18n="competitions.c1Date">November 29, 2023</p>
+          <h4 class="font-bold text-dark mt-1 mb-1" data-i18n="competitions.c1Title">AGETIC — Information Security Competition</h4>
+          <p class="text-gray-500 text-sm mb-3" data-i18n="competitions.c1Place">Santa Cruz, Bolivia</p>
+          <p class="text-sm text-gray-600 mb-4 flex-1" data-i18n-html="competitions.c1Desc">National cybersecurity challenge organized by AGETIC during the International Information Security Congress. A <strong>Capture the Flag (CTF)</strong> contest with hands-on challenges in cryptography, forensics, web security, and ethical hacking.</p>
+          <div class="photo-carousel" data-carousel>
+            <div class="photo-carousel-track">
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/Agetic_2023_1.jpeg" alt="AGETIC 2023" class="photo-carousel-img" loading="lazy">
+              </div>
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/Agetic_2023_2.jpeg" alt="AGETIC 2023" class="photo-carousel-img" loading="lazy">
               </div>
             </div>
-            <div class="flex gap-4 min-w-0">
-              <i class="ti-stats-up text-primary text-xl mt-1 shrink-0"></i>
-              <div class="min-w-0">
-                <h4 class="font-semibold text-dark" data-i18n="about.k2Title">Databases & Optimization</h4>
-                <p class="text-sm text-gray-500" data-i18n="about.k2Desc">SQL Server, transactional queries, data integrity</p>
-              </div>
-            </div>
-            <div class="flex gap-4 min-w-0">
-              <i class="ti-bar-chart text-primary text-xl mt-1 shrink-0"></i>
-              <div class="min-w-0">
-                <h4 class="font-semibold text-dark" data-i18n="about.k3Title">Data Analysis & Reporting</h4>
-                <p class="text-sm text-gray-500" data-i18n="about.k3Desc">Report automation and operational metrics</p>
-              </div>
-            </div>
-            <div class="flex gap-4 min-w-0">
-              <i class="ti-tablet text-primary text-xl mt-1 shrink-0"></i>
-              <div class="min-w-0">
-                <h4 class="font-semibold text-dark" data-i18n="about.k4Title">Mobile Development</h4>
-                <p class="text-sm text-gray-500" data-i18n="about.k4Desc">Android (Java) + Firebase (Auth, Firestore, Realtime DB)</p>
-              </div>
-            </div>
-            <div class="flex gap-4 min-w-0">
-              <i class="ti-lock text-primary text-xl mt-1 shrink-0"></i>
-              <div class="min-w-0">
-                <h4 class="font-semibold text-dark" data-i18n="about.k5Title">Cybersecurity</h4>
-                <p class="text-sm text-gray-500" data-i18n="about.k5Desc">Ethical hacking, security fundamentals, and technical workshops</p>
-              </div>
+            <div class="photo-carousel-controls">
+              <button type="button" class="photo-carousel-btn" data-carousel-prev aria-label="Previous photo"><i class="ti-angle-left"></i></button>
+              <div class="photo-carousel-dots" data-carousel-dots></div>
+              <button type="button" class="photo-carousel-btn" data-carousel-next aria-label="Next photo"><i class="ti-angle-right"></i></button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Achievements -->
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title text-center" data-i18n-html="achievements.title"><span>Achievements</span> Highlights</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-desktop text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a1Title">DANTE CXC Module</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a1Desc">The Accounts Receivable module digitized billing workflows for <strong>50+ users</strong>, with <strong>10,000+ daily records</strong> and <strong>90%</strong> less processing time.</p>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0 flex flex-col">
+          <p class="text-primary font-semibold text-sm" data-i18n="competitions.c2Date">November 7, 2024</p>
+          <h4 class="font-bold text-dark mt-1 mb-1" data-i18n="competitions.c2Title">AGETIC — CITC 2024 Cybersecurity Competition</h4>
+          <p class="text-gray-500 text-sm mb-3" data-i18n="competitions.c2Place">Tarija, Bolivia</p>
+          <p class="text-sm text-gray-600 mb-4 flex-1" data-i18n-html="competitions.c2Desc">Competition held at the International Congress of Technology and Cybersecurity (CITC 2024) at UAJMS. National <strong>CTF</strong> event with university and institute teams solving cybersecurity challenges.</p>
+          <div class="photo-carousel" data-carousel>
+            <div class="photo-carousel-track">
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/Agetic_2024_1.jpeg" alt="AGETIC CITC 2024" class="photo-carousel-img" loading="lazy">
+              </div>
+            </div>
+            <div class="photo-carousel-controls">
+              <button type="button" class="photo-carousel-btn" data-carousel-prev aria-label="Previous photo"><i class="ti-angle-left"></i></button>
+              <div class="photo-carousel-dots" data-carousel-dots></div>
+              <button type="button" class="photo-carousel-btn" data-carousel-next aria-label="Next photo"><i class="ti-angle-right"></i></button>
+            </div>
+          </div>
         </div>
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-dashboard text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a2Title">SQL Server Optimization</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a2Desc">Critical queries from <strong>10 minutes to 10 seconds</strong>, improving performance by <strong>90%</strong>.</p>
-        </div>
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-bar-chart text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a3Title">Report Automation</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a3Desc"><strong>10+ reports</strong> for academic and financial leadership with actionable data.</p>
-        </div>
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-tablet text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a4Title">Android Apps</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a4Desc"><strong>120 downloads</strong> on Encuentrame and <strong>20 active patients</strong> on Anglarill-Fitness with Firebase.</p>
-        </div>
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-user text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a5Title">Technical Training</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a5Desc"><strong>10+ workshops</strong> on cybersecurity, ethical hacking, and Git for <strong>50+ students</strong>.</p>
-        </div>
-        <div class="card-panel text-center hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-server text-4xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="achievements.a6Title">Infrastructure Management</h4>
-          <p class="text-sm text-gray-600" data-i18n-html="achievements.a6Desc"><strong>72 workstations</strong> with 90% availability and networking across <strong>21 labs</strong>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services -->
-  <section class="py-20 bg-white" id="service">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="section-title" data-i18n-html="services.title"><span>My</span> Services</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-server text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s1Title">Backend Development</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s1Desc">Scalable systems with C#, .NET, Python, and REST APIs. Performance optimization and data architecture.</p>
+        <div class="card-panel hover:shadow-xl transition-shadow min-w-0 flex flex-col">
+          <p class="text-primary font-semibold text-sm" data-i18n="competitions.c3Date">November 9, 2024</p>
+          <h4 class="font-bold text-dark mt-1 mb-1" data-i18n="competitions.c3Title">ICPC — Collegiate Programming Contest</h4>
+          <p class="text-gray-500 text-sm mb-3" data-i18n="competitions.c3Place">Tarija, Bolivia</p>
+          <p class="text-sm text-gray-600 mb-4 flex-1" data-i18n-html="competitions.c3Desc"><strong>International Collegiate Programming Contest (ICPC)</strong>: university teams compete to solve algorithmic problems under time pressure, testing programming and problem-solving skills.</p>
+          <div class="photo-carousel" data-carousel>
+            <div class="photo-carousel-track">
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/ICPC_2024.jpeg" alt="ICPC 2024" class="photo-carousel-img" loading="lazy">
+              </div>
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/ICPC_2024_2.jpeg" alt="ICPC 2024" class="photo-carousel-img" loading="lazy">
+              </div>
+              <div class="photo-carousel-slide">
+                <img src="assets/imgs/competitions/ICPC_2024_3.jpeg" alt="ICPC 2024" class="photo-carousel-img" loading="lazy">
+              </div>
+            </div>
+            <div class="photo-carousel-controls">
+              <button type="button" class="photo-carousel-btn" data-carousel-prev aria-label="Previous photo"><i class="ti-angle-left"></i></button>
+              <div class="photo-carousel-dots" data-carousel-dots></div>
+              <button type="button" class="photo-carousel-btn" data-carousel-next aria-label="Next photo"><i class="ti-angle-right"></i></button>
+            </div>
+          </div>
         </div>
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-stats-up text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s2Title">Databases & SQL</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s2Desc">SQL Server design, administration, and optimization. High-performance transactional queries.</p>
-        </div>
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-bar-chart text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s3Title">Data Analysis & Reporting</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s3Desc">Report automation and transforming complex data into actionable insights.</p>
-        </div>
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-tablet text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s4Title">Mobile Development</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s4Desc">Native Android apps in Java with Firebase for real-time synchronization.</p>
-        </div>
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-lock text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s5Title">Cybersecurity</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s5Desc">Vulnerability analysis, ethical hacking, and security training.</p>
-        </div>
-        <div class="card-panel hover:shadow-xl transition-shadow min-w-0">
-          <i class="ti-write text-3xl text-primary mb-4 block"></i>
-          <h4 class="font-bold text-dark mb-2" data-i18n="services.s6Title">Technical Consulting</h4>
-          <p class="text-sm text-gray-600" data-i18n="services.s6Desc">Process automation, system optimization, and strategic decision support.</p>
-        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Portfolio CTA -->
-  <section class="py-16 bg-dark text-center" id="portfolio">
+  <section class="py-12 sm:py-16 bg-dark text-center" id="portfolio">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-white mb-6" data-i18n="portfolioCta.title">Portfolio</h2>
-      <p class="text-gray-400 mb-8 max-w-xl mx-auto" data-i18n="portfolioCta.desc">Explore my featured projects: DANTE CXC Module, Encuentrame, and Anglarill-Fitness.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6" data-i18n="portfolioCta.title">Portfolio</h2>
+      <p class="text-gray-400 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base" data-i18n="portfolioCta.desc">Explore my featured projects: DANTE CXC Module, Encuentrame, and Anglarill-Fitness.</p>
       <a href="portafolio.html" class="btn-primary">
         <i class="ti-archive"></i> <span data-i18n="portfolioCta.btn">View Portfolio</span>
       </a>
@@ -463,131 +459,9 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/tech.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <!-- Hidden CV for PDF -->
-  <div id="cv-pdf-container">
-    <div class="cv-pdf" id="cv-pdf">
-      <div class="cv-header">
-        <h1>Jose Carlo Suarez Brucsoni</h1>
-        <h2>Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus</h2>
-        <div class="cv-contact">
-          <span><strong data-i18n="cv.location">Location:</strong> Santa Cruz de la Sierra, Bolivia</span>
-          <span><strong data-i18n="cv.email">Email:</strong> joseca6520@gmail.com</span>
-          <span><strong data-i18n="cv.phone">Phone:</strong> +591 70918874</span>
-          <span><strong data-i18n="cv.birth">Birth:</strong> 15/03/1999 (<span id="edad-cv">27</span> <span data-i18n="cv.yearsOld">years old</span>)</span>
-          <span><strong>LinkedIn:</strong> linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272</span>
-          <span><strong>GitHub:</strong> github.com/jose-brucsoni</span>
-        </div>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.profileTitle">Professional Profile</div>
-        <p style="text-align: justify; font-size: 13px; line-height: 1.6;" data-i18n-html="cv.profile">
-          Backend Developer with <strong>2+ years of experience</strong> building and optimizing data-driven systems with <strong>C# (.NET)</strong> and <strong>SQL Server</strong>. Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing workflows for <strong>50+ users</strong> with a <strong>90%</strong> reduction in manual processing. Experience in SQL optimization (from <strong>10 minutes to 10 seconds</strong>), report automation, and Android development with Firebase. Expanding expertise in <strong>Python</strong>, data analysis, and <strong>cybersecurity</strong>. <strong>Open to remote opportunities.</strong>
-        </p>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.experienceTitle">Professional Experience</div>
-
-        <div class="cv-experience-item">
-          <h3 data-i18n="cv.exp1Title">Systems Analyst</h3>
-          <div class="company" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
-          <div class="date" data-i18n="cv.exp1Date">July 2023 - Present (3 years)</div>
-          <ul>
-            <li data-i18n-html="cv.exp1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing workflows for <strong>50+ users</strong></li>
-            <li data-i18n-html="cv.exp1b2"><strong>90%</strong> reduction in manual processing time</li>
-            <li data-i18n-html="cv.exp1b3">System with <strong>10,000+ daily records</strong></li>
-            <li data-i18n-html="cv.exp1b4">SQL Server optimization: queries from <strong>10 minutes to 10 seconds</strong></li>
-            <li data-i18n-html="cv.exp1b5">Academic database with <strong>20+ tables</strong> and <strong>10,000+ records</strong></li>
-            <li data-i18n-html="cv.exp1b6">Designed and automated <strong>10+ analytical reports</strong> for academic and financial leadership</li>
-          </ul>
-        </div>
-
-        <div class="cv-experience-item">
-          <h3 data-i18n="cv.exp2Title">Networks & Systems Lab Assistant</h3>
-          <div class="company" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
-          <div class="date" data-i18n="cv.exp2Date">August 2020 - June 2023 (2 years 11 months)</div>
-          <ul>
-            <li data-i18n-html="cv.exp2b1">Technical support and inventory web system: <strong>80%</strong> less manual workload</li>
-            <li data-i18n-html="cv.exp2b2">Maintenance of <strong>72 workstations</strong> with <strong>90%</strong> availability</li>
-            <li data-i18n-html="cv.exp2b3">Network infrastructure across <strong>21 labs</strong></li>
-            <li data-i18n-html="cv.exp2b4"><strong>10+ workshops</strong> on cybersecurity, ethical hacking, and Git</li>
-            <li data-i18n-html="cv.exp2b5">Trained <strong>50+ students</strong></li>
-          </ul>
-        </div>
-
-        <div class="cv-experience-item">
-          <h3 data-i18n="cv.exp3Title">Freelance - Independent Developer</h3>
-          <div class="company" data-i18n="cv.exp3Company">Self-employed</div>
-          <div class="date" data-i18n="cv.exp3Date">January 2019 - July 2020 (1 year 7 months)</div>
-          <ul>
-            <li data-i18n-html="cv.exp3b1"><strong>Encuentrame</strong>: Android classifieds app with <strong>120 downloads</strong>. Firebase Auth and Firestore. Project paused, code on GitHub</li>
-            <li data-i18n-html="cv.exp3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager with <strong>20 active patients</strong>. Firebase Realtime Database</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.educationTitle">Education</div>
-        <div class="cv-education-item">
-          <h3 data-i18n="cv.edu1Title">Systems Engineering</h3>
-          <div class="institution" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</div>
-          <div class="date" data-i18n="resume.edu1Date">2021 - December 2026</div>
-        </div>
-        <div class="cv-education-item">
-          <h3 data-i18n="cv.edu2Title">High School Diploma</h3>
-          <div class="institution" data-i18n="resume.edu2School">Henry Prince School</div>
-          <div class="date" data-i18n="resume.edu2Date">2016</div>
-        </div>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.skillsTitle">Technical Skills</div>
-        <div class="cv-skills">
-          <div class="cv-skill-item"><h4>C# / .NET</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:95%"></div></div></div>
-          <div class="cv-skill-item"><h4>SQL Server</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:95%"></div></div></div>
-          <div class="cv-skill-item"><h4>Python</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:85%"></div></div></div>
-          <div class="cv-skill-item"><h4>REST APIs</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:80%"></div></div></div>
-          <div class="cv-skill-item"><h4>Firebase</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:75%"></div></div></div>
-          <div class="cv-skill-item"><h4>Git</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:85%"></div></div></div>
-        </div>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.highlightsTitle">Key Achievements</div>
-        <div class="cv-projects">
-          <div class="cv-project-item">
-            <h4 data-i18n="cv.hl1Title">DANTE CXC Module</h4>
-            <p data-i18n-html="cv.hl1Desc"><strong>50+ module users</strong>, <strong>10,000 records/day</strong>, <strong>90%</strong> time reduction</p>
-          </div>
-          <div class="cv-project-item">
-            <h4 data-i18n="cv.hl2Title">SQL Optimization</h4>
-            <p data-i18n-html="cv.hl2Desc">Queries from <strong>10 min to 10 sec</strong></p>
-          </div>
-          <div class="cv-project-item">
-            <h4 data-i18n="cv.hl3Title">Reports</h4>
-            <p data-i18n-html="cv.hl3Desc"><strong>10+ automated</strong> reports</p>
-          </div>
-          <div class="cv-project-item">
-            <h4 data-i18n="cv.hl4Title">Android Apps</h4>
-            <p data-i18n-html="cv.hl4Desc"><strong>120 downloads</strong>, <strong>20 active patients</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cv-section">
-        <div class="cv-section-title" data-i18n="cv.languagesTitle">Languages</div>
-        <div class="cv-skills">
-          <div class="cv-skill-item"><h4 data-i18n="resume.langEsName">Spanish</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:100%"></div></div></div>
-          <div class="cv-skill-item"><h4 data-i18n="resume.langEnName">English</h4><div class="cv-skill-bar"><div class="cv-skill-progress" style="width:50%"></div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>

@@ -14,10 +14,8 @@ function calcularEdad(fechaNacimiento) {
 function initEdad() {
   const edad = calcularEdad('1999-03-15');
   const elementoEdad = document.getElementById('edad');
-  const elementoEdadCV = document.getElementById('edad-cv');
 
   if (elementoEdad) elementoEdad.textContent = edad;
-  if (elementoEdadCV) elementoEdadCV.textContent = edad;
 }
 
 function initSmoothScroll() {
@@ -60,155 +58,260 @@ function initMobileNav() {
   });
 }
 
-function getCvFilename() {
-  if (window.i18n) {
-    return window.i18n.t('cv.filename');
-  }
-  return 'CV_Jose_Carlo_Suarez_Brucsoni_EN.pdf';
+function parseISODate(value) {
+  const [year, month, day] = value.split('-').map(Number);
+  return new Date(year, month - 1, day);
 }
 
-function DescargarCV(event) {
-  const element = document.getElementById('cv-pdf');
-  const container = document.getElementById('cv-pdf-container');
-  const btnOriginal = event ? event.currentTarget : null;
-  let textoOriginal = '';
+function diffInMonths(startDate, endDate) {
+  const start = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+  const end = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+  let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  if (end.getDate() < start.getDate()) months -= 1;
+  return Math.max(0, months);
+}
 
-  if (btnOriginal) {
-    textoOriginal = btnOriginal.innerHTML;
-    const generating = window.i18n ? window.i18n.t('cv.generating') : 'Generating PDF...';
-    btnOriginal.innerHTML = `<i class="ti-reload"></i> ${generating}`;
-    btnOriginal.disabled = true;
+function translateKey(key) {
+  return window.i18n ? window.i18n.t(key) : key;
+}
+
+function formatDuration(totalMonths) {
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  const parts = [];
+
+  if (years > 0) {
+    parts.push(`${years} ${translateKey(years === 1 ? 'resume.year' : 'resume.years')}`);
   }
 
-  if (!element || !container) {
-    const msg = window.i18n ? window.i18n.t('cv.errorNotFound') : 'Error: CV content not found. Please reload the page.';
-    alert(msg);
-    if (btnOriginal) {
-      btnOriginal.innerHTML = textoOriginal;
-      btnOriginal.disabled = false;
+  if (months > 0) {
+    parts.push(`${months} ${translateKey(months === 1 ? 'resume.month' : 'resume.months')}`);
+  }
+
+  if (!parts.length) {
+    return `0 ${translateKey('resume.months')}`;
+  }
+
+  return parts.join(' ');
+}
+
+function updateExperienceDurations() {
+  const jobs = document.querySelectorAll('.experience-job');
+  if (!jobs.length) return;
+
+  let totalMonths = 0;
+
+  jobs.forEach((job) => {
+    const startValue = job.getAttribute('data-start');
+    const endValue = job.getAttribute('data-end');
+    if (!startValue) return;
+
+    const start = parseISODate(startValue);
+    const end = endValue ? parseISODate(endValue) : new Date();
+    const months = diffInMonths(start, end);
+    totalMonths += months;
+
+    const durationEl = job.querySelector('.experience-duration');
+    if (durationEl) durationEl.textContent = ` (${formatDuration(months)})`;
+  });
+
+  const totalEl = document.getElementById('experience-total');
+  if (totalEl) {
+    totalEl.textContent = `${translateKey('resume.totalTechExp')}: ${formatDuration(totalMonths)}`;
+  }
+}
+
+function updateToggleLabel(btn) {
+  if (btn.hasAttribute('data-toggle-static')) {
+    const hint = btn.querySelector('.experience-toggle-hint');
+    if (hint) {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const key = expanded ? 'resume.collapse' : 'resume.expand';
+      hint.setAttribute('data-i18n', key);
+      hint.textContent = translateKey(key);
+    }
+    const title = btn.querySelector('.experience-toggle-title');
+    if (title) {
+      const titleKey = title.getAttribute('data-i18n');
+      if (titleKey) title.textContent = translateKey(titleKey);
     }
     return;
   }
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  const key = expanded ? 'resume.readLess' : 'resume.readMore';
+  btn.setAttribute('data-i18n', key);
+  btn.textContent = translateKey(key);
+}
 
-  const widthInPx = 210 * 3.7795275591;
+function updateToggleLabels() {
+  document.querySelectorAll('.experience-toggle').forEach(updateToggleLabel);
+}
 
-  container.style.setProperty('display', 'block', 'important');
-  container.style.setProperty('position', 'fixed', 'important');
-  container.style.setProperty('left', '50%', 'important');
-  container.style.setProperty('top', '0', 'important');
-  container.style.setProperty('transform', 'translateX(-50%)', 'important');
-  container.style.setProperty('width', `${widthInPx}px`, 'important');
-  container.style.setProperty('max-width', `${widthInPx}px`, 'important');
-  container.style.setProperty('min-width', `${widthInPx}px`, 'important');
-  container.style.setProperty('visibility', 'visible', 'important');
-  container.style.setProperty('opacity', '1', 'important');
-  container.style.setProperty('z-index', '9999', 'important');
-  container.style.setProperty('overflow', 'visible', 'important');
-  container.style.setProperty('background-color', '#ffffff', 'important');
-  container.style.setProperty('height', 'auto', 'important');
+function initExperienceToggles() {
+  document.querySelectorAll('.experience-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const job = btn.closest('.experience-job');
+      if (!job) return;
 
-  const paddingTopBottom = 12 * 3.7795275591;
-  const paddingLeftRight = 15 * 3.7795275591;
+      const details = job.querySelector('.experience-details');
+      if (!details) return;
 
-  element.style.setProperty('width', `${widthInPx}px`, 'important');
-  element.style.setProperty('max-width', `${widthInPx}px`, 'important');
-  element.style.setProperty('margin', '0', 'important');
-  element.style.setProperty('padding', `${paddingTopBottom}px ${paddingLeftRight}px`, 'important');
-  element.style.setProperty('box-sizing', 'border-box', 'important');
-  element.style.setProperty('overflow', 'visible', 'important');
-  element.style.setProperty('position', 'relative', 'important');
-  element.style.setProperty('background-color', '#ffffff', 'important');
-  element.style.setProperty('display', 'block', 'important');
-  element.style.setProperty('visibility', 'visible', 'important');
-  element.style.setProperty('opacity', '1', 'important');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      details.classList.toggle('hidden', expanded);
+      updateToggleLabel(btn);
+    });
+  });
+}
 
-  const opt = {
-    margin: 1,
-    filename: getCvFilename(),
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: {
-      scale: 2,
-      useCORS: true,
-      letterRendering: true,
-      logging: false,
-      allowTaint: false,
-      backgroundColor: '#ffffff',
-      removeContainer: false,
-      onclone(clonedDoc) {
-        const clonedElement = clonedDoc.getElementById('cv-pdf');
-        if (clonedElement) {
-          clonedElement.style.display = 'block';
-          clonedElement.style.visibility = 'visible';
-          clonedElement.style.opacity = '1';
-        }
-      },
-    },
-    jsPDF: {
-      unit: 'mm',
-      format: 'a4',
-      orientation: 'portrait',
-      compress: true,
-    },
-    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
-  };
+async function initTechIcons() {
+  if (!window.tech) return;
 
-  function resetCvStyles() {
-    container.style.display = 'none';
-    container.style.position = 'absolute';
-    container.style.left = '-9999px';
-    container.style.top = '-9999px';
-    container.style.visibility = 'hidden';
-    container.style.opacity = '0';
-    container.style.width = '0';
-    container.style.maxWidth = 'none';
-    container.style.minWidth = 'none';
-    container.style.transform = 'none';
-    container.style.height = '0';
-
-    element.style.width = '';
-    element.style.maxWidth = '';
-    element.style.margin = '';
-    element.style.padding = '';
+  try {
+    const catalog = await window.tech.loadTechCatalog();
+    window.tech.fillTechContainers(catalog);
+  } catch (err) {
+    console.error('Tech catalog load failed:', err);
   }
+}
 
-  function restoreButton() {
-    if (btnOriginal) {
-      btnOriginal.innerHTML = textoOriginal;
-      btnOriginal.disabled = false;
-    }
-  }
+function initMobileNavReveal() {
+  const nav = document.getElementById('site-nav');
+  const hero = document.getElementById('hero');
+  if (!nav || !hero) return;
 
-  setTimeout(() => {
-    element.offsetHeight;
-    const rect = element.getBoundingClientRect();
+  const mq = window.matchMedia('(max-width: 1023px)');
 
-    if (rect.width === 0 || rect.height === 0) {
-      const msg = window.i18n ? window.i18n.t('cv.errorRender') : 'Error: CV content is not rendering correctly. Please try again.';
-      alert(msg);
-      resetCvStyles();
-      restoreButton();
+  function syncNavVisibility() {
+    if (!mq.matches) {
+      nav.classList.add('is-visible');
       return;
     }
 
-    html2pdf()
-      .set(opt)
-      .from(element)
-      .save()
-      .then(() => {
-        resetCvStyles();
-        restoreButton();
-      })
-      .catch(() => {
-        resetCvStyles();
-        const msg = window.i18n ? window.i18n.t('cv.errorPdf') : 'Error generating PDF. Please try again.';
-        alert(msg);
-        restoreButton();
-      });
-  }, 300);
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const isVisible = nav.classList.contains('is-visible');
+
+    if (!isVisible && heroBottom <= 56) {
+      nav.classList.add('is-visible');
+    } else if (isVisible && heroBottom > 80) {
+      nav.classList.remove('is-visible');
+    }
+  }
+
+  let ticking = false;
+  function onScrollOrResize() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      syncNavVisibility();
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+  if (typeof mq.addEventListener === 'function') {
+    mq.addEventListener('change', syncNavVisibility);
+  } else if (typeof mq.addListener === 'function') {
+    mq.addListener(syncNavVisibility);
+  }
+
+  syncNavVisibility();
 }
+
+function initResumeEnter() {
+  const resume = document.getElementById('resume');
+  if (!resume || !resume.classList.contains('section-reveal')) return;
+
+  const mq = window.matchMedia('(max-width: 1023px)');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function markEntered() {
+    resume.classList.add('is-entered');
+  }
+
+  if (!mq.matches || reduceMotion.matches) {
+    markEntered();
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    markEntered();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          markEntered();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+  );
+
+  observer.observe(resume);
+
+  if (typeof mq.addEventListener === 'function') {
+    mq.addEventListener('change', (event) => {
+      if (!event.matches) markEntered();
+    });
+  }
+}
+
+function initPhotoCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('.photo-carousel-slide'));
+    const dotsWrap = carousel.querySelector('[data-carousel-dots]');
+    const prevBtn = carousel.querySelector('[data-carousel-prev]');
+    const nextBtn = carousel.querySelector('[data-carousel-next]');
+    if (!slides.length) return;
+
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      if (!dotsWrap) return;
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'photo-carousel-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', `Photo ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function goTo(nextIndex) {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === index);
+      });
+      if (dotsWrap) {
+        dotsWrap.querySelectorAll('.photo-carousel-dot').forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === index);
+        });
+      }
+    }
+
+    goTo(0);
+    if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+  });
+}
+
+document.addEventListener('languageChanged', () => {
+  updateExperienceDurations();
+  updateToggleLabels();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   initEdad();
   initSmoothScroll();
   initMobileNav();
+  initMobileNavReveal();
+  initResumeEnter();
+  initExperienceToggles();
+  updateExperienceDurations();
+  initTechIcons();
+  initPhotoCarousels();
 });

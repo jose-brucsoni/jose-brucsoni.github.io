@@ -15,106 +15,34 @@
 <body class="bg-gray-50 overflow-x-hidden">
 
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16 gap-4">
-        <a href="index.html" class="font-display font-bold text-dark text-lg truncate">Jose Brucsoni</a>
-        <div class="flex items-center gap-3 shrink-0">
-          <div id="lang-switcher" class="flex items-center gap-1">
-            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">EN</button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 gap-2 sm:gap-4">
+        <a href="index.html" class="font-display font-bold text-dark text-base sm:text-lg truncate min-w-0">Jose Brucsoni</a>
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
+          <div id="lang-switcher" class="flex items-center gap-1 shrink-0">
+            <button type="button" data-lang="en" class="lang-btn lang-btn-active" aria-pressed="true">English</button>
             <span class="text-gray-300">|</span>
-            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">ES</button>
+            <button type="button" data-lang="es" class="lang-btn" aria-pressed="false">Español</button>
           </div>
-          <a href="index.html" class="nav-link flex items-center gap-2 text-sm sm:text-base">
-            <i class="ti-arrow-left"></i> <span data-i18n="nav.backHome">Back to Home</span>
+          <a href="index.html" class="nav-link flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base shrink-0" aria-label="Back to Home">
+            <i class="ti-arrow-left"></i>
+            <span class="hidden sm:inline" data-i18n="nav.backHome">Back to Home</span>
           </a>
         </div>
       </div>
     </div>
   </nav>
 
-  <section class="py-12 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10 sm:mb-16">
+  <section class="py-10 sm:py-14 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center">
         <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
-        <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-2" data-i18n="portfolio.subtitle">Featured projects in backend, databases, and mobile development with real impact.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-        <!-- DANTE CXC Module -->
-        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
-          <div class="relative h-48 overflow-hidden">
-            <img src="assets/imgs/Portada_GeneracionDeReportes.png" alt="DANTE CXC Module - Accounts Receivable" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
-            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full" data-i18n="portfolio.danteBadge">Enterprise Module</span>
-          </div>
-          <div class="p-5 sm:p-6">
-            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.danteTitle">Accounts Receivable (CXC) Module — DANTE</h2>
-            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.danteDesc">
-              Module developed in C# (.NET) within the DANTE system to digitize accounts receivable workflows.
-              Used by <strong>50+ users</strong> with <strong>10,000+ daily records</strong> and
-              <strong>90%</strong> reduction in manual processing.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">.NET</span>
-              <span class="tech-tag">SQL Server</span>
-            </div>
-            <p class="text-xs text-gray-400 italic" data-i18n="portfolio.danteNote">Internal DANTE module — no public repository</p>
-          </div>
-        </article>
-
-        <!-- Encuentrame -->
-        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
-          <div class="relative h-48 overflow-hidden">
-            <img src="assets/imgs/portada_encuentrame.png" alt="Encuentrame - Classifieds App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
-            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full">Android</span>
-          </div>
-          <div class="p-5 sm:p-6">
-            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.encuentrameTitle">Encuentrame — Classifieds App</h2>
-            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.encuentrameDesc">
-              Native Android app in Java for job listings and property/vehicle sales.
-              Firebase Auth and Firestore. <strong>120 downloads</strong> in local distribution. Project paused, not on Play Store.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Android</span>
-              <span class="tech-tag">Firebase</span>
-            </div>
-            <a href="https://github.com/jose-brucsoni/Materia_AplicacionesMoviles" target="_blank" rel="noopener" class="btn-primary text-sm">
-              <i class="ti-github"></i> <span data-i18n="portfolio.viewGithub">View on GitHub</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Anglarill-Fitness -->
-        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group min-w-0">
-          <div class="relative h-48 overflow-hidden">
-            <img src="assets/imgs/portada_nutricion.png" alt="Anglarill-Fitness - Nutrition Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
-            <span class="absolute bottom-3 left-3 text-white text-xs font-semibold bg-primary px-3 py-1 rounded-full">Android B2C</span>
-          </div>
-          <div class="p-5 sm:p-6">
-            <h2 class="text-lg sm:text-xl font-bold text-dark mb-2 break-words" data-i18n="portfolio.anglarillTitle">Anglarill-Fitness — Nutrition Manager</h2>
-            <p class="text-sm text-gray-600 mb-4 break-words" data-i18n-html="portfolio.anglarillDesc">
-              Android app for nutritionist Jose Alberto Anglarill. Patients track weight, meals, and hydration;
-              the nutritionist publishes plans and recipes. Firebase Realtime Database with <strong>20 active patients</strong>.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Android</span>
-              <span class="tech-tag">Firebase RTDB</span>
-            </div>
-            <a href="https://github.com/jose-brucsoni/AnglarillFitness" target="_blank" rel="noopener" class="btn-primary text-sm">
-              <i class="ti-github"></i> <span data-i18n="portfolio.viewGithub">View on GitHub</span>
-            </a>
-          </div>
-        </article>
-
+        <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base -mt-4" data-i18n="portfolio.subtitle">Featured projects in backend, databases, and mobile development with real impact.</p>
       </div>
     </div>
   </section>
+
+  <div id="portfolio-projects" aria-live="polite"></div>
 
   <footer class="bg-gray-900 text-gray-400 py-6">
     <div class="max-w-7xl mx-auto px-4 text-center text-sm">
@@ -124,5 +52,7 @@
 
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/tech.js"></script>
+  <script src="assets/js/portfolio.js"></script>
 </body>
 </html>

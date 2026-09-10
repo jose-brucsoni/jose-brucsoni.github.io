@@ -1,0 +1,35 @@
+{
+  "projects": [
+    {
+      "id": "dante",
+      "image": "assets/imgs/Portada_GeneracionDeReportes.png",
+      "imageAltKey": "portfolio.danteImageAlt",
+      "badgeKey": "portfolio.danteBadge",
+      "titleKey": "portfolio.danteTitle",
+      "descKey": "portfolio.danteDesc",
+      "noteKey": "portfolio.danteNote",
+      "tech": ["csharp", "dotnet", "sqlserver"],
+      "github": null
+    },
+    {
+      "id": "encuentrame",
+      "image": "assets/imgs/portada_encuentrame.png",
+      "imageAltKey": "portfolio.encuentrameImageAlt",
+      "badge": "Android",
+      "titleKey": "portfolio.encuentrameTitle",
+      "descKey": "portfolio.encuentrameDesc",
+      "tech": ["java", "android", "firebase"],
+      "github": "https://github.com/jose-brucsoni/Materia_AplicacionesMoviles"
+    },
+    {
+      "id": "anglarill",
+      "image": "assets/imgs/portada_nutricion.png",
+      "imageAltKey": "portfolio.anglarillImageAlt",
+      "badge": "Android B2C",
+      "titleKey": "portfolio.anglarillTitle",
+      "descKey": "portfolio.anglarillDesc",
+      "tech": ["java", "android", "firebaseRtdb"],
+      "github": "https://github.com/jose-brucsoni/AnglarillFitness"
+    }
+  ]
+}
