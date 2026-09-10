@@ -93,10 +93,38 @@
       hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg w-auto;
   }
 
+  .btn-disabled {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+      bg-gray-400 text-white font-semibold rounded-full cursor-not-allowed shadow-none w-auto
+      opacity-90 pointer-events-none;
+  }
+
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
       border-2 border-primary text-primary font-semibold rounded-full
       hover:bg-primary hover:text-white transition-all duration-300 w-auto;
+  }
+
+  .cv-menu-wrap {
+    @apply relative inline-block;
+  }
+
+  .cv-menu {
+    @apply absolute left-0 top-full mt-2 z-40 min-w-[13rem]
+      bg-white rounded-xl shadow-xl border border-gray-100 py-2;
+  }
+
+  .cv-menu-up {
+    @apply top-auto bottom-full mt-0 mb-2;
+  }
+
+  .cv-menu-item {
+    @apply block w-full text-left px-4 py-2 text-sm font-medium text-gray-700
+      hover:bg-primary/10 hover:text-primary transition-colors;
+  }
+
+  .cv-menu-item-disabled {
+    @apply text-gray-400 cursor-not-allowed hover:bg-transparent hover:text-gray-400;
   }
 
   .nav-link {
@@ -109,6 +137,10 @@
 
   .tools-subgroup {
     @apply pl-3 ml-1 border-l border-gray-200;
+  }
+
+  .about-avatar {
+    @apply object-cover object-[center_20%];
   }
 
   .photo-carousel {

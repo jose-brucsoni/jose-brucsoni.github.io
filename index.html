@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/cv-pdf.css">
 </head>
 <body class="bg-gray-50" id="home">
 
@@ -35,9 +36,17 @@
       <p class="text-sm sm:text-base md:text-lg font-medium opacity-90 max-w-3xl mb-4 normal-case leading-relaxed break-words" data-i18n="hero.tagline">
         Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus
       </p>
-      <a href="Profile.pdf" download="Profile.pdf" class="btn-primary mb-6 sm:mb-8">
-        <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
-      </a>
+      <div class="cv-menu-wrap mb-6 sm:mb-8">
+        <button type="button" data-cv-menu-trigger class="btn-primary" aria-haspopup="menu" aria-expanded="false">
+          <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+          <i class="ti-angle-down text-xs"></i>
+        </button>
+        <div class="cv-menu hidden" role="menu">
+          <button type="button" role="menuitem" class="cv-menu-item" data-cv-format="harvard" data-i18n="cv.formatHarvard">Harvard format</button>
+          <button type="button" role="menuitem" class="cv-menu-item" data-cv-format="ats" data-i18n="cv.formatAts">ATS format</button>
+          <button type="button" role="menuitem" class="cv-menu-item cv-menu-item-disabled" disabled aria-disabled="true" data-i18n="cv.formatPersonal">Personal format</button>
+        </div>
+      </div>
       <ul class="flex flex-wrap gap-2 sm:gap-3">
         <li><a class="social-link" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
         <li><a class="social-link" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti-github"></i></a></li>
@@ -50,7 +59,7 @@
   <!-- Navbar -->
   <nav id="site-nav" class="nav-reveal z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 relative">
-      <div class="flex items-center justify-between h-14 lg:h-20">
+      <div class="flex items-center justify-between gap-3 h-14 lg:h-20">
         <a href="#home" class="flex items-center gap-2 sm:gap-3 min-w-0">
           <img src="assets/imgs/avatar.jpg" alt="Jose Carlo Suarez Brucsoni" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover ring-2 ring-primary/30 shrink-0">
           <div class="hidden sm:block min-w-0">
@@ -58,6 +67,15 @@
             <p class="text-xs text-gray-500" data-i18n="nav.role">Backend Developer</p>
           </div>
         </a>
+
+        <ul id="nav-menu" class="hidden lg:flex items-center gap-1 absolute lg:static top-full left-0 right-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-t lg:border-0 border-gray-100 flex-col lg:flex-row p-3 lg:p-0 max-w-full lg:flex-1 lg:justify-center">
+          <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#resume" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#competitions" class="nav-link" data-i18n="nav.competitions">Competitions</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#about" class="nav-link text-primary font-semibold" data-i18n="nav.contact">Contact</a></li>
+        </ul>
 
         <div class="flex items-center gap-1 sm:gap-2 shrink-0">
           <div id="lang-switcher" class="flex items-center gap-0.5 sm:gap-1">
@@ -73,14 +91,6 @@
             <i class="ti-menu text-xl"></i>
           </button>
         </div>
-
-        <ul id="nav-menu" class="hidden lg:flex items-center gap-1 absolute lg:static top-full left-0 right-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none border-t lg:border-0 border-gray-100 flex-col lg:flex-row p-3 lg:p-0 max-w-full">
-          <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
-          <li><a href="#resume" class="nav-link" data-i18n="nav.experience">Experience</a></li>
-          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
-          <li><a href="#about" class="nav-link text-primary font-semibold" data-i18n="nav.contact">Contact</a></li>
-        </ul>
       </div>
     </div>
   </nav>
@@ -91,9 +101,9 @@
       <div class="grid lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         <!-- Experience -->
         <div class="card-panel">
-          <div class="flex items-start justify-between gap-2 mb-4">
+          <div class="mb-4">
             <h3 class="text-xl font-bold text-dark pb-2 border-b-2 border-primary inline-block" data-i18n="resume.experience">Work Experience</h3>
-            <p id="experience-total" class="experience-total text-right max-w-[55%] shrink-0"></p>
+            <p id="experience-total" class="experience-total mt-2"></p>
           </div>
 
           <div class="experience-job mb-6" data-start="2019-01-01" data-end="2020-08-01">
@@ -102,13 +112,6 @@
             </p>
             <p class="font-bold text-dark mt-1" data-i18n="resume.job3Title">Freelance - Independent Developer</p>
             <div class="flex flex-wrap gap-2 mt-3" data-tech="java,android,firebase,figma"></div>
-            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
-            <div class="experience-details hidden">
-              <ul class="text-sm text-gray-600 space-y-2 mt-2 list-disc list-outside pl-4">
-                <li data-i18n-html="resume.job3b1"><strong>Encuentrame</strong>: Android classifieds app, 120 local downloads. Project paused, code on GitHub</li>
-                <li data-i18n-html="resume.job3b2"><strong>Anglarill-Fitness</strong>: B2C nutrition manager for 20 active patients with Firebase</li>
-              </ul>
-            </div>
           </div>
 
           <hr class="border-gray-200 my-6">
@@ -120,25 +123,6 @@
             <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
             <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
             <div class="flex flex-wrap gap-2 mt-3" data-tech="laravel,linux,mikrotik"></div>
-            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
-            <div class="experience-details hidden">
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2Auto">Process Automation & Web Development</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n="resume.job2a1">Web system for technical support and inventory (80% less manual workload)</li>
-              </ul>
-
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2infra">Infrastructure & Systems Management</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n="resume.job2i1">Maintenance of 72 workstations with 90% availability</li>
-                <li data-i18n="resume.job2i2">Network infrastructure across 21 computer labs</li>
-              </ul>
-
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job2cyber">Cybersecurity & Technical Training</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n="resume.job2c1">10+ workshops on cybersecurity, ethical hacking, and Git</li>
-                <li data-i18n="resume.job2c2">Trained 50+ students</li>
-              </ul>
-            </div>
           </div>
 
           <hr class="border-gray-200 my-6">
@@ -150,27 +134,6 @@
             <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
             <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
             <div class="flex flex-wrap gap-2 mt-3" data-tech="blazor,sqlserver,powerbi"></div>
-            <button type="button" class="experience-toggle" data-i18n="resume.readMore" aria-expanded="false">Read more</button>
-            <div class="experience-details hidden">
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1Backend">Backend & Software Development</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n-html="resume.job1b1">Designed and developed the <strong>Accounts Receivable (CXC) Module</strong> of <strong>DANTE</strong>, digitizing billing and financial management workflows</li>
-                <li data-i18n="resume.job1b2">90% reduction in manual processing time for 50+ active users</li>
-                <li data-i18n="resume.job1b3">System handling 10,000+ daily records with high reliability</li>
-              </ul>
-
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1db">Database Engineering & SQL Optimization</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n="resume.job1d1">Academic database with 20+ tables and 10,000+ records in SQL Server</li>
-                <li data-i18n="resume.job1d2">Optimized queries: from 10 minutes to 10 seconds (90% improvement)</li>
-              </ul>
-
-              <p class="text-sm font-semibold text-dark mt-3" data-i18n="resume.job1data">Data Analysis & Reporting</p>
-              <ul class="text-sm text-gray-600 space-y-1 mt-1 list-disc list-outside pl-4">
-                <li data-i18n="resume.job1a1">10+ automated analytical reports for academic and financial leadership</li>
-                <li data-i18n="resume.job1a2">Retention, payment, and enrollment metrics for strategic decisions</li>
-              </ul>
-            </div>
           </div>
 
           <hr class="border-gray-200 my-6">
@@ -206,6 +169,15 @@
             <p class="text-primary font-semibold text-sm" data-i18n="resume.edu2Date">2016</p>
             <p class="font-bold text-dark mt-1" data-i18n="resume.edu2Title">High School Diploma</p>
             <p class="text-gray-500 text-sm" data-i18n="resume.edu2School">Henry Prince School</p>
+          </div>
+
+          <hr class="border-gray-200 my-6">
+
+          <div class="mb-6">
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu3Date">2017 - 2021</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.edu3Title">Electronic Engineering and Systems</p>
+            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+            <p class="text-sm text-gray-600 mt-1" data-i18n="resume.edu3Note">Switched to Systems Engineering</p>
           </div>
 
           <hr class="border-gray-200 my-6">
@@ -339,28 +311,44 @@
   <!-- About -->
   <section class="py-12 sm:py-16 lg:py-20 bg-white" id="about">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="max-w-2xl">
-        <h3 class="text-xl sm:text-2xl font-bold text-dark mb-4" data-i18n="about.personal">Personal Information</h3>
-        <div class="w-12 h-1 bg-primary mb-6"></div>
-        <ul class="space-y-3 text-sm text-gray-600">
-          <li><span class="font-semibold text-dark" data-i18n="about.email">Email:</span> <a href="mailto:joseca6520@gmail.com" class="text-primary hover:underline">joseca6520@gmail.com</a></li>
-          <li><span class="font-semibold text-dark" data-i18n="about.address">Address:</span> Urb. Motacu Nro 44, Carretera Norte Km 17,5</li>
-          <li><span class="font-semibold text-dark" data-i18n="about.city">City:</span> Santa Cruz de la Sierra, Bolivia</li>
-          <li><span class="font-semibold text-dark" data-i18n="about.phone">Phone:</span> <a href="tel:+59170918874" class="text-primary hover:underline">+591 70918874</a></li>
-          <li><span class="font-semibold text-dark" data-i18n="about.birth">Date of Birth:</span> 15/03/1999 (<span id="edad">27</span> <span data-i18n="about.yearsOld">years old</span>)</li>
-          <li><span class="font-semibold text-dark" data-i18n="about.github">GitHub:</span> <a href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" class="text-primary hover:underline break-all">github.com/jose-brucsoni</a></li>
-          <li><span class="font-semibold text-dark" data-i18n="about.linkedin">LinkedIn:</span> <a href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" class="text-primary hover:underline break-all">linkedin.com/in/jose-carlo-suarez-brucsoni</a></li>
-          <li><span class="font-semibold text-dark" data-i18n="about.license">Driver's license:</span> <span data-i18n="about.licenseValue">Categories A and M</span></li>
-        </ul>
-        <ul class="flex gap-3 mt-6">
-          <li><a class="social-link-dark" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener"><i class="ti-linkedin"></i></a></li>
-          <li><a class="social-link-dark" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener"><i class="ti-github"></i></a></li>
-          <li><a class="social-link-dark" href="mailto:joseca6520@gmail.com"><i class="ti-email"></i></a></li>
-          <li><a class="social-link-dark" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener"><i class="ti-instagram"></i></a></li>
-        </ul>
-        <a href="Profile.pdf" download="Profile.pdf" class="btn-outline mt-8 inline-flex">
-          <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
-        </a>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-bold text-dark mb-4" data-i18n="about.personal">Personal Information</h3>
+          <div class="w-12 h-1 bg-primary mb-6"></div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><span class="font-semibold text-dark" data-i18n="about.email">Email:</span> <a href="mailto:joseca6520@gmail.com" class="text-primary hover:underline">joseca6520@gmail.com</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.city">City:</span> Santa Cruz de la Sierra, Bolivia</li>
+            <li><span class="font-semibold text-dark" data-i18n="about.phone">Phone:</span> <a href="tel:+59170918874" class="text-primary hover:underline">+591 70918874</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.birth">Date of Birth:</span> 15/03/1999 (<span id="edad">27</span> <span data-i18n="about.yearsOld">years old</span>)</li>
+            <li><span class="font-semibold text-dark" data-i18n="about.github">GitHub:</span> <a href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" class="text-primary hover:underline break-all">github.com/jose-brucsoni</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.linkedin">LinkedIn:</span> <a href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" class="text-primary hover:underline break-all">linkedin.com/in/jose-carlo-suarez-brucsoni</a></li>
+            <li><span class="font-semibold text-dark" data-i18n="about.license">Driver's license:</span> <span data-i18n="about.licenseValue">Categories A and M</span></li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center gap-6 lg:justify-self-center">
+          <img
+            src="assets/imgs/avatar.jpg"
+            alt="Jose Carlo Suarez Brucsoni"
+            class="about-avatar w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover ring-4 ring-primary/20 shadow-lg"
+          >
+          <ul class="flex gap-3">
+            <li><a class="social-link-dark" href="https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti-linkedin"></i></a></li>
+            <li><a class="social-link-dark" href="https://github.com/jose-brucsoni" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti-github"></i></a></li>
+            <li><a class="social-link-dark" href="mailto:joseca6520@gmail.com" aria-label="Email"><i class="ti-email"></i></a></li>
+            <li><a class="social-link-dark" href="https://www.instagram.com/jose_brucsoni/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti-instagram"></i></a></li>
+          </ul>
+          <div class="cv-menu-wrap">
+            <button type="button" data-cv-menu-trigger class="btn-outline inline-flex" aria-haspopup="menu" aria-expanded="false">
+              <i class="ti-download"></i> <span data-i18n="hero.downloadCv">Download CV</span>
+              <i class="ti-angle-down text-xs"></i>
+            </button>
+            <div class="cv-menu cv-menu-up hidden" role="menu">
+              <button type="button" role="menuitem" class="cv-menu-item" data-cv-format="harvard" data-i18n="cv.formatHarvard">Harvard format</button>
+              <button type="button" role="menuitem" class="cv-menu-item" data-cv-format="ats" data-i18n="cv.formatAts">ATS format</button>
+              <button type="button" role="menuitem" class="cv-menu-item cv-menu-item-disabled" disabled aria-disabled="true" data-i18n="cv.formatPersonal">Personal format</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -444,24 +432,25 @@
   <!-- Portfolio CTA -->
   <section class="py-12 sm:py-16 bg-dark text-center" id="portfolio">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6" data-i18n="portfolioCta.title">Portfolio</h2>
-      <p class="text-gray-400 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base" data-i18n="portfolioCta.desc">Explore my featured projects: DANTE CXC Module, Encuentrame, and Anglarill-Fitness.</p>
-      <a href="portafolio.html" class="btn-primary">
+      <button type="button" class="btn-disabled" disabled aria-disabled="true">
         <i class="ti-archive"></i> <span data-i18n="portfolioCta.btn">View Portfolio</span>
-      </a>
+      </button>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-6">
     <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-      <p>&copy; <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer.text">Jose Carlo Suarez Brucsoni | Backend Developer passionate about building solutions that create real impact</span></p>
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> <span data-i18n="footer.text">Jose Carlo Suarez Brucsoni</span></p>
     </div>
   </footer>
 
   <script src="assets/js/translations.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/tech.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="assets/js/cv-pdf.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
