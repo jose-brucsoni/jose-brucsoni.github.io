@@ -206,6 +206,14 @@
     @apply w-3.5 h-3.5 object-contain;
   }
 
+  .tech-tag-icon-only {
+    @apply gap-0 px-1.5 py-1 lg:px-2;
+  }
+
+  .tech-tag-icon-only .tech-tag-icon[src] {
+    @apply w-4 h-4 lg:w-5 lg:h-5 aspect-square object-contain shrink-0;
+  }
+
   .lang-gate {
     @apply fixed inset-0 z-[100] flex items-center justify-center bg-dark/90 backdrop-blur-sm p-4;
   }
@@ -429,5 +437,66 @@
 
   .project-row-primary .tech-tag-icon {
     @apply text-white;
+  }
+
+  .area-grid {
+    @apply grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6;
+  }
+
+  .area-card {
+    @apply flex flex-col items-center text-center rounded-[15px] bg-gray-100 p-3 sm:p-4 lg:p-6
+      transition-all duration-300 min-h-0 lg:min-h-[11rem] border border-transparent;
+  }
+
+  .area-card-enabled {
+    @apply cursor-pointer hover:bg-white hover:shadow-lg hover:border-gray-100;
+  }
+
+  .area-card-selected {
+    @apply bg-white shadow-lg border-gray-100;
+  }
+
+  .area-card-disabled {
+    @apply bg-gray-200/80 cursor-not-allowed pointer-events-none;
+  }
+
+  .area-card-disabled .area-card-tech {
+    @apply opacity-60;
+  }
+
+  .area-card-icon {
+    @apply text-2xl lg:text-3xl text-primary mb-2 lg:mb-4 leading-none;
+  }
+
+  .area-card-icon-svg {
+    @apply w-7 h-7 lg:w-9 lg:h-9 shrink-0;
+  }
+
+  .area-card-disabled .area-card-icon {
+    @apply text-gray-400;
+  }
+
+  .area-card-title {
+    @apply text-sm sm:text-base lg:text-lg font-bold text-dark mb-0;
+  }
+
+  .area-card-disabled .area-card-title {
+    @apply text-gray-500;
+  }
+
+  .area-card-tech {
+    @apply mt-2 justify-center items-center self-center;
+  }
+
+  .area-card-tech .tech-tag {
+    @apply px-1.5 py-1 shrink-0 self-center h-auto;
+  }
+
+  .area-card-tech .tech-tag-icon[src] {
+    @apply w-4 h-4 sm:w-5 sm:h-5 aspect-square object-contain shrink-0;
+  }
+
+  .area-card-learning {
+    @apply block mt-2 text-[10px] sm:text-xs font-semibold text-yellow-600;
   }
 }

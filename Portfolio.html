@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="bg-gray-50 overflow-x-hidden">
+<body class="bg-gray-50 overflow-x-hidden min-h-dvh flex flex-col">
 
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -33,18 +33,23 @@
     </div>
   </nav>
 
-  <section class="py-10 sm:py-14 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center">
-        <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
-        <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base -mt-4" data-i18n="portfolio.subtitle">Featured projects in backend, databases, and mobile development with real impact.</p>
+  <main class="flex-1 w-full">
+    <section class="py-10 sm:py-14 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+          <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
+          <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base -mt-4 mb-8 sm:mb-10" data-i18n="portfolio.subtitle">
+            Choose an Area
+          </p>
+        </div>
+        <div id="portfolio-areas" class="area-grid" aria-label="Areas of expertise"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div id="portfolio-projects" aria-live="polite"></div>
+    <div id="portfolio-projects" class="hidden" aria-live="polite"></div>
+  </main>
 
-  <footer class="bg-gray-900 text-gray-400 py-6">
+  <footer class="bg-gray-900 text-gray-400 py-6 mt-auto">
     <div class="max-w-7xl mx-auto px-4 text-center text-sm">
       <p>&copy; <script>document.write(new Date().getFullYear())</script> Jose Carlo Suarez Brucsoni</p>
     </div>

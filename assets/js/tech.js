@@ -30,20 +30,28 @@ function createTechIcon(icon) {
   return img;
 }
 
-function renderTechTags(slugs, techCatalog) {
+function renderTechTags(slugs, techCatalog, options = {}) {
+  const iconsOnly = options.iconsOnly === true;
   const container = document.createElement('div');
   container.className = 'flex flex-wrap gap-2 mb-5';
 
   (slugs || []).forEach((slug) => {
     const { label, icon } = getTechEntry(slug, techCatalog);
+    if (iconsOnly && (!icon || icon === 'generic')) return;
+
     const tag = document.createElement('span');
-    tag.className = 'tech-tag';
+    tag.className = iconsOnly ? 'tech-tag tech-tag-icon-only' : 'tech-tag';
     tag.appendChild(createTechIcon(icon));
 
-    const labelEl = document.createElement('span');
-    labelEl.className = 'tech-tag-label';
-    labelEl.textContent = label;
-    tag.appendChild(labelEl);
+    if (!iconsOnly) {
+      const labelEl = document.createElement('span');
+      labelEl.className = 'tech-tag-label';
+      labelEl.textContent = label;
+      tag.appendChild(labelEl);
+    } else {
+      tag.setAttribute('title', label);
+      tag.setAttribute('aria-label', label);
+    }
 
     container.appendChild(tag);
   });

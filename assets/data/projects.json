@@ -1,35 +1,165 @@
 {
+  "areas": [
+    {
+      "id": "cybersecurity",
+      "icon": "ti-lock",
+      "enabled": true,
+      "titleKey": "portfolio.areaCyberTitle",
+      "tech": ["picoctf", "githubwriteups", "kalilinux"]
+    },
+    {
+      "id": "software",
+      "icon": "ti-desktop",
+      "enabled": true,
+      "titleKey": "portfolio.areaSoftwareTitle",
+      "tech": ["laravel", "django", "blazor"]
+    },
+    {
+      "id": "data",
+      "icon": "ti-bar-chart",
+      "enabled": true,
+      "titleKey": "portfolio.areaDataTitle",
+      "tech": ["python", "chartjs", "apexcharts", "sqlserver"]
+    },
+    {
+      "id": "infra",
+      "icon": "ti-server",
+      "enabled": true,
+      "titleKey": "portfolio.areaInfraTitle",
+      "tech": ["archlinux", "kvm", "vmware", "mikrotik"]
+    },
+    {
+      "id": "mobile",
+      "icon": "ti-mobile",
+      "enabled": true,
+      "titleKey": "portfolio.areaMobileTitle",
+      "tech": ["androidstudio", "java", "firebase"]
+    },
+    {
+      "id": "ai",
+      "icon": "brain",
+      "enabled": false,
+      "titleKey": "portfolio.areaAiTitle",
+      "tech": []
+    },
+    {
+      "id": "cloud",
+      "icon": "ti-cloud",
+      "enabled": false,
+      "titleKey": "portfolio.areaCloudTitle",
+      "tech": ["kubernetes", "cloudservices"]
+    }
+  ],
   "projects": [
     {
-      "id": "dante",
-      "image": "assets/imgs/Portada_GeneracionDeReportes.png",
-      "imageAltKey": "portfolio.danteImageAlt",
-      "badgeKey": "portfolio.danteBadge",
-      "titleKey": "portfolio.danteTitle",
-      "descKey": "portfolio.danteDesc",
-      "noteKey": "portfolio.danteNote",
+      "id": "demo-cyber-1",
+      "area": "cybersecurity",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoCyber1ImageAlt",
+      "badgeKey": "portfolio.demoCyber1Badge",
+      "titleKey": "portfolio.demoCyber1Title",
+      "descKey": "portfolio.demoCyber1Desc",
+      "tech": ["kalilinux", "picoctf"],
+      "github": null
+    },
+    {
+      "id": "demo-cyber-2",
+      "area": "cybersecurity",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoCyber2ImageAlt",
+      "badgeKey": "portfolio.demoCyber2Badge",
+      "titleKey": "portfolio.demoCyber2Title",
+      "descKey": "portfolio.demoCyber2Desc",
+      "tech": ["githubwriteups"],
+      "github": null
+    },
+    {
+      "id": "demo-software-1",
+      "area": "software",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoSoftware1ImageAlt",
+      "badgeKey": "portfolio.demoSoftware1Badge",
+      "titleKey": "portfolio.demoSoftware1Title",
+      "descKey": "portfolio.demoSoftware1Desc",
       "tech": ["csharp", "dotnet", "sqlserver"],
       "github": null
     },
     {
-      "id": "encuentrame",
-      "image": "assets/imgs/portada_encuentrame.png",
-      "imageAltKey": "portfolio.encuentrameImageAlt",
-      "badge": "Android",
-      "titleKey": "portfolio.encuentrameTitle",
-      "descKey": "portfolio.encuentrameDesc",
-      "tech": ["java", "android", "firebase"],
-      "github": "https://github.com/jose-brucsoni/Materia_AplicacionesMoviles"
+      "id": "demo-software-2",
+      "area": "software",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoSoftware2ImageAlt",
+      "badgeKey": "portfolio.demoSoftware2Badge",
+      "titleKey": "portfolio.demoSoftware2Title",
+      "descKey": "portfolio.demoSoftware2Desc",
+      "tech": ["laravel", "django"],
+      "github": null
     },
     {
-      "id": "anglarill",
-      "image": "assets/imgs/portada_nutricion.png",
-      "imageAltKey": "portfolio.anglarillImageAlt",
-      "badge": "Android B2C",
-      "titleKey": "portfolio.anglarillTitle",
-      "descKey": "portfolio.anglarillDesc",
+      "id": "demo-data-1",
+      "area": "data",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoData1ImageAlt",
+      "badgeKey": "portfolio.demoData1Badge",
+      "titleKey": "portfolio.demoData1Title",
+      "descKey": "portfolio.demoData1Desc",
+      "tech": ["powerbi", "sqlserver"],
+      "github": null
+    },
+    {
+      "id": "demo-data-2",
+      "area": "data",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoData2ImageAlt",
+      "badgeKey": "portfolio.demoData2Badge",
+      "titleKey": "portfolio.demoData2Title",
+      "descKey": "portfolio.demoData2Desc",
+      "tech": ["chartjs", "apexcharts"],
+      "github": null
+    },
+    {
+      "id": "demo-infra-1",
+      "area": "infra",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoInfra1ImageAlt",
+      "badgeKey": "portfolio.demoInfra1Badge",
+      "titleKey": "portfolio.demoInfra1Title",
+      "descKey": "portfolio.demoInfra1Desc",
+      "tech": ["linux", "mikrotik"],
+      "github": null
+    },
+    {
+      "id": "demo-infra-2",
+      "area": "infra",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoInfra2ImageAlt",
+      "badgeKey": "portfolio.demoInfra2Badge",
+      "titleKey": "portfolio.demoInfra2Title",
+      "descKey": "portfolio.demoInfra2Desc",
+      "tech": ["windowsserver", "vmware"],
+      "github": null
+    },
+    {
+      "id": "demo-mobile-1",
+      "area": "mobile",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoMobile1ImageAlt",
+      "badgeKey": "portfolio.demoMobile1Badge",
+      "titleKey": "portfolio.demoMobile1Title",
+      "descKey": "portfolio.demoMobile1Desc",
+      "tech": ["java", "android", "firebase"],
+      "github": null
+    },
+    {
+      "id": "demo-mobile-2",
+      "area": "mobile",
+      "image": "assets/imgs/header.jpg",
+      "imageAltKey": "portfolio.demoMobile2ImageAlt",
+      "badgeKey": "portfolio.demoMobile2Badge",
+      "titleKey": "portfolio.demoMobile2Title",
+      "descKey": "portfolio.demoMobile2Desc",
       "tech": ["java", "android", "firebaseRtdb"],
-      "github": "https://github.com/jose-brucsoni/AnglarillFitness"
+      "github": null
     }
   ]
 }
