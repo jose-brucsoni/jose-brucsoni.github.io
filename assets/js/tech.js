@@ -41,6 +41,7 @@ function renderTechTags(slugs, techCatalog, options = {}) {
 
     const tag = document.createElement('span');
     tag.className = iconsOnly ? 'tech-tag tech-tag-icon-only' : 'tech-tag';
+    tag.dataset.tech = slug;
     tag.appendChild(createTechIcon(icon));
 
     if (!iconsOnly) {

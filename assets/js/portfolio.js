@@ -1,3 +1,14 @@
+const PAGE_SIZE = 2;
+
+const portfolioState = {
+  areas: [],
+  projects: [],
+  techCatalog: {},
+  selectedAreaId: null,
+  selectedTechs: new Set(),
+  page: 1,
+};
+
 async function loadPortfolioData() {
   const projectsRes = await fetch('assets/data/projects.json');
 
@@ -16,15 +27,15 @@ async function loadPortfolioData() {
 }
 
 function renderGithub(project, isPrimaryRow) {
-  const githubLabel = document.createElement('span');
-  githubLabel.setAttribute('data-i18n', 'portfolio.viewGithub');
-  githubLabel.textContent = i18nText('portfolio.viewGithub', 'View on GitHub');
-
   if (!project.github) {
     const disabled = document.createElement('span');
     disabled.className = 'btn-github-disabled';
     disabled.setAttribute('aria-disabled', 'true');
-    disabled.innerHTML = '<i class="ti-github"></i> ';
+    disabled.innerHTML = '<i class="ti-github" aria-hidden="true"></i> <i class="ti-lock" aria-hidden="true"></i> ';
+
+    const githubLabel = document.createElement('span');
+    githubLabel.setAttribute('data-i18n', 'portfolio.githubPrivate');
+    githubLabel.textContent = i18nText('portfolio.githubPrivate', 'Private');
     disabled.appendChild(githubLabel);
     return disabled;
   }
@@ -33,9 +44,41 @@ function renderGithub(project, isPrimaryRow) {
   link.href = project.github;
   link.target = '_blank';
   link.rel = 'noopener';
-  link.className = isPrimaryRow ? 'btn-github-light' : 'btn-primary';
-  link.innerHTML = '<i class="ti-github"></i> ';
+  link.className = isPrimaryRow ? 'btn-project-light' : 'btn-project';
+  link.innerHTML = '<i class="ti-github" aria-hidden="true"></i> ';
+
+  const githubLabel = document.createElement('span');
+  githubLabel.setAttribute('data-i18n', 'portfolio.viewGithub');
+  githubLabel.textContent = i18nText('portfolio.viewGithub', 'Github');
   link.appendChild(githubLabel);
+  return link;
+}
+
+function renderDemo(project, isPrimaryRow) {
+  if (!project.demo) {
+    const disabled = document.createElement('span');
+    disabled.className = 'btn-demo-disabled';
+    disabled.setAttribute('aria-disabled', 'true');
+    disabled.innerHTML = '<i class="ti-eye" aria-hidden="true"></i> ';
+
+    const demoLabel = document.createElement('span');
+    demoLabel.setAttribute('data-i18n', 'portfolio.demoUnavailable');
+    demoLabel.textContent = i18nText('portfolio.demoUnavailable', 'Demo');
+    disabled.appendChild(demoLabel);
+    return disabled;
+  }
+
+  const link = document.createElement('a');
+  link.href = project.demo;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.className = isPrimaryRow ? 'btn-project-light' : 'btn-project';
+  link.innerHTML = '<i class="ti-eye" aria-hidden="true"></i> ';
+
+  const demoLabel = document.createElement('span');
+  demoLabel.setAttribute('data-i18n', 'portfolio.viewDemo');
+  demoLabel.textContent = i18nText('portfolio.viewDemo', 'Demo');
+  link.appendChild(demoLabel);
   return link;
 }
 
@@ -47,7 +90,7 @@ function renderProject(project, index, techCatalog) {
   section.className = `project-row ${isPrimaryRow ? 'project-row-primary' : 'project-row-light'}`;
 
   const inner = document.createElement('div');
-  inner.className = `project-inner ${isImageRight ? 'lg:flex-row-reverse' : 'lg:flex-row'}`;
+  inner.className = `project-inner ${isImageRight ? 'project-inner-reverse' : ''}`;
 
   const media = document.createElement('div');
   media.className = `project-media ${isImageRight ? 'project-media-right' : 'project-media-left'}`;
@@ -60,17 +103,28 @@ function renderProject(project, index, techCatalog) {
     img.alt = window.i18n.t(project.imageAltKey);
   }
 
-  const badge = document.createElement('span');
-  badge.className = 'project-badge';
-  if (project.badgeKey) {
-    badge.setAttribute('data-i18n', project.badgeKey);
-    badge.textContent = i18nText(project.badgeKey, '');
-  } else {
-    badge.textContent = project.badge || '';
-  }
-
   media.appendChild(img);
-  media.appendChild(badge);
+
+  if (project.tech && project.tech.length > 0) {
+    const techWrap = window.tech.renderTechTags(project.tech, techCatalog, { iconsOnly: true });
+    techWrap.className = 'project-media-tech';
+    techWrap.querySelectorAll('[data-tech]').forEach((tag) => {
+      const slug = tag.dataset.tech;
+      tag.setAttribute('role', 'button');
+      tag.setAttribute('tabindex', '0');
+      tag.classList.toggle('is-active', portfolioState.selectedTechs.has(slug));
+      tag.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleTech(slug);
+      });
+      tag.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        toggleTech(slug);
+      });
+    });
+    media.appendChild(techWrap);
+  }
 
   const content = document.createElement('div');
   content.className = 'project-content';
@@ -87,8 +141,6 @@ function renderProject(project, index, techCatalog) {
 
   content.appendChild(title);
   content.appendChild(desc);
-  content.appendChild(window.tech.renderTechTags(project.tech, techCatalog, { iconsOnly: true }));
-  content.appendChild(renderGithub(project, isPrimaryRow));
 
   if (project.noteKey) {
     const note = document.createElement('p');
@@ -97,6 +149,12 @@ function renderProject(project, index, techCatalog) {
     note.textContent = i18nText(project.noteKey, '');
     content.appendChild(note);
   }
+
+  const actions = document.createElement('div');
+  actions.className = 'project-actions';
+  actions.appendChild(renderGithub(project, isPrimaryRow));
+  actions.appendChild(renderDemo(project, isPrimaryRow));
+  content.appendChild(actions);
 
   inner.appendChild(media);
   inner.appendChild(content);
@@ -169,7 +227,7 @@ function createAreaIcon(area) {
   return icon;
 }
 
-function renderAreaCard(area, onSelect, techCatalog) {
+function renderAreaCard(area, onSelect) {
   const card = document.createElement('button');
   card.type = 'button';
   card.className = `area-card ${area.enabled ? 'area-card-enabled' : 'area-card-disabled'}`;
@@ -189,13 +247,6 @@ function renderAreaCard(area, onSelect, techCatalog) {
   card.appendChild(createAreaIcon(area));
   card.appendChild(title);
 
-  const tech = area.tech || [];
-  if (tech.length > 0) {
-    const techWrap = window.tech.renderTechTags(tech, techCatalog, { iconsOnly: true });
-    techWrap.className = 'area-card-tech flex flex-wrap gap-1.5 sm:gap-2';
-    card.appendChild(techWrap);
-  }
-
   if (!area.enabled) {
     const learning = document.createElement('span');
     learning.className = 'area-card-learning';
@@ -211,8 +262,196 @@ function renderAreaCard(area, onSelect, techCatalog) {
   return card;
 }
 
-function renderProjectsForArea(areaId, projects, techCatalog, projectsContainer) {
-  const filtered = projects.filter((project) => project.area === areaId);
+function setSelectedArea(areasContainer, areaId) {
+  areasContainer.querySelectorAll('.area-card').forEach((card) => {
+    const isSelected = card.dataset.areaId === areaId;
+    card.classList.toggle('area-card-selected', isSelected);
+    card.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+  });
+}
+
+function getAreaById(areaId) {
+  return portfolioState.areas.find((area) => area.id === areaId) || null;
+}
+
+function getProjectsForArea(areaId) {
+  return portfolioState.projects.filter((project) => project.area === areaId);
+}
+
+function collectAreaTechSlugs(area, areaProjects) {
+  const seen = new Set();
+  const slugs = [];
+
+  (area.tech || []).forEach((slug) => {
+    if (!seen.has(slug)) {
+      seen.add(slug);
+      slugs.push(slug);
+    }
+  });
+
+  areaProjects.forEach((project) => {
+    (project.tech || []).forEach((slug) => {
+      if (!seen.has(slug)) {
+        seen.add(slug);
+        slugs.push(slug);
+      }
+    });
+  });
+
+  return slugs;
+}
+
+function getFilteredProjects() {
+  const areaProjects = getProjectsForArea(portfolioState.selectedAreaId);
+  if (portfolioState.selectedTechs.size === 0) return areaProjects;
+  return areaProjects.filter((project) =>
+    (project.tech || []).some((slug) => portfolioState.selectedTechs.has(slug))
+  );
+}
+
+function scrollToFirstProject() {
+  const projectsContainer = document.getElementById('portfolio-projects');
+  if (!projectsContainer) return;
+
+  const firstRow = projectsContainer.querySelector('.project-row');
+  const target = firstRow || projectsContainer;
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleTech(slug) {
+  if (portfolioState.selectedTechs.has(slug)) {
+    portfolioState.selectedTechs.delete(slug);
+  } else {
+    portfolioState.selectedTechs.add(slug);
+  }
+  portfolioState.page = 1;
+
+  const filtersContainer = document.getElementById('portfolio-filters');
+  if (filtersContainer) {
+    renderFilters(filtersContainer);
+  }
+  renderCurrentProjects();
+  scrollToFirstProject();
+}
+
+function renderFilters(filtersContainer) {
+  const area = getAreaById(portfolioState.selectedAreaId);
+  if (!area) {
+    filtersContainer.classList.add('hidden');
+    filtersContainer.innerHTML = '';
+    return;
+  }
+
+  const areaProjects = getProjectsForArea(portfolioState.selectedAreaId);
+  const slugs = collectAreaTechSlugs(area, areaProjects);
+
+  filtersContainer.classList.remove('hidden');
+  filtersContainer.className = 'portfolio-filters';
+  filtersContainer.innerHTML = '';
+
+  const inner = document.createElement('div');
+  inner.className = 'portfolio-filters-inner';
+
+  const label = document.createElement('p');
+  label.className = 'portfolio-filters-label';
+  label.setAttribute('data-i18n', 'portfolio.filterByTech');
+  label.textContent = i18nText('portfolio.filterByTech', 'Filter by technology');
+  inner.appendChild(label);
+
+  const tags = document.createElement('div');
+  tags.className = 'portfolio-filters-tags';
+
+  slugs.forEach((slug) => {
+    const { label: techLabel, icon } = window.tech.getTechEntry(slug, portfolioState.techCatalog);
+    const isActive = portfolioState.selectedTechs.has(slug);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `tech-filter${isActive ? ' is-active' : ''}`;
+    btn.dataset.tech = slug;
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    btn.appendChild(window.tech.createTechIcon(icon));
+
+    const text = document.createElement('span');
+    text.textContent = techLabel;
+    btn.appendChild(text);
+
+    btn.addEventListener('click', () => {
+      toggleTech(slug);
+    });
+
+    tags.appendChild(btn);
+  });
+
+  inner.appendChild(tags);
+  filtersContainer.appendChild(inner);
+}
+
+function renderPagination(paginationContainer, totalItems) {
+  const totalPages = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
+
+  if (totalItems <= PAGE_SIZE) {
+    paginationContainer.classList.add('hidden');
+    paginationContainer.innerHTML = '';
+    return;
+  }
+
+  if (portfolioState.page > totalPages) {
+    portfolioState.page = totalPages;
+  }
+
+  paginationContainer.classList.remove('hidden');
+  paginationContainer.className = 'portfolio-pagination';
+  paginationContainer.innerHTML = '';
+
+  const prev = document.createElement('button');
+  prev.type = 'button';
+  prev.className = 'pagination-btn';
+  prev.setAttribute('data-i18n', 'portfolio.prev');
+  prev.textContent = i18nText('portfolio.prev', 'Previous');
+  prev.disabled = portfolioState.page <= 1;
+  prev.addEventListener('click', () => {
+    if (portfolioState.page <= 1) return;
+    portfolioState.page -= 1;
+    renderCurrentProjects();
+  });
+  paginationContainer.appendChild(prev);
+
+  for (let page = 1; page <= totalPages; page += 1) {
+    const pageBtn = document.createElement('button');
+    pageBtn.type = 'button';
+    pageBtn.className = `pagination-btn${portfolioState.page === page ? ' is-active' : ''}`;
+    pageBtn.textContent = String(page);
+    pageBtn.setAttribute('aria-current', portfolioState.page === page ? 'page' : 'false');
+    pageBtn.addEventListener('click', () => {
+      portfolioState.page = page;
+      renderCurrentProjects();
+    });
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'pagination-btn';
+  next.setAttribute('data-i18n', 'portfolio.next');
+  next.textContent = i18nText('portfolio.next', 'Next');
+  next.disabled = portfolioState.page >= totalPages;
+  next.addEventListener('click', () => {
+    if (portfolioState.page >= totalPages) return;
+    portfolioState.page += 1;
+    renderCurrentProjects();
+  });
+  paginationContainer.appendChild(next);
+}
+
+function renderCurrentProjects() {
+  const projectsContainer = document.getElementById('portfolio-projects');
+  const paginationContainer = document.getElementById('portfolio-pagination');
+  if (!projectsContainer || !paginationContainer) return;
+
+  const filtered = getFilteredProjects();
+  const start = (portfolioState.page - 1) * PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+
   projectsContainer.innerHTML = '';
   projectsContainer.classList.remove('hidden');
 
@@ -222,42 +461,66 @@ function renderProjectsForArea(areaId, projects, techCatalog, projectsContainer)
     empty.setAttribute('data-i18n', 'portfolio.emptyArea');
     empty.textContent = i18nText('portfolio.emptyArea', 'No projects in this area yet.');
     projectsContainer.appendChild(empty);
+    paginationContainer.classList.add('hidden');
+    paginationContainer.innerHTML = '';
   } else {
-    filtered.forEach((project, index) => {
-      projectsContainer.appendChild(renderProject(project, index, techCatalog));
+    pageItems.forEach((project, localIndex) => {
+      const globalIndex = start + localIndex;
+      projectsContainer.appendChild(
+        renderProject(project, globalIndex, portfolioState.techCatalog)
+      );
     });
+    renderPagination(paginationContainer, filtered.length);
   }
 
   applyI18n();
-  projectsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function setSelectedArea(areasContainer, areaId) {
-  areasContainer.querySelectorAll('.area-card').forEach((card) => {
-    const isSelected = card.dataset.areaId === areaId;
-    card.classList.toggle('area-card-selected', isSelected);
-    card.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
-  });
+function selectArea(areaId, areasContainer, filtersContainer) {
+  portfolioState.selectedAreaId = areaId;
+  portfolioState.selectedTechs = new Set();
+  portfolioState.page = 1;
+
+  setSelectedArea(areasContainer, areaId);
+  renderFilters(filtersContainer);
+  renderCurrentProjects();
+  scrollToFirstProject();
+}
+
+function setProjectViewportHeight() {
+  document.documentElement.style.setProperty('--project-vh', `${window.innerHeight}px`);
 }
 
 async function initPortfolio() {
   const areasContainer = document.getElementById('portfolio-areas');
+  const filtersContainer = document.getElementById('portfolio-filters');
   const projectsContainer = document.getElementById('portfolio-projects');
-  if (!areasContainer || !projectsContainer) return;
+  const paginationContainer = document.getElementById('portfolio-pagination');
+  if (!areasContainer || !filtersContainer || !projectsContainer || !paginationContainer) return;
+
+  setProjectViewportHeight();
+  window.addEventListener('orientationchange', () => {
+    window.setTimeout(setProjectViewportHeight, 100);
+  });
 
   try {
     const { areas, projects, techCatalog } = await loadPortfolioData();
+    portfolioState.areas = areas;
+    portfolioState.projects = projects;
+    portfolioState.techCatalog = techCatalog;
+
     areasContainer.innerHTML = '';
+    filtersContainer.innerHTML = '';
+    filtersContainer.classList.add('hidden');
     projectsContainer.innerHTML = '';
     projectsContainer.classList.add('hidden');
-
-    const handleSelect = (areaId) => {
-      setSelectedArea(areasContainer, areaId);
-      renderProjectsForArea(areaId, projects, techCatalog, projectsContainer);
-    };
+    paginationContainer.innerHTML = '';
+    paginationContainer.classList.add('hidden');
 
     areas.forEach((area) => {
-      areasContainer.appendChild(renderAreaCard(area, handleSelect, techCatalog));
+      areasContainer.appendChild(
+        renderAreaCard(area, (areaId) => selectArea(areaId, areasContainer, filtersContainer))
+      );
     });
 
     applyI18n();
