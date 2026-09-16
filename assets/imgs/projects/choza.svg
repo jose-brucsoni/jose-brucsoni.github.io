@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Choza - plataforma inmobiliaria para Bolivia">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a1519"/>
+      <stop offset="55%" stop-color="#1f1014"/>
+      <stop offset="100%" stop-color="#140a0d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6B2D3B"/>
+      <stop offset="100%" stop-color="#8B3A4A"/>
+    </linearGradient>
+    <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dce7df"/>
+      <stop offset="100%" stop-color="#c5d4cb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="220" fill="#6B2D3B" fill-opacity="0.22"/>
+  <circle cx="90" cy="620" r="260" fill="#8B3A4A" fill-opacity="0.14"/>
+  <circle cx="720" cy="640" r="140" fill="#6B2D3B" fill-opacity="0.12"/>
+
+  <!-- Soft shadow under panel (no feDropShadow) -->
+  <rect x="102" y="86" width="1020" height="535" rx="22" fill="#000000" fill-opacity="0.28"/>
+  <rect x="90" y="70" width="1020" height="535" rx="22" fill="url(#panel)"/>
+
+  <!-- Top bar -->
+  <rect x="90" y="70" width="1020" height="72" rx="22" fill="#6B2D3B"/>
+  <rect x="90" y="118" width="1020" height="24" fill="#6B2D3B"/>
+  <circle cx="128" cy="106" r="7" fill="#f8b4c0" fill-opacity="0.85"/>
+  <circle cx="154" cy="106" r="7" fill="#d4a5ae" fill-opacity="0.75"/>
+  <circle cx="180" cy="106" r="7" fill="#f8fafc" fill-opacity="0.45"/>
+  <text x="220" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Choza</text>
+  <text x="300" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="500" fill="#f3d5db">Inmobiliaria - Bolivia</text>
+  <rect x="920" y="90" width="150" height="32" rx="16" fill="#ffffff" fill-opacity="0.15"/>
+  <text x="995" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Planes Broker</text>
+
+  <!-- Search bar -->
+  <rect x="120" y="168" width="620" height="48" rx="14" fill="#ffffff" stroke="#d4a5ae" stroke-width="1.5"/>
+  <circle cx="148" cy="192" r="9" fill="none" stroke="#8B3A4A" stroke-width="2.2"/>
+  <line x1="155" y1="199" x2="163" y2="207" stroke="#8B3A4A" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="178" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#94a3b8">Santa Cruz - Casa - Venta</text>
+  <rect x="760" y="172" width="120" height="40" rx="12" fill="url(#accent)"/>
+  <text x="820" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Buscar</text>
+  <rect x="896" y="172" width="184" height="40" rx="12" fill="#ffffff" stroke="#c4a0a8" stroke-width="1.5"/>
+  <text x="988" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B2D3B">Publicar aviso gratis</text>
+
+  <!-- Map panel -->
+  <rect x="120" y="236" width="420" height="330" rx="16" fill="url(#mapGrad)" stroke="#c5d0c8" stroke-width="1.5"/>
+  <path d="M140 320 H520 M180 236 V546 M300 236 V546 M420 236 V546 M140 400 H520 M140 480 H520" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3"/>
+  <path d="M140 280 Q260 300 340 260 T520 290" fill="none" stroke="#8aa394" stroke-width="8" stroke-opacity="0.5"/>
+  <circle cx="250" cy="340" r="14" fill="#6B2D3B"/>
+  <circle cx="250" cy="340" r="5" fill="#ffffff"/>
+  <path d="M250 354 L250 372" stroke="#6B2D3B" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="380" cy="420" r="14" fill="#8B3A4A"/>
+  <circle cx="380" cy="420" r="5" fill="#ffffff"/>
+  <path d="M380 434 L380 452" stroke="#8B3A4A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="200" cy="470" r="14" fill="#4E1F28"/>
+  <circle cx="200" cy="470" r="5" fill="#ffffff"/>
+  <path d="M200 484 L200 502" stroke="#4E1F28" stroke-width="3" stroke-linecap="round"/>
+  <rect x="140" y="250" width="120" height="28" rx="8" fill="#ffffff" fill-opacity="0.9"/>
+  <text x="200" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#6B2D3B">Leaflet - OSM</text>
+
+  <!-- Property card 1 -->
+  <rect x="560" y="236" width="250" height="155" rx="14" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+  <rect x="560" y="236" width="250" height="78" rx="14" fill="#8B3A4A"/>
+  <rect x="560" y="292" width="250" height="22" fill="#8B3A4A"/>
+  <rect x="576" y="252" width="54" height="22" rx="8" fill="#ffffff"/>
+  <text x="603" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#6B2D3B">Bs.</text>
+  <rect x="638" y="252" width="72" height="22" rx="8" fill="#1f1014" fill-opacity="0.35"/>
+  <text x="674" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">3D Tour</text>
+  <text x="576" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#1e293b">Casa Equipetrol</text>
+  <text x="576" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">3 dorm - 2 banos - 180 m2</text>
+  <text x="576" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#6B2D3B">Bs. 850.000</text>
+
+  <!-- Property card 2 -->
+  <rect x="830" y="236" width="250" height="155" rx="14" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+  <rect x="830" y="236" width="250" height="78" rx="14" fill="#4E1F28"/>
+  <rect x="830" y="292" width="250" height="22" fill="#4E1F28"/>
+  <rect x="846" y="252" width="54" height="22" rx="8" fill="#ffffff"/>
+  <text x="873" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#6B2D3B">Bs.</text>
+  <rect x="908" y="252" width="78" height="22" rx="8" fill="#f59e0b"/>
+  <text x="947" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#1f1014">Destacado</text>
+  <text x="846" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#1e293b">Depto Urbari</text>
+  <text x="846" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">2 dorm - 1 bano - 75 m2</text>
+  <text x="846" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#6B2D3B">Bs. 420.000</text>
+
+  <!-- Agent dashboard strip -->
+  <rect x="560" y="411" width="520" height="155" rx="14" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+  <rect x="560" y="411" width="180" height="155" rx="14" fill="#6B2D3B"/>
+  <rect x="710" y="411" width="30" height="155" fill="#6B2D3B"/>
+  <path d="M620 470 L670 438 L720 470 V520 H620 Z" fill="#f8fafc" fill-opacity="0.9"/>
+  <rect x="648" y="490" width="24" height="30" fill="#6B2D3B"/>
+  <text x="760" y="455" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e293b">Dashboard agente</text>
+  <text x="760" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">10 captaciones activas gratis - planes USD</text>
+  <rect x="760" y="500" width="18" height="40" rx="3" fill="#d4a5ae"/>
+  <rect x="786" y="488" width="18" height="52" rx="3" fill="#8B3A4A"/>
+  <rect x="812" y="510" width="18" height="30" rx="3" fill="#d4a5ae"/>
+  <rect x="838" y="478" width="18" height="62" rx="3" fill="#6B2D3B"/>
+  <rect x="900" y="500" width="150" height="36" rx="12" fill="url(#accent)"/>
+  <text x="975" y="523" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Ver planes</text>
+</svg>

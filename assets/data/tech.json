@@ -59,6 +59,10 @@
     "label": "CSS",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
   },
+  "javascript": {
+    "label": "JavaScript",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+  },
   "windows": {
     "label": "Windows",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
@@ -78,6 +82,14 @@
   "django": {
     "label": "Django",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+  },
+  "postgresql": {
+    "label": "PostgreSQL",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+  },
+  "leaflet": {
+    "label": "Leaflet",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/leaflet.svg"
   },
   "linux": {
     "label": "Linux",

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="GestionInternos — guía de teléfonos internos">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a1519"/>
+      <stop offset="55%" stop-color="#1f1014"/>
+      <stop offset="100%" stop-color="#140a0d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6B2D3B"/>
+      <stop offset="100%" stop-color="#8B3A4A"/>
+    </linearGradient>
+    <filter id="soft" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- Atmosphere -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="220" fill="#6B2D3B" fill-opacity="0.22"/>
+  <circle cx="90" cy="620" r="260" fill="#8B3A4A" fill-opacity="0.14"/>
+  <circle cx="720" cy="640" r="140" fill="#6B2D3B" fill-opacity="0.12"/>
+
+  <!-- App window -->
+  <g filter="url(#soft)">
+    <rect x="90" y="70" width="1020" height="535" rx="22" fill="url(#panel)"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="90" y="70" width="1020" height="72" rx="22" fill="#6B2D3B"/>
+  <rect x="90" y="118" width="1020" height="24" fill="#6B2D3B"/>
+  <circle cx="128" cy="106" r="7" fill="#f8b4c0" fill-opacity="0.85"/>
+  <circle cx="154" cy="106" r="7" fill="#d4a5ae" fill-opacity="0.75"/>
+  <circle cx="180" cy="106" r="7" fill="#f8fafc" fill-opacity="0.45"/>
+  <text x="220" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" fill="#ffffff">GestionInternos</text>
+  <text x="430" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="500" fill="#f3d5db">UTEPSA · Guía de internos</text>
+
+  <!-- Search -->
+  <rect x="120" y="168" width="540" height="44" rx="12" fill="#ffffff" stroke="#d4a5ae" stroke-width="1.5"/>
+  <circle cx="148" cy="190" r="9" fill="none" stroke="#8B3A4A" stroke-width="2.2"/>
+  <line x1="155" y1="197" x2="163" y2="205" stroke="#8B3A4A" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="178" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#94a3b8">Buscar nombre, cargo, área o interno…</text>
+
+  <!-- Filters -->
+  <rect x="680" y="172" width="92" height="36" rx="18" fill="url(#accent)"/>
+  <text x="726" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Área</text>
+  <rect x="784" y="172" width="92" height="36" rx="18" fill="#ffffff" stroke="#c4a0a8" stroke-width="1.5"/>
+  <text x="830" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B2D3B">Cargo</text>
+  <rect x="888" y="172" width="110" height="36" rx="18" fill="#ffffff" stroke="#c4a0a8" stroke-width="1.5"/>
+  <text x="943" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B2D3B">Ubicación</text>
+  <rect x="1010" y="172" width="70" height="36" rx="18" fill="#fff1f3" stroke="#e8b4be" stroke-width="1.5"/>
+  <text x="1045" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#6B2D3B">Hoy</text>
+
+  <!-- Stats chips -->
+  <rect x="120" y="230" width="168" height="34" rx="10" fill="#fff1f3"/>
+  <circle cx="142" cy="247" r="6" fill="#6B2D3B"/>
+  <text x="158" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#4E1F28">3 en licencia</text>
+  <rect x="300" y="230" width="188" height="34" rx="10" fill="#fff7ed"/>
+  <circle cx="322" cy="247" r="6" fill="#c2410c"/>
+  <text x="338" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#9a3412">2 cumpleaños hoy</text>
+
+  <!-- Employee cards -->
+  <!-- Card 1 -->
+  <g>
+    <rect x="120" y="288" width="300" height="168" rx="16" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+    <circle cx="178" cy="348" r="32" fill="#6B2D3B"/>
+    <circle cx="178" cy="338" r="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <ellipse cx="178" cy="366" rx="18" ry="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <text x="228" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="700" fill="#1e293b">Ana Rojas</text>
+    <text x="228" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Analista de Sistemas</text>
+    <rect x="228" y="372" width="72" height="24" rx="8" fill="#6B2D3B"/>
+    <text x="264" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2145</text>
+    <rect x="140" y="414" width="88" height="22" rx="8" fill="#fff7ed"/>
+    <text x="184" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#c2410c">Cumpleaños</text>
+    <text x="248" y="429" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">Bloque A · TI</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g>
+    <rect x="450" y="288" width="300" height="168" rx="16" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+    <circle cx="508" cy="348" r="32" fill="#8B3A4A"/>
+    <circle cx="508" cy="338" r="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <ellipse cx="508" cy="366" rx="18" ry="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <text x="558" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="700" fill="#1e293b">Luis Mendoza</text>
+    <text x="558" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Coordinador RRHH</text>
+    <rect x="558" y="372" width="72" height="24" rx="8" fill="#6B2D3B"/>
+    <text x="594" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1088</text>
+    <rect x="470" y="414" width="78" height="22" rx="8" fill="#f1f5f9"/>
+    <text x="509" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">Disponible</text>
+    <text x="562" y="429" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">Bloque B · RRHH</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g>
+    <rect x="780" y="288" width="300" height="168" rx="16" fill="#ffffff" stroke="#e8d0d5" stroke-width="1.5"/>
+    <circle cx="838" cy="348" r="32" fill="#4E1F28"/>
+    <circle cx="838" cy="338" r="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <ellipse cx="838" cy="366" rx="18" ry="12" fill="#f8fafc" fill-opacity="0.9"/>
+    <text x="888" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="700" fill="#1e293b">María Vargas</text>
+    <text x="888" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Asistente Académica</text>
+    <rect x="888" y="372" width="72" height="24" rx="8" fill="#6B2D3B"/>
+    <text x="924" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3312</text>
+    <rect x="800" y="414" width="78" height="22" rx="8" fill="#fff1f3"/>
+    <text x="839" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#6B2D3B">Licencia</text>
+    <text x="892" y="429" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">Campus · Acad.</text>
+  </g>
+
+  <!-- Detail modal hint (side peek) -->
+  <g opacity="0.95">
+    <rect x="780" y="478" width="300" height="92" rx="14" fill="#1f1014" fill-opacity="0.92"/>
+    <text x="800" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Ficha de contacto</text>
+    <text x="800" y="536" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#d4a5ae">email · interno · ubicación · foto</text>
+    <circle cx="1048" cy="524" r="18" fill="#6B2D3B"/>
+    <path d="M1042 524h12M1048 518v12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pagination -->
+  <g>
+    <rect x="120" y="500" width="40" height="36" rx="10" fill="#ffffff" stroke="#d4a5ae"/>
+    <text x="140" y="523" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#6B2D3B">‹</text>
+    <rect x="170" y="500" width="40" height="36" rx="10" fill="#6B2D3B"/>
+    <text x="190" y="523" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">1</text>
+    <rect x="220" y="500" width="40" height="36" rx="10" fill="#ffffff" stroke="#d4a5ae"/>
+    <text x="240" y="523" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="600" fill="#6B2D3B">2</text>
+    <rect x="270" y="500" width="40" height="36" rx="10" fill="#ffffff" stroke="#d4a5ae"/>
+    <text x="290" y="523" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#6B2D3B">›</text>
+  </g>
+</svg>
