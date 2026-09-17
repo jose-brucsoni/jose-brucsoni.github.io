@@ -23,6 +23,10 @@
     "label": "Python",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
   },
+  "selenium": {
+    "label": "Selenium",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"
+  },
   "java": {
     "label": "Java",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
@@ -38,6 +42,22 @@
   "firebase": {
     "label": "Firebase",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  "ionic": {
+    "label": "Ionic",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg"
+  },
+  "angular": {
+    "label": "Angular",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+  },
+  "typescript": {
+    "label": "TypeScript",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+  },
+  "capacitor": {
+    "label": "Capacitor",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/capacitor.svg"
   },
   "firebaseRtdb": {
     "label": "Firebase RTDB",
@@ -74,6 +94,10 @@
   "php": {
     "label": "PHP",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+  },
+  "mysql": {
+    "label": "MySQL",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
   },
   "laravel": {
     "label": "Laravel",
@@ -134,6 +158,10 @@
   "bootstrap": {
     "label": "Bootstrap",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+  },
+  "jquery": {
+    "label": "jQuery",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
   },
   "chartjs": {
     "label": "Chart.js",

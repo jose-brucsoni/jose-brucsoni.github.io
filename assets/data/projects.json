@@ -5,7 +5,7 @@
       "icon": "ti-desktop",
       "enabled": true,
       "titleKey": "portfolio.areaSoftwareTitle",
-      "tech": ["blazor", "dotnet", "csharp", "sqlserver", "bootstrap", "django", "python", "docker", "tailwind", "leaflet", "chartjs", "html", "css", "javascript"]
+      "tech": ["blazor", "dotnet", "csharp", "sqlserver", "bootstrap", "django", "python", "docker", "tailwind", "leaflet", "chartjs", "html", "css", "javascript", "apexcharts", "jquery", "selenium", "php", "mysql"]
     },
     {
       "id": "data",
@@ -33,7 +33,7 @@
       "icon": "ti-mobile",
       "enabled": true,
       "titleKey": "portfolio.areaMobileTitle",
-      "tech": ["androidstudio", "java", "firebase"]
+      "tech": ["androidstudio", "java", "firebase", "ionic", "angular", "typescript", "capacitor", "android"]
     },
     {
       "id": "ai",
@@ -94,6 +94,105 @@
       "tech": ["django", "python", "html", "css", "javascript"],
       "github": "https://github.com/jose-brucsoni/LuisFernandoSuarez_Inmobiliaria",
       "demo": "https://jose-brucsoni.github.io/LuisFernandoSuarez_Inmobiliaria/"
+    },
+    {
+      "id": "sistema-de-pagos",
+      "area": "software",
+      "image": "assets/imgs/projects/sistema-de-pagos.svg",
+      "imageAltKey": "portfolio.sistemaPagosImageAlt",
+      "titleKey": "portfolio.sistemaPagosTitle",
+      "descKey": "portfolio.sistemaPagosDesc",
+      "tech": ["html", "css", "javascript", "apexcharts"],
+      "github": null,
+      "demo": "https://jose-brucsoni.github.io/Sistema-de-Pagos/"
+    },
+    {
+      "id": "docu",
+      "area": "mobile",
+      "image": "assets/imgs/projects/docu.svg",
+      "imageAltKey": "portfolio.docuImageAlt",
+      "titleKey": "portfolio.docuTitle",
+      "descKey": "portfolio.docuDesc",
+      "tech": ["ionic", "angular", "typescript", "firebase", "capacitor"],
+      "github": "https://github.com/jose-brucsoni/Docu",
+      "demo": "https://jose-brucsoni.github.io/Docu/"
+    },
+    {
+      "id": "puntos-de-residuos",
+      "area": "software",
+      "image": "assets/imgs/projects/puntos-de-residuos.svg",
+      "imageAltKey": "portfolio.puntosResiduosImageAlt",
+      "titleKey": "portfolio.puntosResiduosTitle",
+      "descKey": "portfolio.puntosResiduosDesc",
+      "tech": ["html", "css", "javascript"],
+      "github": "https://github.com/jose-brucsoni/Puntos_de_Residuos",
+      "demo": "https://jose-brucsoni.github.io/Puntos_de_Residuos/"
+    },
+    {
+      "id": "foodrest",
+      "area": "software",
+      "image": "assets/imgs/projects/foodrest.svg",
+      "imageAltKey": "portfolio.foodRestImageAlt",
+      "titleKey": "portfolio.foodRestTitle",
+      "descKey": "portfolio.foodRestDesc",
+      "tech": ["html", "css", "javascript", "bootstrap", "jquery"],
+      "github": "https://github.com/jose-brucsoni/foodRest",
+      "demo": "https://jose-brucsoni.github.io/foodRest/"
+    },
+    {
+      "id": "special-dog-bolivia",
+      "area": "mobile",
+      "image": "assets/imgs/projects/special-dog-bolivia.svg",
+      "imageAltKey": "portfolio.specialDogImageAlt",
+      "titleKey": "portfolio.specialDogTitle",
+      "descKey": "portfolio.specialDogDesc",
+      "tech": ["java", "android", "androidstudio"],
+      "github": null,
+      "demo": "https://jose-brucsoni.github.io/Special_Dog_Bolivia/"
+    },
+    {
+      "id": "whatsapp-bot",
+      "area": "software",
+      "image": "assets/imgs/projects/whatsapp-bot.svg",
+      "imageAltKey": "portfolio.whatsappBotImageAlt",
+      "titleKey": "portfolio.whatsappBotTitle",
+      "descKey": "portfolio.whatsappBotDesc",
+      "tech": ["python", "selenium"],
+      "github": "https://github.com/jose-brucsoni/Whatsapp_bot",
+      "demo": null
+    },
+    {
+      "id": "anglarill-fitness",
+      "area": "mobile",
+      "image": "assets/imgs/projects/anglarill-fitness.svg",
+      "imageAltKey": "portfolio.anglarillFitnessImageAlt",
+      "titleKey": "portfolio.anglarillFitnessTitle",
+      "descKey": "portfolio.anglarillFitnessDesc",
+      "tech": ["java", "android", "androidstudio"],
+      "github": "https://github.com/jose-brucsoni/AnglarillFitness",
+      "demo": "https://jose-brucsoni.github.io/AnglarillFitness/"
+    },
+    {
+      "id": "encuentrame",
+      "area": "mobile",
+      "image": "assets/imgs/projects/encuentrame.svg",
+      "imageAltKey": "portfolio.encuentrameImageAlt",
+      "titleKey": "portfolio.encuentrameTitle",
+      "descKey": "portfolio.encuentrameDesc",
+      "tech": ["java", "android", "androidstudio", "firebase"],
+      "github": null,
+      "demo": "https://jose-brucsoni.github.io/Encuentrame/"
+    },
+    {
+      "id": "sistema-lab-mecanica",
+      "area": "software",
+      "image": "assets/imgs/projects/sistema-lab-mecanica.svg",
+      "imageAltKey": "portfolio.sistemaLabMecanicaImageAlt",
+      "titleKey": "portfolio.sistemaLabMecanicaTitle",
+      "descKey": "portfolio.sistemaLabMecanicaDesc",
+      "tech": ["php", "mysql", "jquery", "bootstrap", "html", "css"],
+      "github": null,
+      "demo": "https://jose-brucsoni.github.io/sistema-lab-mecanica/demo/index.html"
     }
   ]
 }
