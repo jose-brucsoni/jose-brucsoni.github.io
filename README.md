@@ -1,124 +1,63 @@
 # José Carlo Suárez Brucsoni
 
-<div align="center">
+Sitio de **portfolio y CV**. Backend Developer | C# (.NET) y Python | SQL | ciberseguridad. Santa Cruz de la Sierra, Bolivia.
 
-### Backend Developer | C# (.NET) & Python | SQL & Data Systems | Cybersecurity Focus
-📍 **Santa Cruz de la Sierra, Bolivia**
+![Portada del sitio](docs/screenshots/portfolio.png)
+
+**Sitio:** [https://jose-brucsoni.github.io/](https://jose-brucsoni.github.io/)
+
+<div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jose-brucsoni)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jose-brucsoni.github.io/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joseca6520@gmail.com)
 
 </div>
 
 ---
 
-## Sobre Mí
+## Sobre mí
 
-Backend Developer con **2+ años de experiencia** construyendo y optimizando sistemas orientados a datos con **C# (.NET)** y **SQL Server**. Diseñé y desarrollé el **Módulo de Cuentas Por Cobrar (CXC)** de **DANTE**, que digitalizó flujos de cobro para **50+ usuarios** y redujo el procesamiento manual en un **90%**.
+Backend Developer con **2+ años** en sistemas orientados a datos con **C# (.NET)** y **SQL Server**. Diseñé el módulo de **Cuentas por Cobrar (CXC)** de **DANTE** en UTEPSA (flujos de cobro para **50+** usuarios; menos procesamiento manual). Optimización de consultas (de minutos a segundos), reportes y Android con Firebase. Amplío **Python** y ciberseguridad. Abierto a trabajo remoto.
 
-Mi experiencia abarca optimización de bases de datos (consultas de **10 minutos a 10 segundos**), automatización de reportes y desarrollo Android con Firebase. Actualmente amplío mi expertise en **Python**, análisis de datos y **ciberseguridad**.
-
-**Estoy abierto a oportunidades remotas** donde pueda contribuir a proyectos de alto impacto con tecnologías modernas.
+El detalle del prototipo público de DANTE está en el repo `DANTE` (demo); el sistema interno no se publica completo.
 
 ---
 
-## Stack Tecnológico
+## Stack
 
-### Backend & Datos
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-![REST APIs](https://img.shields.io/badge/REST_APIs-FF6B6B?style=for-the-badge)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-### Móvil & Cloud
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+C# · .NET · Python · SQL Server · REST · Git · Firebase · Android · Java
 
 ---
 
-## Experiencia Profesional
+## Experiencia
 
-### Analista de sistema
-**Universidad Tecnológica Privada de Santa Cruz** | *julio 2023 - Presente* (3 años)
+### Analista de sistema — UTEPSA *(julio 2023 – presente)*
 
-#### Backend & Software Development
-- Diseñé y desarrollé el **Módulo de Cuentas Por Cobrar (CXC)** de **DANTE**, que digitalizó flujos de cobro y gestión financiera
-- **90%** de reducción en tiempo de procesamiento manual para **50+ usuarios activos**
-- Sistema con **10,000+ registros diarios** con alta confiabilidad
+- Módulo CXC de DANTE: cobro y gestión financiera, **50+** usuarios, **10.000+** registros/día.
+- SQL Server (**20+** tablas); consultas de ~10 min a ~10 s.
+- **10+** reportes (retención, pagos, inscripciones).
 
-#### Database Engineering & SQL Optimization
-- Base de datos académica con **20+ tablas** y **10,000+ registros** en SQL Server
-- Consultas optimizadas: de **10 minutos a 10 segundos** (90% mejora)
+### Auxiliar de laboratorio de redes y sistemas — UTEPSA *(agosto 2020 – junio 2023)*
 
-#### Data Analysis & Reporting
-- **10+ reportes analíticos** automatizados para liderazgo académico y financiero
-- Métricas de retención, pagos e inscripciones para decisiones estratégicas
+- Web de soporte e inventario (~80% menos carga manual).
+- **72** workstations, **21** laboratorios.
+- **10+** talleres de ciberseguridad, hacking ético y Git (**50+** estudiantes).
 
----
+### Freelance *(enero 2019 – julio 2020)*
 
-### Auxiliar de Laboratorio de Redes y Sistemas
-**Universidad Tecnológica Privada de Santa Cruz** | *agosto 2020 - junio 2023* (2 años 11 meses)
-
-#### Process Automation & Web Development
-- Sistema web de soporte técnico e inventario con **80%** menos carga manual
-
-#### Infrastructure & Systems Management
-- Mantenimiento de **72 workstations** con **90%** de disponibilidad
-- Infraestructura de red en **21 laboratorios** de cómputo
-
-#### Cybersecurity & Technical Training
-- **10+ talleres** sobre ciberseguridad, hacking ético y Git
-- Capacitación a **50+ estudiantes**
-
----
-
-### Freelance - Desarrollador Autónomo
-*enero 2019 - julio 2020* (1 año 7 meses)
-
-#### Encuentrame — App de Clasificados
-- Android nativo en Java con Firebase (Auth y Firestore)
-- **120 descargas** en distribución local. Proyecto pausado, código en GitHub
-
-#### Anglarill-Fitness — Gestor Nutricional B2C
-- App para nutricionista José Alberto Anglarill
-- Firebase Realtime Database con **20 pacientes activos**
-
----
-
-## Impacto y Métricas
-
-<div align="center">
-
-| **Métrica** | **Resultado** |
-|------------|---------------|
-| Usuarios del módulo CXC de DANTE | **+50** |
-| Registros diarios gestionados | **10,000+** |
-| Reducción de tiempo de procesamiento | **90%** |
-| Optimización de consultas SQL | **90%** (10 min → 10 seg) |
-| Workstations gestionadas | **72** |
-| Estudiantes capacitados | **+50** |
-| Descargas Encuentrame | **120** |
-
-</div>
+- **Encuentrame:** Android + Firebase; ~120 descargas locales; pausado.
+- **Anglarill Fitness:** app de nutrición (el repo público es prototipo visual + esqueleto Android).
 
 ---
 
 ## Educación
 
-**Universidad Tecnológica Privada de Santa Cruz** — Ingeniería en Sistemas
-- *2021 - diciembre 2026*
-
-**Colegio "Henry Prince"** — Bachiller de Humanidades
-- *2016*
+UTEPSA — Ingeniería en Sistemas (2021 – dic. 2026). Colegio Henry Prince — Bachiller (2016).
 
 ---
 
-## Desarrollo Local
+## Este sitio (desarrollo local)
 
 ```bash
 npm install
@@ -130,21 +69,6 @@ npm run build  # CSS de producción
 
 ## Contacto
 
-<div align="center">
+[joseca6520@gmail.com](mailto:joseca6520@gmail.com) · [LinkedIn](https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272) · [GitHub](https://github.com/jose-brucsoni) · +591 70918874
 
-[![Email](https://img.shields.io/badge/Email-joseca6520@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joseca6520@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-José%20Carlo-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jose-carlo-suarez-brucsoni-5588ba272)
-[![GitHub](https://img.shields.io/badge/GitHub-jose--brucsoni-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jose-brucsoni)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Mi%20Portafolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jose-brucsoni.github.io/)
-
-**Teléfono:** +591 70918874
-
-</div>
-
----
-
-<div align="center">
-
-*Backend Developer apasionado por crear soluciones seguras, eficientes y escalables*
-
-</div>
+Uso personal y académico, salvo acuerdo distinto.
