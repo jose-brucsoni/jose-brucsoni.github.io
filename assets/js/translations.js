@@ -199,6 +199,8 @@ const TRANSLATIONS = {
     portfolio: {
       title: 'My Project Portfolio',
       subtitle: 'Choose an Area',
+      quoteText: '“Talk is cheap. Show me the code.”',
+      quoteAuthor: 'Linus Torvalds',
       comingSoon: 'Coming soon',
       learningInProgress: 'Learning in progress',
       emptyArea: 'No projects in this area yet.',
@@ -210,6 +212,7 @@ const TRANSLATIONS = {
       next: 'Next',
       filterByTech: 'Filter by technology',
       loadError: 'Could not load projects. Please reload the page.',
+      areaAllTitle: 'Show All',
       areaCyberTitle: 'Cybersecurity',
       areaCyberDesc: 'Ethical hacking, vulnerability analysis, and hands-on security challenges.',
       areaSoftwareTitle: 'Software Development',
@@ -537,6 +540,8 @@ const TRANSLATIONS = {
     portfolio: {
       title: 'Mi Portafolio de Proyectos',
       subtitle: 'Elige una Area',
+      quoteText: '«Hablar es barato. Muéstrame el código.»',
+      quoteAuthor: 'Linus Torvalds',
       comingSoon: 'Próximamente',
       learningInProgress: 'En proceso de Aprendizaje',
       emptyArea: 'Aún no hay proyectos en esta área.',
@@ -548,6 +553,7 @@ const TRANSLATIONS = {
       next: 'Siguiente',
       filterByTech: 'Filtrar por tecnología',
       loadError: 'No se pudieron cargar los proyectos. Recarga la página.',
+      areaAllTitle: 'Mostrar Todos',
       areaCyberTitle: 'Ciberseguridad',
       areaCyberDesc: 'Hacking ético, análisis de vulnerabilidades y retos prácticos de seguridad.',
       areaSoftwareTitle: 'Desarrollo de Software',

@@ -34,15 +34,22 @@
   </nav>
 
   <main class="flex-1 w-full">
-    <section class="py-10 sm:py-14 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center">
-          <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
-          <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base -mt-4 mb-8 sm:mb-10" data-i18n="portfolio.subtitle">
-            Choose an Area
-          </p>
+    <section id="portfolio-intro" class="is-quote-playing py-10 sm:py-14 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div class="portfolio-intro-stack max-w-7xl mx-auto">
+        <blockquote id="portfolio-quote" class="portfolio-quote">
+          <i class="ti-linux portfolio-quote-icon" aria-hidden="true"></i>
+          <p class="portfolio-quote-text" data-i18n="portfolio.quoteText">«Hablar es barato. Muéstrame el código.»</p>
+          <footer class="portfolio-quote-author" data-i18n="portfolio.quoteAuthor">Linus Torvalds</footer>
+        </blockquote>
+        <div id="portfolio-stage" class="portfolio-stage">
+          <div class="text-center">
+            <h1 class="section-title" data-i18n="portfolio.title">My Project Portfolio</h1>
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base -mt-4 mb-8 sm:mb-10" data-i18n="portfolio.subtitle">
+              Choose an Area
+            </p>
+          </div>
+          <div id="portfolio-areas" class="area-grid" aria-label="Areas of expertise"></div>
         </div>
-        <div id="portfolio-areas" class="area-grid" aria-label="Areas of expertise"></div>
       </div>
     </section>
 

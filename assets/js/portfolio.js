@@ -275,6 +275,7 @@ function getAreaById(areaId) {
 }
 
 function getProjectsForArea(areaId) {
+  if (areaId === 'all') return portfolioState.projects;
   return portfolioState.projects.filter((project) => project.area === areaId);
 }
 
@@ -491,11 +492,35 @@ function setProjectViewportHeight() {
   document.documentElement.style.setProperty('--project-vh', `${window.innerHeight}px`);
 }
 
+const QUOTE_INTRO_MS = 3000;
+
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function finishQuoteIntro(section, quote, stage) {
+  if (!section || !quote || !stage) return;
+  section.classList.remove('is-quote-playing');
+  section.classList.add('is-quote-done');
+  stage.classList.add('is-visible');
+  quote.setAttribute('aria-hidden', 'true');
+}
+
+function waitQuoteIntro() {
+  if (prefersReducedMotion()) return Promise.resolve();
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, QUOTE_INTRO_MS);
+  });
+}
+
 async function initPortfolio() {
   const areasContainer = document.getElementById('portfolio-areas');
   const filtersContainer = document.getElementById('portfolio-filters');
   const projectsContainer = document.getElementById('portfolio-projects');
   const paginationContainer = document.getElementById('portfolio-pagination');
+  const introSection = document.getElementById('portfolio-intro');
+  const quote = document.getElementById('portfolio-quote');
+  const stage = document.getElementById('portfolio-stage');
   if (!areasContainer || !filtersContainer || !projectsContainer || !paginationContainer) return;
 
   setProjectViewportHeight();
@@ -503,8 +528,11 @@ async function initPortfolio() {
     window.setTimeout(setProjectViewportHeight, 100);
   });
 
+  const introDone = waitQuoteIntro();
+
   try {
     const { areas, projects, techCatalog } = await loadPortfolioData();
+
     portfolioState.areas = areas;
     portfolioState.projects = projects;
     portfolioState.techCatalog = techCatalog;
@@ -525,8 +553,12 @@ async function initPortfolio() {
 
     applyI18n();
     document.addEventListener('languageChanged', applyImageAlts);
+    await introDone;
+    finishQuoteIntro(introSection, quote, stage);
   } catch (err) {
     console.error('Portfolio load failed:', err);
+    await introDone;
+    finishQuoteIntro(introSection, quote, stage);
     showLoadError(areasContainer);
     applyI18n();
   }

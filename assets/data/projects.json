@@ -1,6 +1,13 @@
 {
   "areas": [
     {
+      "id": "all",
+      "icon": "ti-layout-grid2",
+      "enabled": true,
+      "titleKey": "portfolio.areaAllTitle",
+      "tech": []
+    },
+    {
       "id": "software",
       "icon": "ti-desktop",
       "enabled": true,
@@ -54,7 +61,7 @@
     {
       "id": "gestion-internos",
       "area": "software",
-      "image": "assets/imgs/projects/gestion-internos.svg",
+      "image": "assets/imgs/projects/gestion-internos.png",
       "imageAltKey": "portfolio.gestionInternosImageAlt",
       "titleKey": "portfolio.gestionInternosTitle",
       "descKey": "portfolio.gestionInternosDesc",
@@ -65,7 +72,7 @@
     {
       "id": "choza",
       "area": "software",
-      "image": "assets/imgs/projects/choza.svg",
+      "image": "assets/imgs/projects/choza.png",
       "imageAltKey": "portfolio.chozaImageAlt",
       "titleKey": "portfolio.chozaTitle",
       "descKey": "portfolio.chozaDesc",
@@ -76,7 +83,7 @@
     {
       "id": "dante",
       "area": "software",
-      "image": "assets/imgs/projects/dante.svg",
+      "image": "assets/imgs/projects/dante.png",
       "imageAltKey": "portfolio.danteImageAlt",
       "titleKey": "portfolio.danteTitle",
       "descKey": "portfolio.danteDesc",
@@ -87,7 +94,7 @@
     {
       "id": "lfs-inmobiliaria",
       "area": "software",
-      "image": "assets/imgs/projects/lfs-inmobiliaria.svg",
+      "image": "assets/imgs/projects/lfs-inmobiliaria.png",
       "imageAltKey": "portfolio.lfsInmobiliariaImageAlt",
       "titleKey": "portfolio.lfsInmobiliariaTitle",
       "descKey": "portfolio.lfsInmobiliariaDesc",
@@ -98,7 +105,7 @@
     {
       "id": "sistema-de-pagos",
       "area": "software",
-      "image": "assets/imgs/projects/sistema-de-pagos.svg",
+      "image": "assets/imgs/projects/sistema-de-pagos.png",
       "imageAltKey": "portfolio.sistemaPagosImageAlt",
       "titleKey": "portfolio.sistemaPagosTitle",
       "descKey": "portfolio.sistemaPagosDesc",
@@ -109,7 +116,7 @@
     {
       "id": "docu",
       "area": "mobile",
-      "image": "assets/imgs/projects/docu.svg",
+      "image": "assets/imgs/projects/docu.png",
       "imageAltKey": "portfolio.docuImageAlt",
       "titleKey": "portfolio.docuTitle",
       "descKey": "portfolio.docuDesc",
@@ -120,7 +127,7 @@
     {
       "id": "puntos-de-residuos",
       "area": "software",
-      "image": "assets/imgs/projects/puntos-de-residuos.svg",
+      "image": "assets/imgs/projects/puntos-de-residuos.png",
       "imageAltKey": "portfolio.puntosResiduosImageAlt",
       "titleKey": "portfolio.puntosResiduosTitle",
       "descKey": "portfolio.puntosResiduosDesc",
@@ -131,7 +138,7 @@
     {
       "id": "foodrest",
       "area": "software",
-      "image": "assets/imgs/projects/foodrest.svg",
+      "image": "assets/imgs/projects/foodrest.png",
       "imageAltKey": "portfolio.foodRestImageAlt",
       "titleKey": "portfolio.foodRestTitle",
       "descKey": "portfolio.foodRestDesc",
@@ -142,7 +149,7 @@
     {
       "id": "special-dog-bolivia",
       "area": "mobile",
-      "image": "assets/imgs/projects/special-dog-bolivia.svg",
+      "image": "assets/imgs/projects/special-dog-bolivia.png",
       "imageAltKey": "portfolio.specialDogImageAlt",
       "titleKey": "portfolio.specialDogTitle",
       "descKey": "portfolio.specialDogDesc",
@@ -164,7 +171,7 @@
     {
       "id": "anglarill-fitness",
       "area": "mobile",
-      "image": "assets/imgs/projects/anglarill-fitness.svg",
+      "image": "assets/imgs/projects/anglarill-fitness.png",
       "imageAltKey": "portfolio.anglarillFitnessImageAlt",
       "titleKey": "portfolio.anglarillFitnessTitle",
       "descKey": "portfolio.anglarillFitnessDesc",
@@ -175,7 +182,7 @@
     {
       "id": "encuentrame",
       "area": "mobile",
-      "image": "assets/imgs/projects/encuentrame.svg",
+      "image": "assets/imgs/projects/encuentrame.png",
       "imageAltKey": "portfolio.encuentrameImageAlt",
       "titleKey": "portfolio.encuentrameTitle",
       "descKey": "portfolio.encuentrameDesc",
@@ -186,7 +193,7 @@
     {
       "id": "sistema-lab-mecanica",
       "area": "software",
-      "image": "assets/imgs/projects/sistema-lab-mecanica.svg",
+      "image": "assets/imgs/projects/sistema-lab-mecanica.png",
       "imageAltKey": "portfolio.sistemaLabMecanicaImageAlt",
       "titleKey": "portfolio.sistemaLabMecanicaTitle",
       "descKey": "portfolio.sistemaLabMecanicaDesc",
