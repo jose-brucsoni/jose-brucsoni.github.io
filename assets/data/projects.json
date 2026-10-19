@@ -200,6 +200,17 @@
       "tech": ["php", "mysql", "jquery", "bootstrap", "html", "css"],
       "github": null,
       "demo": "https://jose-brucsoni.github.io/sistema-lab-mecanica/demo/index.html"
+    },
+    {
+      "id": "sistema-piscicultura",
+      "area": "software",
+      "image": "assets/imgs/projects/sistema-piscicultura.png",
+      "imageAltKey": "portfolio.sistemaPisciculturaImageAlt",
+      "titleKey": "portfolio.sistemaPisciculturaTitle",
+      "descKey": "portfolio.sistemaPisciculturaDesc",
+      "tech": ["blazor", "dotnet", "csharp", "sqlserver"],
+      "github": "https://github.com/jose-brucsoni/Sistema-de-Getion-de-Piscicultura",
+      "demo": null
     }
   ]
 }

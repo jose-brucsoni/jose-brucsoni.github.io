@@ -266,6 +266,9 @@ const TRANSLATIONS = {
       sistemaLabMecanicaTitle: 'Sistema Lab Mecánica',
       sistemaLabMecanicaDesc: 'Web system (PHP MVC, mysqli, MySQL/MariaDB) for the UTEPSA Mechanics Lab: inventory, loans, reservations, requests, and documentation, with role-based access (lab lead, admin, assistant, read-only). HTML/CSS UI with jQuery and Bootstrap 4. Static HTML demo on GitHub Pages (no PHP or database).',
       sistemaLabMecanicaImageAlt: 'Sistema Lab Mecánica — UTEPSA lab management web app',
+      sistemaPisciculturaTitle: 'Sistema de Gestión de Piscicultura',
+      sistemaPisciculturaDesc: 'Web app for <strong>fish batch logbook</strong> (seeding → harvest): pond, feeding, water, and delivery to sales. Case study of <strong>Lagos Andinos SRL</strong> (Andean region, Bolivia). Graduation thesis project built with Blazor/.NET 9, SQL Server, Dapper, and ASP.NET Core cookie authentication. Repository includes SQL scripts and full documentation.',
+      sistemaPisciculturaImageAlt: 'Sistema de Gestión de Piscicultura — fish farming management web app',
     },
     cv: {
       location: 'Location:',
@@ -607,6 +610,9 @@ const TRANSLATIONS = {
       sistemaLabMecanicaTitle: 'Sistema Lab Mecánica',
       sistemaLabMecanicaDesc: 'Sistema web (PHP MVC, mysqli, MySQL/MariaDB) del Laboratorio de Mecanica de UTEPSA: inventario, prestamos, reservas, solicitudes y documentacion, con acceso por roles (encargado, administrador, auxiliar, consulta). Interfaz HTML/CSS, jQuery y Bootstrap 4. Demo HTML estatica en GitHub Pages (sin PHP ni base de datos).',
       sistemaLabMecanicaImageAlt: 'Sistema Lab Mecánica — app web del laboratorio UTEPSA',
+      sistemaPisciculturaTitle: 'Sistema de Gestión de Piscicultura',
+      sistemaPisciculturaDesc: 'Aplicación web para la <strong>bitácora de cada lote de peces</strong> (siembra → cosecha): estanque, alimentación, agua y entrega a ventas. Caso de estudio de <strong>Lagos Andinos SRL</strong> (región andina, Bolivia). Proyecto de examen de grado desarrollado con Blazor/.NET 9, SQL Server, Dapper y autenticación con cookies de ASP.NET Core. El repositorio incluye scripts SQL y documentación completa.',
+      sistemaPisciculturaImageAlt: 'Sistema de Gestión de Piscicultura — app web de gestión de piscicultura',
     },
     cv: {
       location: 'Ubicación:',
