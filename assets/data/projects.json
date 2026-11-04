@@ -19,6 +19,7 @@
       "icon": "ti-bar-chart",
       "enabled": true,
       "titleKey": "portfolio.areaDataTitle",
+      "noticeKey": "portfolio.areaDataNotice",
       "tech": ["python", "chartjs", "apexcharts", "sqlserver"]
     },
     {
@@ -26,6 +27,7 @@
       "icon": "ti-server",
       "enabled": true,
       "titleKey": "portfolio.areaInfraTitle",
+      "noticeKey": "portfolio.areaInfraNotice",
       "tech": ["archlinux", "kvm", "vmware", "mikrotik"]
     },
     {
@@ -33,6 +35,7 @@
       "icon": "ti-lock",
       "enabled": true,
       "titleKey": "portfolio.areaCyberTitle",
+      "noticeKey": "portfolio.areaCyberNotice",
       "tech": ["picoctf", "githubwriteups", "kalilinux"]
     },
     {
@@ -66,7 +69,8 @@
       "titleKey": "portfolio.gestionInternosTitle",
       "descKey": "portfolio.gestionInternosDesc",
       "tech": ["blazor", "dotnet", "csharp", "sqlserver", "bootstrap"],
-      "github": "https://github.com/jose-brucsoni/GestionInternos",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/GestionInternos/"
     },
     {
@@ -77,8 +81,10 @@
       "titleKey": "portfolio.chozaTitle",
       "descKey": "portfolio.chozaDesc",
       "tech": ["django", "python", "docker", "tailwind", "leaflet", "chartjs"],
-      "github": "https://github.com/jose-brucsoni/Choza",
-      "demo": "https://jose-brucsoni.github.io/Choza/"
+      "github": null,
+      "githubPrivate": true,
+      "demo": "https://jose-brucsoni.github.io/Choza/",
+      "demoLabelKey": "portfolio.viewProjectCta"
     },
     {
       "id": "dante",
@@ -88,7 +94,8 @@
       "titleKey": "portfolio.danteTitle",
       "descKey": "portfolio.danteDesc",
       "tech": ["blazor", "dotnet", "csharp", "bootstrap"],
-      "github": "https://github.com/jose-brucsoni/DANTE",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/DANTE/"
     },
     {
@@ -110,7 +117,8 @@
       "titleKey": "portfolio.sistemaPagosTitle",
       "descKey": "portfolio.sistemaPagosDesc",
       "tech": ["html", "css", "javascript", "apexcharts"],
-      "github": "https://github.com/jose-brucsoni/Sistema-de-Pagos",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/Sistema-de-Pagos/"
     },
     {
@@ -154,7 +162,8 @@
       "titleKey": "portfolio.specialDogTitle",
       "descKey": "portfolio.specialDogDesc",
       "tech": ["java", "android", "androidstudio"],
-      "github": "https://github.com/jose-brucsoni/Special_Dog_Bolivia",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/Special_Dog_Bolivia/"
     },
     {
@@ -187,7 +196,8 @@
       "titleKey": "portfolio.encuentrameTitle",
       "descKey": "portfolio.encuentrameDesc",
       "tech": ["java", "android", "androidstudio", "firebase"],
-      "github": "https://github.com/jose-brucsoni/Encuentrame",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/Encuentrame/"
     },
     {
@@ -198,7 +208,8 @@
       "titleKey": "portfolio.sistemaLabMecanicaTitle",
       "descKey": "portfolio.sistemaLabMecanicaDesc",
       "tech": ["php", "mysql", "jquery", "bootstrap", "html", "css"],
-      "github": "https://github.com/jose-brucsoni/sistema-lab-mecanica",
+      "github": null,
+      "githubPrivate": true,
       "demo": "https://jose-brucsoni.github.io/sistema-lab-mecanica/demo/index.html"
     },
     {
@@ -221,17 +232,6 @@
       "descKey": "portfolio.taxosDesc",
       "tech": ["python", "javascript", "tailwind", "linux", "windows"],
       "github": "https://github.com/jose-brucsoni/Taxos",
-      "demo": null
-    },
-    {
-      "id": "my-so",
-      "area": "software",
-      "image": "assets/imgs/projects/my-so.png",
-      "imageAltKey": "portfolio.mySoImageAlt",
-      "titleKey": "portfolio.mySoTitle",
-      "descKey": "portfolio.mySoDesc",
-      "tech": ["linux", "archlinux"],
-      "github": "https://github.com/jose-brucsoni/My_SO",
       "demo": null
     }
   ]

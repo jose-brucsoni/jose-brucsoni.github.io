@@ -35,7 +35,7 @@ function renderGithub(project, isPrimaryRow) {
 
     const githubLabel = document.createElement('span');
     githubLabel.setAttribute('data-i18n', 'portfolio.githubPrivate');
-    githubLabel.textContent = i18nText('portfolio.githubPrivate', 'Private');
+    githubLabel.textContent = i18nText('portfolio.githubPrivate', 'Private repo');
     disabled.appendChild(githubLabel);
     return disabled;
   }
@@ -75,9 +75,10 @@ function renderDemo(project, isPrimaryRow) {
   link.className = isPrimaryRow ? 'btn-project-light' : 'btn-project';
   link.innerHTML = '<i class="ti-eye" aria-hidden="true"></i> ';
 
+  const demoKey = project.demoLabelKey || 'portfolio.viewDemo';
   const demoLabel = document.createElement('span');
-  demoLabel.setAttribute('data-i18n', 'portfolio.viewDemo');
-  demoLabel.textContent = i18nText('portfolio.viewDemo', 'Demo');
+  demoLabel.setAttribute('data-i18n', demoKey);
+  demoLabel.textContent = i18nText(demoKey, 'Demo');
   link.appendChild(demoLabel);
   return link;
 }
@@ -155,6 +156,14 @@ function renderProject(project, index, techCatalog) {
   actions.appendChild(renderGithub(project, isPrimaryRow));
   actions.appendChild(renderDemo(project, isPrimaryRow));
   content.appendChild(actions);
+
+  if (project.githubPrivate) {
+    const privateNote = document.createElement('p');
+    privateNote.className = 'project-private-note';
+    privateNote.setAttribute('data-i18n', 'portfolio.privateRepoNote');
+    privateNote.textContent = i18nText('portfolio.privateRepoNote', 'Code available on request for technical review.');
+    content.appendChild(privateNote);
+  }
 
   inner.appendChild(media);
   inner.appendChild(content);
@@ -457,11 +466,36 @@ function renderCurrentProjects() {
   projectsContainer.classList.remove('hidden');
 
   if (filtered.length === 0) {
-    const empty = document.createElement('p');
-    empty.className = 'text-center text-gray-500 py-12 px-4';
-    empty.setAttribute('data-i18n', 'portfolio.emptyArea');
-    empty.textContent = i18nText('portfolio.emptyArea', 'No projects in this area yet.');
-    projectsContainer.appendChild(empty);
+    const area = getAreaById(portfolioState.selectedAreaId);
+    if (area && area.noticeKey) {
+      const notice = document.createElement('div');
+      notice.className = 'area-notice';
+
+      const icon = document.createElement('i');
+      icon.className = 'ti-time area-notice-icon';
+      icon.setAttribute('aria-hidden', 'true');
+
+      const title = document.createElement('h3');
+      title.className = 'area-notice-title';
+      title.setAttribute('data-i18n', 'portfolio.areaNoticeTitle');
+      title.textContent = i18nText('portfolio.areaNoticeTitle', 'Projects in preparation');
+
+      const text = document.createElement('p');
+      text.className = 'area-notice-text';
+      text.setAttribute('data-i18n', area.noticeKey);
+      text.textContent = i18nText(area.noticeKey, '');
+
+      notice.appendChild(icon);
+      notice.appendChild(title);
+      notice.appendChild(text);
+      projectsContainer.appendChild(notice);
+    } else {
+      const empty = document.createElement('p');
+      empty.className = 'text-center text-gray-500 py-12 px-4';
+      empty.setAttribute('data-i18n', 'portfolio.emptyArea');
+      empty.textContent = i18nText('portfolio.emptyArea', 'No projects in this area yet.');
+      projectsContainer.appendChild(empty);
+    }
     paginationContainer.classList.add('hidden');
     paginationContainer.innerHTML = '';
   } else {
