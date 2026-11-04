@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="WhatsApp Bot - creacion masiva de grupos">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="WhatsApp Bot - automatizacion masiva de grupos">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#2a1519"/>
@@ -25,55 +25,78 @@
   <rect x="90" y="70" width="1020" height="64" rx="22" fill="#6B2D3B"/>
   <rect x="90" y="110" width="1020" height="24" fill="#6B2D3B"/>
   <text x="130" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffffff">WhatsApp Bot</text>
-  <text x="340" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f3d5db">Python + Selenium + Chrome</text>
+  <text x="352" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f3d5db">Python + Selenium + Excel</text>
   <rect x="880" y="90" width="190" height="32" rx="16" fill="#ffffff" fill-opacity="0.18"/>
   <text x="975" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Sin demo web</text>
 
-  <!-- Excel in -->
-  <rect x="120" y="168" width="300" height="380" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
-  <rect x="120" y="168" width="300" height="48" rx="16" fill="#6B2D3B"/>
-  <rect x="120" y="192" width="300" height="24" fill="#6B2D3B"/>
-  <text x="270" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">MATERIAS-1.xlsx</text>
-  <text x="140" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Hoja final · columna J</text>
-  <rect x="140" y="260" width="260" height="32" rx="8" fill="#fff1f3"/>
-  <text x="154" y="281" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#4E1F28">J2  Algebra I</text>
-  <rect x="140" y="302" width="260" height="32" rx="8" fill="#f8fafc" stroke="#e8d0d5"/>
-  <text x="154" y="323" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">J3  Calculo</text>
-  <rect x="140" y="344" width="260" height="32" rx="8" fill="#fff1f3"/>
-  <text x="154" y="365" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#4E1F28">J4  Programacion</text>
-  <rect x="140" y="386" width="260" height="32" rx="8" fill="#f8fafc" stroke="#e8d0d5"/>
-  <text x="154" y="407" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">... hasta J39</text>
-  <text x="270" y="470" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#8B3A4A">Hasta 39 grupos</text>
-  <text x="270" y="500" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Contacto: a_Yo</text>
+  <rect x="120" y="168" width="250" height="300" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
+  <rect x="120" y="168" width="250" height="46" rx="16" fill="#6B2D3B"/>
+  <rect x="120" y="192" width="250" height="22" fill="#6B2D3B"/>
+  <text x="245" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Lista en Excel</text>
+  <text x="140" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Contactos y grupos</text>
+  <rect x="140" y="254" width="210" height="30" rx="8" fill="#fff1f3"/>
+  <text x="154" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#4E1F28">Grupo 1</text>
+  <rect x="140" y="292" width="210" height="30" rx="8" fill="#f8fafc" stroke="#e8d0d5"/>
+  <text x="154" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">Grupo 2</text>
+  <rect x="140" y="330" width="210" height="30" rx="8" fill="#fff1f3"/>
+  <text x="154" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#4E1F28">Grupo 3</text>
+  <rect x="140" y="368" width="210" height="30" rx="8" fill="#f8fafc" stroke="#e8d0d5"/>
+  <text x="154" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">... hasta 39</text>
+  <text x="245" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#8B3A4A">Una sola hoja de entrada</text>
 
-  <!-- Chrome / WA Web -->
-  <rect x="450" y="168" width="300" height="380" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
-  <rect x="450" y="168" width="300" height="48" rx="16" fill="#4E1F28"/>
-  <rect x="450" y="192" width="300" height="24" fill="#4E1F28"/>
-  <text x="600" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">WhatsApp Web</text>
-  <rect x="520" y="250" width="160" height="160" rx="12" fill="#1f1014"/>
-  <rect x="548" y="278" width="104" height="104" fill="#f8fafc"/>
-  <rect x="564" y="294" width="24" height="24" fill="#6B2D3B"/>
-  <rect x="612" y="294" width="24" height="24" fill="#6B2D3B"/>
-  <rect x="564" y="342" width="24" height="24" fill="#6B2D3B"/>
-  <rect x="588" y="318" width="24" height="24" fill="#8B3A4A"/>
-  <text x="600" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Escanear QR</text>
-  <text x="600" y="468" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Selenium controla Chrome</text>
-  <text x="600" y="500" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Espera hasta 600 s</text>
+  <path d="M382 318h58" stroke="#8B3A4A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M440 318l-12-9v18z" fill="#8B3A4A"/>
 
-  <!-- Excel out -->
-  <rect x="780" y="168" width="290" height="380" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
-  <rect x="780" y="168" width="290" height="48" rx="16" fill="#8B3A4A"/>
-  <rect x="780" y="192" width="290" height="24" fill="#8B3A4A"/>
-  <text x="925" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Modulo 1.xlsx</text>
-  <text x="800" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Hoja1 · J enlace · K nombre</text>
-  <rect x="800" y="260" width="250" height="44" rx="8" fill="#fff1f3"/>
-  <text x="814" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#4E1F28">chat.whatsapp.com/...</text>
-  <text x="814" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#6B2D3B">Algebra I</text>
-  <rect x="800" y="316" width="250" height="44" rx="8" fill="#f8fafc" stroke="#e8d0d5"/>
-  <text x="814" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">chat.whatsapp.com/...</text>
-  <text x="814" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Calculo</text>
-  <rect x="800" y="440" width="250" height="72" rx="10" fill="url(#accent)"/>
-  <text x="925" y="472" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Guarda en cada fila</text>
-  <text x="925" y="494" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#f3d5db">No es API oficial</text>
+  <rect x="462" y="168" width="270" height="300" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
+  <rect x="462" y="168" width="270" height="46" rx="16" fill="#4E1F28"/>
+  <rect x="462" y="192" width="270" height="22" fill="#4E1F28"/>
+  <text x="597" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Automatizacion</text>
+
+  <circle cx="520" cy="270" r="16" fill="#6B2D3B"/>
+  <path d="M513 270l5 5 9-10" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="552" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Crear grupos en lote</text>
+
+  <line x1="502" y1="300" x2="694" y2="300" stroke="#e8d0d5" stroke-width="1.5"/>
+  <text x="520" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#8B3A4A" letter-spacing="1">EXTENSIBLE A</text>
+
+  <circle cx="528" cy="352" r="10" fill="none" stroke="#8B3A4A" stroke-width="2.5"/>
+  <path d="M528 347v10M523 352h10" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="552" y="357" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Enviar mensajes</text>
+
+  <circle cx="528" cy="386" r="10" fill="none" stroke="#8B3A4A" stroke-width="2.5"/>
+  <path d="M528 381v10M523 386h10" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="552" y="391" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Editar grupos</text>
+
+  <circle cx="528" cy="420" r="10" fill="none" stroke="#8B3A4A" stroke-width="2.5"/>
+  <path d="M528 415v10M523 420h10" stroke="#8B3A4A" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="552" y="425" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Agregar o quitar integrantes</text>
+
+  <path d="M754 318h58" stroke="#8B3A4A" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M812 318l-12-9v18z" fill="#8B3A4A"/>
+
+  <rect x="834" y="168" width="250" height="300" rx="16" fill="#ffffff" stroke="#e8d0d5"/>
+  <rect x="834" y="168" width="250" height="46" rx="16" fill="#8B3A4A"/>
+  <rect x="834" y="192" width="250" height="22" fill="#8B3A4A"/>
+  <text x="959" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">WhatsApp</text>
+
+  <rect x="858" y="238" width="202" height="56" rx="10" fill="#f8fafc" stroke="#e8d0d5"/>
+  <circle cx="886" cy="266" r="14" fill="#6B2D3B"/>
+  <text x="886" y="271" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">1</text>
+  <text x="912" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">Grupo creado</text>
+
+  <rect x="858" y="306" width="202" height="56" rx="10" fill="#f8fafc" stroke="#e8d0d5"/>
+  <circle cx="886" cy="334" r="14" fill="#6B2D3B"/>
+  <text x="886" y="339" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
+  <text x="912" y="339" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">Enlace guardado</text>
+
+  <rect x="858" y="374" width="202" height="56" rx="10" fill="#f8fafc" stroke="#e8d0d5"/>
+  <circle cx="886" cy="402" r="14" fill="#6B2D3B"/>
+  <text x="886" y="407" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">3</text>
+  <text x="912" y="407" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">Siguiente fila</text>
+
+  <rect x="120" y="500" width="964" height="72" rx="14" fill="url(#accent)"/>
+  <text x="150" y="532" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Crea grupos y guarda cada enlace de invitacion</text>
+  <text x="150" y="556" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f3d5db">El mismo enfoque permite extenderlo a envios masivos y gestion de integrantes</text>
+  <rect x="906" y="512" width="164" height="48" rx="24" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="988" y="542" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">No es API oficial</text>
 </svg>
