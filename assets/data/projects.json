@@ -211,6 +211,28 @@
       "tech": ["blazor", "dotnet", "csharp", "sqlserver"],
       "github": "https://github.com/jose-brucsoni/Sistema-de-Getion-de-Piscicultura",
       "demo": null
+    },
+    {
+      "id": "taxos",
+      "area": "software",
+      "image": "assets/imgs/projects/taxos.png",
+      "imageAltKey": "portfolio.taxosImageAlt",
+      "titleKey": "portfolio.taxosTitle",
+      "descKey": "portfolio.taxosDesc",
+      "tech": ["python", "javascript", "tailwind", "linux", "windows"],
+      "github": "https://github.com/jose-brucsoni/Taxos",
+      "demo": null
+    },
+    {
+      "id": "my-so",
+      "area": "software",
+      "image": "assets/imgs/projects/my-so.png",
+      "imageAltKey": "portfolio.mySoImageAlt",
+      "titleKey": "portfolio.mySoTitle",
+      "descKey": "portfolio.mySoDesc",
+      "tech": ["linux", "archlinux"],
+      "github": "https://github.com/jose-brucsoni/My_SO",
+      "demo": null
     }
   ]
 }
