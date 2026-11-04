@@ -66,7 +66,7 @@
       "titleKey": "portfolio.gestionInternosTitle",
       "descKey": "portfolio.gestionInternosDesc",
       "tech": ["blazor", "dotnet", "csharp", "sqlserver", "bootstrap"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/GestionInternos",
       "demo": "https://jose-brucsoni.github.io/GestionInternos/"
     },
     {
@@ -77,7 +77,7 @@
       "titleKey": "portfolio.chozaTitle",
       "descKey": "portfolio.chozaDesc",
       "tech": ["django", "python", "docker", "tailwind", "leaflet", "chartjs"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/Choza",
       "demo": "https://jose-brucsoni.github.io/Choza/"
     },
     {
@@ -88,7 +88,7 @@
       "titleKey": "portfolio.danteTitle",
       "descKey": "portfolio.danteDesc",
       "tech": ["blazor", "dotnet", "csharp", "bootstrap"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/DANTE",
       "demo": "https://jose-brucsoni.github.io/DANTE/"
     },
     {
@@ -110,7 +110,7 @@
       "titleKey": "portfolio.sistemaPagosTitle",
       "descKey": "portfolio.sistemaPagosDesc",
       "tech": ["html", "css", "javascript", "apexcharts"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/Sistema-de-Pagos",
       "demo": "https://jose-brucsoni.github.io/Sistema-de-Pagos/"
     },
     {
@@ -154,7 +154,7 @@
       "titleKey": "portfolio.specialDogTitle",
       "descKey": "portfolio.specialDogDesc",
       "tech": ["java", "android", "androidstudio"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/Special_Dog_Bolivia",
       "demo": "https://jose-brucsoni.github.io/Special_Dog_Bolivia/"
     },
     {
@@ -187,7 +187,7 @@
       "titleKey": "portfolio.encuentrameTitle",
       "descKey": "portfolio.encuentrameDesc",
       "tech": ["java", "android", "androidstudio", "firebase"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/Encuentrame",
       "demo": "https://jose-brucsoni.github.io/Encuentrame/"
     },
     {
@@ -198,7 +198,7 @@
       "titleKey": "portfolio.sistemaLabMecanicaTitle",
       "descKey": "portfolio.sistemaLabMecanicaDesc",
       "tech": ["php", "mysql", "jquery", "bootstrap", "html", "css"],
-      "github": null,
+      "github": "https://github.com/jose-brucsoni/sistema-lab-mecanica",
       "demo": "https://jose-brucsoni.github.io/sistema-lab-mecanica/demo/index.html"
     },
     {
