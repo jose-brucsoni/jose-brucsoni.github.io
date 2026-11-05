@@ -262,35 +262,34 @@ function initResumeEnter() {
 }
 
 function initResumeTabs() {
-  const tablist = document.querySelector('[data-resume-tabs]');
-  if (!tablist) return;
+  document.querySelectorAll('[data-resume-tabs]').forEach((tablist) => {
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+    if (!tabs.length) return;
 
-  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-  if (!tabs.length) return;
+    function activate(tab, focus) {
+      tabs.forEach((item) => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+        const panelId = item.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+        if (panel) panel.hidden = !selected;
+      });
+      if (focus) tab.focus();
+    }
 
-  function activate(tab, focus) {
-    tabs.forEach((item) => {
-      const selected = item === tab;
-      item.setAttribute('aria-selected', String(selected));
-      item.tabIndex = selected ? 0 : -1;
-      const panelId = item.getAttribute('aria-controls');
-      const panel = panelId ? document.getElementById(panelId) : null;
-      if (panel) panel.hidden = !selected;
-    });
-    if (focus) tab.focus();
-  }
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => activate(tab, true));
-    tab.addEventListener('keydown', (event) => {
-      let nextIndex = null;
-      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
-      else if (event.key === 'Home') nextIndex = 0;
-      else if (event.key === 'End') nextIndex = tabs.length - 1;
-      if (nextIndex === null) return;
-      event.preventDefault();
-      activate(tabs[nextIndex], true);
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activate(tab, true));
+      tab.addEventListener('keydown', (event) => {
+        let nextIndex = null;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = tabs.length - 1;
+        if (nextIndex === null) return;
+        event.preventDefault();
+        activate(tabs[nextIndex], true);
+      });
     });
   });
 }
