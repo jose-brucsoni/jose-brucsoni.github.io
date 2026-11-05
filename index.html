@@ -110,183 +110,125 @@
   </nav>
 
   <!-- Experience & Skills -->
-  <section class="section-reveal pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 bg-dark lg:bg-white" id="resume">
+  <section class="section-reveal pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 bg-white" id="resume">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-        <!-- Experience -->
-        <div class="card-panel">
-          <div class="mb-4">
-            <h3 class="text-xl font-bold text-dark pb-2 border-b-2 border-primary inline-block" data-i18n="resume.experience">Work Experience</h3>
-            <p id="experience-total" class="experience-total mt-2"></p>
+      <div class="resume-layout">
+        <div class="resume-main min-w-0">
+          <p id="experience-total" class="experience-total mb-3"></p>
+          <div class="resume-tablist" role="tablist" data-resume-tabs data-i18n-aria="resume.tabsLabel" aria-label="Career">
+            <button type="button" class="resume-tab" role="tab" id="resume-tab-work" aria-selected="true" aria-controls="resume-panel-work" tabindex="0" data-i18n="resume.tabWork">Work</button>
+            <button type="button" class="resume-tab" role="tab" id="resume-tab-education" aria-selected="false" aria-controls="resume-panel-education" tabindex="-1" data-i18n="resume.tabEducation">Education</button>
+            <button type="button" class="resume-tab" role="tab" id="resume-tab-projects" aria-selected="false" aria-controls="resume-panel-projects" tabindex="-1" data-i18n="resume.tabProjects">Projects</button>
           </div>
 
-          <div class="experience-job mb-6" data-start="2019-01-01" data-end="2020-08-01">
-            <p class="text-primary font-semibold text-sm">
-              <span data-i18n="resume.job3Date">January 2019 - July 2020</span><span class="experience-duration"></span>
-            </p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.job3Title">Freelance - Independent Developer</p>
-            <div class="flex flex-wrap gap-2 mt-3" data-tech="java,android,firebase,figma"></div>
+          <div class="resume-panel" role="tabpanel" id="resume-panel-work" aria-labelledby="resume-tab-work">
+            <ol class="timeline">
+              <li class="timeline-item experience-job" data-start="2019-01-01" data-end="2020-08-01">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm">
+                  <span data-i18n="resume.job3Date">January 2019 - July 2020</span><span class="experience-duration"></span>
+                </p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.job3Title">Freelance - Independent Developer</p>
+                <div class="tech-icon-row" data-tech="java,android,firebase,figma" data-tech-style="icon"></div>
+              </li>
+              <li class="timeline-item experience-job" data-start="2020-08-01" data-end="2023-07-01">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm">
+                  <span data-i18n="resume.job2Date">August 2020 - June 2023</span><span class="experience-duration"></span>
+                </p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
+                <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+                <div class="tech-icon-row" data-tech="laravel,linux,mikrotik" data-tech-style="icon"></div>
+              </li>
+              <li class="timeline-item timeline-item-current experience-job" data-start="2023-07-01" data-end="">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm">
+                  <span data-i18n="resume.job1Date">July 2023 - Present</span><span class="experience-duration"></span>
+                </p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
+                <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+                <div class="tech-icon-row" data-tech="blazor,sqlserver,powerbi" data-tech-style="icon"></div>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.teachingPeriod">August 2023</p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.teachingTitle">Teaching</p>
+                <p class="text-sm text-gray-600 mt-2" data-i18n-html="resume.teachingDesc">During my time as Networks &amp; Systems Lab Assistant, I led <strong>workshops</strong> on cybersecurity and ethical hacking.</p>
+                <div class="tech-icon-row" data-tech="kalilinux" data-tech-style="icon"></div>
+              </li>
+            </ol>
           </div>
 
-          <hr class="border-gray-200 my-6">
-
-          <div class="experience-job mb-6" data-start="2020-08-01" data-end="2023-07-01">
-            <p class="text-primary font-semibold text-sm">
-              <span data-i18n="resume.job2Date">August 2020 - June 2023</span><span class="experience-duration"></span>
-            </p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.job2Title">Networks & Systems Lab Assistant</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-            <div class="flex flex-wrap gap-2 mt-3" data-tech="laravel,linux,mikrotik"></div>
+          <div class="resume-panel" role="tabpanel" id="resume-panel-education" aria-labelledby="resume-tab-education" hidden>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.edu2Date">2016</p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.edu2Title">High School Diploma</p>
+                <p class="text-gray-500 text-sm" data-i18n="resume.edu2School">Henry Prince School</p>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.edu3Date">2017 - 2021</p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.edu3Title">Electronic Engineering and Systems</p>
+                <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+                <p class="text-sm text-gray-600 mt-1" data-i18n="resume.edu3Note">Switched to Systems Engineering</p>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.edu1Date">2021 - December 2026</p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.edu1Title">Systems Engineering</p>
+                <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.certDate">Currently</p>
+                <p class="font-bold text-dark mt-1" data-i18n="resume.certTitle">Practicing</p>
+                <div class="flex flex-wrap gap-2 mt-3" data-tech="kubernetes,cloudservices"></div>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <p class="text-primary font-semibold text-sm" data-i18n="resume.languages">Languages</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                  <span class="tech-tag" data-i18n="resume.langEs">Spanish — Native</span>
+                  <span class="tech-tag" data-i18n="resume.langEn">English — B2</span>
+                </div>
+              </li>
+            </ol>
           </div>
 
-          <hr class="border-gray-200 my-6">
-
-          <div class="experience-job mb-6" data-start="2023-07-01" data-end="">
-            <p class="text-primary font-semibold text-sm">
-              <span data-i18n="resume.job1Date">July 2023 - Present</span><span class="experience-duration"></span>
-            </p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.job1Title">Systems Analyst</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-            <div class="flex flex-wrap gap-2 mt-3" data-tech="blazor,sqlserver,powerbi"></div>
-          </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div class="mb-6">
-            <p class="font-bold text-dark" data-i18n="resume.teachingTitle">Teaching</p>
-            <p class="text-primary font-semibold text-sm mt-1" data-i18n="resume.teachingPeriod">August 2023</p>
-            <p class="text-sm text-gray-600 mt-2" data-i18n-html="resume.teachingDesc">During my time as Networks &amp; Systems Lab Assistant, I led <strong>workshops</strong> on cybersecurity and ethical hacking.</p>
-            <div class="flex flex-wrap gap-2 mt-3" data-tech="kalilinux"></div>
-          </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div class="experience-job mb-0">
-            <button type="button" class="experience-toggle experience-toggle-static" data-toggle-static aria-expanded="false">
-              <span class="experience-toggle-title" data-i18n="resume.personalProjectsTitle">Personal Projects</span>
-              <span class="experience-toggle-hint" data-i18n="resume.expand">Expand</span>
-            </button>
-            <div class="experience-details hidden mt-2">
-              <p class="text-primary font-semibold text-sm" data-i18n="resume.personalProjectsPeriod">Indefinite</p>
-              <p class="text-sm text-gray-600 mt-2" data-i18n="resume.personalProjectsDesc">Projects I did at university or in my free time to practice, learn, and solve a proposed problem</p>
-              <div class="flex flex-wrap gap-2 mt-3" data-tech="django,others"></div>
-              <a href="Portfolio.html" class="inline-flex items-center gap-1 text-sm text-primary font-semibold mt-3 hover:underline" data-i18n="resume.viewProject">View projects</a>
-            </div>
+          <div class="resume-panel" role="tabpanel" id="resume-panel-projects" aria-labelledby="resume-tab-projects" hidden>
+            <p class="text-primary font-semibold text-sm" data-i18n="resume.personalProjectsPeriod">Indefinite</p>
+            <p class="font-bold text-dark mt-1" data-i18n="resume.personalProjectsTitle">Personal Projects</p>
+            <p class="text-sm text-gray-600 mt-2" data-i18n="resume.personalProjectsDesc">Projects I did at university or in my free time to practice, learn, and solve a proposed problem</p>
+            <div class="tech-icon-row" data-tech="django,others" data-tech-style="icon"></div>
+            <a href="Portfolio.html" class="inline-flex items-center gap-1 text-sm text-primary font-semibold mt-3 hover:underline" data-i18n="resume.viewProject">View projects</a>
           </div>
         </div>
 
-        <!-- Education -->
-        <div class="card-panel">
-          <h3 class="text-xl font-bold text-dark mb-4 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.education">Education</h3>
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu2Date">2016</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.edu2Title">High School Diploma</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.edu2School">Henry Prince School</p>
+        <div class="resume-skills min-w-0">
+          <h3 class="text-xl font-bold text-dark mb-4" data-i18n="resume.skills">Technologies I have experience with</h3>
+          <div class="resume-tablist" role="tablist" data-resume-tabs data-i18n-aria="resume.skillTabsLabel" aria-label="Technology groups">
+            <button type="button" class="resume-tab" role="tab" id="skill-tab-backend" aria-selected="true" aria-controls="skill-panel-backend" tabindex="0" data-i18n="resume.skillTabBackend">Backend & databases</button>
+            <button type="button" class="resume-tab" role="tab" id="skill-tab-frontend" aria-selected="false" aria-controls="skill-panel-frontend" tabindex="-1" data-i18n="resume.skillTabFrontend">Frontend & mobile</button>
+            <button type="button" class="resume-tab" role="tab" id="skill-tab-infra" aria-selected="false" aria-controls="skill-panel-infra" tabindex="-1" data-i18n="resume.skillTabInfra">Infra & networks</button>
+            <button type="button" class="resume-tab" role="tab" id="skill-tab-data" aria-selected="false" aria-controls="skill-panel-data" tabindex="-1" data-i18n="resume.skillTabData">Data & security</button>
+            <button type="button" class="resume-tab" role="tab" id="skill-tab-tools" aria-selected="false" aria-controls="skill-panel-tools" tabindex="-1" data-i18n="resume.skillTabTools">Tools</button>
           </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu3Date">2017 - 2021</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.edu3Title">Electronic Engineering and Systems</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
-            <p class="text-sm text-gray-600 mt-1" data-i18n="resume.edu3Note">Switched to Systems Engineering</p>
+          <div class="resume-panel" role="tabpanel" id="skill-panel-backend" aria-labelledby="skill-tab-backend">
+            <div class="skill-grid" data-tech="laravel,django,dotnet,blazor,sqlserver"></div>
           </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div class="mb-6">
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.edu1Date">2021 - December 2026</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.edu1Title">Systems Engineering</p>
-            <p class="text-gray-500 text-sm" data-i18n="resume.job1Company">Universidad Tecnológica Privada de Santa Cruz</p>
+          <div class="resume-panel" role="tabpanel" id="skill-panel-frontend" aria-labelledby="skill-tab-frontend" hidden>
+            <div class="skill-grid" data-tech="tailwind,bootstrap,androidstudio,java,firebase"></div>
           </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div>
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.certDate">Currently</p>
-            <p class="font-bold text-dark mt-1" data-i18n="resume.certTitle">Practicing</p>
-            <div class="flex flex-wrap gap-2 mt-3" data-tech="kubernetes,cloudservices"></div>
+          <div class="resume-panel" role="tabpanel" id="skill-panel-infra" aria-labelledby="skill-tab-infra" hidden>
+            <div class="skill-grid" data-tech="archlinux,windowsserver,kvm,vmware,mikrotik"></div>
           </div>
-
-          <hr class="border-gray-200 my-6">
-
-          <div>
-            <p class="text-primary font-semibold text-sm" data-i18n="resume.languages">Languages</p>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="tech-tag" data-i18n="resume.langEs">Spanish — Native</span>
-              <span class="tech-tag" data-i18n="resume.langEn">English — B2</span>
-            </div>
+          <div class="resume-panel" role="tabpanel" id="skill-panel-data" aria-labelledby="skill-tab-data" hidden>
+            <div class="skill-grid" data-tech="powerbi,chartjs,apexcharts,picoctf,githubwriteups,kalilinux"></div>
           </div>
-        </div>
-
-        <!-- Tools -->
-        <div class="card-panel">
-          <h3 class="text-xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary inline-block" data-i18n="resume.skills">Technologies I have experience with</h3>
-          <div class="space-y-5">
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsOrg">Organization</p>
-              <div class="space-y-3">
-                <div class="tools-subgroup">
-                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsPersonal">Personal</p>
-                  <div class="flex flex-wrap gap-2" data-tech="notion"></div>
-                </div>
-                <div class="tools-subgroup">
-                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsTeams">Teams</p>
-                  <div class="flex flex-wrap gap-2" data-tech="jira,trello"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsMethods">Work methodologies</p>
-              <div class="flex flex-wrap gap-2" data-tech="scrum,kanban"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsCodeMgmt">Code management</p>
-              <div class="flex flex-wrap gap-2" data-tech="git,github"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsLangs">Frameworks</p>
-              <div class="space-y-3">
-                <div class="tools-subgroup">
-                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsFrontend">Frontend</p>
-                  <div class="flex flex-wrap gap-2" data-tech="tailwind,bootstrap"></div>
-                </div>
-                <div class="tools-subgroup">
-                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsBackend">Backend</p>
-                  <div class="flex flex-wrap gap-2" data-tech="laravel,django,dotnet"></div>
-                </div>
-                <div class="tools-subgroup">
-                  <p class="text-xs font-medium text-gray-500 mb-1.5" data-i18n="resume.toolsFullStack">Full stack</p>
-                  <div class="flex flex-wrap gap-2" data-tech="blazor"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsInfra">Infrastructure</p>
-              <div class="flex flex-wrap gap-2" data-tech="archlinux,windowsserver,kvm,vmware,mikrotik"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsDatabase">Database</p>
-              <div class="flex flex-wrap gap-2" data-tech="sqlserver"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsCyber">Cybersecurity</p>
-              <div class="flex flex-wrap gap-2" data-tech="picoctf,githubwriteups,kalilinux"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsData">Data analysis and presentation</p>
-              <div class="flex flex-wrap gap-2" data-tech="powerbi,chartjs,apexcharts"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsMobile">Mobile development</p>
-              <div class="flex flex-wrap gap-2" data-tech="androidstudio,java,firebase"></div>
-            </div>
-            <div class="tools-group">
-              <p class="text-sm font-semibold text-dark mb-2" data-i18n="resume.toolsEditors">Code editors</p>
-              <div class="flex flex-wrap gap-2" data-tech="visualstudio,vscode,cursor"></div>
-            </div>
+          <div class="resume-panel" role="tabpanel" id="skill-panel-tools" aria-labelledby="skill-tab-tools" hidden>
+            <div class="skill-grid" data-tech="notion,jira,trello,scrum,kanban,git,github,visualstudio,vscode,cursor"></div>
           </div>
         </div>
       </div>

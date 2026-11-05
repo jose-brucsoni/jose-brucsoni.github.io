@@ -12,6 +12,26 @@ function getTechEntry(slug, catalog) {
   return { label: slug, icon: 'generic' };
 }
 
+function techInitials(label) {
+  const parts = String(label || '')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (!parts.length) return '?';
+  if (parts.length === 1) {
+    const word = parts[0].replace(/[^A-Za-z0-9]/g, '');
+    if (!word) return parts[0].slice(0, 2).toUpperCase();
+    return word.slice(0, 2).toUpperCase();
+  }
+
+  return (parts[0][0] + parts[1][0]).toUpperCase();
+}
+
+function hasTechIcon(icon) {
+  return Boolean(icon) && icon !== 'generic';
+}
+
 function createTechIcon(icon) {
   const iconKey = icon || 'generic';
 
@@ -72,8 +92,33 @@ function fillTechContainers(catalog, root) {
 
     el.innerHTML = '';
 
+    const iconStyle = el.getAttribute('data-tech-style') === 'icon';
+
     slugs.forEach((slug) => {
       const { label, icon } = getTechEntry(slug, catalog);
+
+      if (iconStyle) {
+        const tag = document.createElement('span');
+        tag.className = 'tech-icon-btn';
+        tag.tabIndex = 0;
+        tag.setAttribute('title', label);
+        tag.setAttribute('aria-label', label);
+        tag.dataset.label = label;
+
+        if (hasTechIcon(icon)) {
+          tag.appendChild(createTechIcon(icon));
+        } else {
+          const initials = document.createElement('span');
+          initials.className = 'tech-icon-initials';
+          initials.setAttribute('aria-hidden', 'true');
+          initials.textContent = techInitials(label);
+          tag.appendChild(initials);
+        }
+
+        el.appendChild(tag);
+        return;
+      }
+
       const tag = document.createElement('span');
       tag.className = 'tech-tag';
       tag.appendChild(createTechIcon(icon));
@@ -99,6 +144,7 @@ async function loadTechCatalog() {
 window.tech = {
   getTechEntry,
   createTechIcon,
+  techInitials,
   renderTechTags,
   fillTechContainers,
   loadTechCatalog,
