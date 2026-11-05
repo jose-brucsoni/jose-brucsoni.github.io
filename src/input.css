@@ -78,17 +78,17 @@
   }
 
   .social-link {
-    @apply inline-flex items-center justify-center w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-white/30 text-white
-      hover:bg-white hover:text-primary transition-all duration-300 shrink-0 text-sm lg:text-base;
+    @apply inline-flex items-center justify-center w-11 h-11 lg:w-10 lg:h-10 rounded-full border border-white/30 text-white
+      hover:bg-white hover:text-primary transition-all duration-300 shrink-0 text-base lg:text-base;
   }
 
   .social-link-dark {
-    @apply inline-flex items-center justify-center w-9 h-9 lg:w-10 lg:h-10 rounded-full border border-gray-300 text-gray-600
-      hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shrink-0 text-sm lg:text-base;
+    @apply inline-flex items-center justify-center w-11 h-11 lg:w-10 lg:h-10 rounded-full border border-gray-300 text-gray-600
+      hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shrink-0 text-base lg:text-base;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 text-sm lg:min-h-0 lg:px-6 lg:py-3 lg:text-base
       bg-primary text-white font-semibold rounded-full
       hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg w-auto;
   }
@@ -100,7 +100,7 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 text-sm lg:min-h-0 lg:px-6 lg:py-3 lg:text-base
       border-2 border-primary text-primary font-semibold rounded-full
       hover:bg-primary hover:text-white transition-all duration-300 w-auto;
   }
@@ -128,7 +128,11 @@
   }
 
   .nav-link {
-    @apply text-gray-700 hover:text-primary font-medium transition-colors px-3 py-2 text-sm lg:text-base;
+    @apply inline-flex items-center text-gray-700 hover:text-primary font-medium transition-colors min-h-11 px-2 sm:px-3 py-2 text-sm lg:min-h-0 lg:px-3 lg:text-base;
+  }
+
+  #nav-toggle {
+    @apply inline-flex items-center justify-center min-w-11 min-h-11 text-gray-700 lg:hidden;
   }
 
   .tools-group {
@@ -177,7 +181,7 @@
   }
 
   .photo-carousel-btn {
-    @apply inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 text-gray-500
+    @apply inline-flex items-center justify-center w-11 h-11 lg:w-8 lg:h-8 rounded-full border border-gray-200 text-gray-500
       hover:border-primary hover:text-primary transition-colors;
   }
 
@@ -215,7 +219,7 @@
   }
 
   .project-media-tech .tech-tag-icon-only {
-    @apply cursor-pointer transition-all duration-200 hover:border-primary;
+    @apply cursor-pointer transition-all duration-200 hover:border-primary min-w-11 min-h-11 justify-center lg:min-w-0 lg:min-h-0;
   }
 
   .project-media-tech .tech-tag-icon-only.is-active {
@@ -231,7 +235,7 @@
   }
 
   .lang-gate-btn {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center min-h-11 px-4 py-2.5 text-sm lg:min-h-0 lg:px-6 lg:py-3 lg:text-base
       bg-primary text-white font-semibold rounded-full
       hover:bg-primary-dark transition-all duration-300 w-full sm:w-auto cursor-pointer;
   }
@@ -241,7 +245,7 @@
   }
 
   .experience-toggle-static {
-    @apply mt-0 flex w-full items-center justify-between gap-3 text-left font-bold text-dark hover:text-dark;
+    @apply mt-0 flex w-full min-h-11 items-center justify-between gap-3 text-left font-bold text-dark hover:text-dark;
   }
 
   .experience-toggle-hint {
@@ -345,7 +349,7 @@
   }
 
   .lang-btn {
-    @apply px-1.5 sm:px-2 py-1 text-xs sm:text-sm text-gray-500 hover:text-primary transition-colors cursor-pointer;
+    @apply inline-flex items-center justify-center min-h-11 px-2 sm:px-2.5 py-1 text-xs sm:text-sm text-gray-500 hover:text-primary transition-colors cursor-pointer lg:min-h-0 lg:px-2;
   }
 
   .lang-btn-active {
@@ -353,22 +357,22 @@
   }
 
   .btn-project {
-    @apply inline-flex items-center justify-center gap-2 px-3 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-3 py-2.5 text-sm leading-tight text-center whitespace-normal lg:min-h-0 lg:px-6 lg:py-3 lg:text-base lg:whitespace-nowrap
       bg-transparent border-2 border-primary text-primary font-semibold rounded-full
-      hover:bg-primary hover:text-white transition-all duration-300 w-full min-w-0 lg:w-auto;
+      hover:bg-primary hover:text-white transition-all duration-300 w-full min-w-0 lg:w-auto text-center;
   }
 
   .btn-project-light {
-    @apply inline-flex items-center justify-center gap-2 px-3 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-3 py-2.5 text-sm lg:min-h-0 lg:px-6 lg:py-3 lg:text-base
       bg-transparent border-2 border-white text-white font-semibold rounded-full
-      hover:bg-white hover:text-primary transition-all duration-300 w-full min-w-0 lg:w-auto;
+      hover:bg-white hover:text-primary transition-all duration-300 w-full min-w-0 lg:w-auto text-center;
   }
 
   .btn-github-disabled,
   .btn-demo-disabled {
-    @apply inline-flex items-center justify-center gap-2 px-3 py-2 text-sm lg:px-6 lg:py-3 lg:text-base
+    @apply inline-flex items-center justify-center gap-2 min-h-11 px-3 py-2.5 text-sm lg:min-h-0 lg:px-6 lg:py-3 lg:text-base
       bg-gray-200 text-gray-400 font-semibold rounded-full border-2 border-transparent
-      cursor-not-allowed w-full min-w-0 lg:w-auto;
+      cursor-not-allowed w-full min-w-0 lg:w-auto text-center;
   }
 
   .project-row-primary .btn-demo-disabled,
@@ -378,8 +382,7 @@
 
   .project-row {
     @apply w-full py-8 sm:py-12 lg:py-8 overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16
-      flex flex-col lg:h-[50vh] lg:min-h-[50vh] lg:max-h-[50vh];
-    min-height: var(--project-vh, 100vh);
+      flex flex-col h-auto min-h-0 lg:h-[50vh] lg:min-h-[50vh] lg:max-h-[50vh];
   }
 
   @media (min-width: 1024px) {
@@ -434,7 +437,7 @@
   }
 
   .tech-filter {
-    @apply inline-flex items-center gap-1.5 px-2.5 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm
+    @apply inline-flex items-center gap-1.5 min-h-11 px-3 py-2 lg:min-h-0 lg:px-3 lg:py-1.5 text-xs lg:text-sm
       bg-white border border-primary/40 text-primary rounded-full cursor-pointer
       hover:border-primary hover:bg-primary/5 transition-all duration-200;
   }
@@ -448,13 +451,13 @@
   }
 
   .portfolio-pagination {
-    @apply w-full px-4 sm:px-6 py-6 sm:py-8 flex justify-center items-center gap-2 sm:gap-3 bg-gray-50;
+    @apply w-full max-w-full px-4 sm:px-6 py-6 sm:py-8 flex flex-wrap justify-center items-center gap-2 sm:gap-3 bg-gray-50;
   }
 
   .pagination-btn {
-    @apply inline-flex items-center justify-center min-w-9 h-9 px-3 text-sm font-semibold rounded-full
+    @apply inline-flex items-center justify-center min-w-11 h-11 px-3 text-sm font-semibold rounded-full
       border border-primary/40 text-primary bg-transparent
-      hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer;
+      hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer lg:min-w-9 lg:h-9;
   }
 
   .pagination-btn.is-active {
@@ -467,6 +470,70 @@
 
   .project-img {
     @apply w-full h-40 sm:h-52 md:h-64 lg:h-full lg:max-h-56 xl:max-h-64 object-cover shadow-xl;
+  }
+
+  .phone-frame {
+    position: relative;
+    width: min(220px, 72vw);
+    aspect-ratio: 9 / 19.5;
+    margin-inline: auto;
+    padding: 0.55rem 0.5rem 0.6rem;
+    border-radius: 2.15rem;
+    background: linear-gradient(160deg, #3a3f45 0%, #212529 42%, #121416 100%);
+    box-shadow:
+      0 18px 36px rgba(33, 37, 41, 0.28),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+    border: 3px solid #16181b;
+  }
+
+  .project-row-primary .phone-frame {
+    background: linear-gradient(160deg, #2c181d 0%, #1a1013 45%, #0e090b 100%);
+    border-color: #0c0809;
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.12);
+  }
+
+  .phone-notch {
+    position: absolute;
+    top: 0.72rem;
+    left: 50%;
+    z-index: 2;
+    width: 34%;
+    height: 0.72rem;
+    transform: translateX(-50%);
+    border-radius: 0 0 0.65rem 0.65rem;
+    background: #0e1012;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .project-row-primary .phone-notch {
+    background: #070506;
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1.55rem;
+    background: #0b0d0f;
+  }
+
+  .phone-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  @media (min-width: 1024px) {
+    .phone-frame {
+      width: auto;
+      height: min(16rem, 100%);
+      max-height: 16rem;
+      aspect-ratio: 9 / 19.5;
+    }
   }
 
   .project-media-left .project-img,
@@ -517,7 +584,7 @@
   }
 
   .area-notice {
-    @apply max-w-2xl mx-auto my-10 sm:my-14 px-6 py-10 sm:px-10 sm:py-12 text-center
+    @apply max-w-2xl mx-4 sm:mx-auto my-8 sm:my-14 px-5 py-8 sm:px-10 sm:py-12 text-center
       bg-white rounded-3xl border border-primary/15 shadow-sm;
   }
 
@@ -643,7 +710,7 @@
 
   .area-card {
     @apply flex flex-col items-center justify-center text-center rounded-[15px] bg-gray-100 p-3 sm:p-4 lg:p-6
-      transition-all duration-300 min-h-0 lg:min-h-[11rem] border border-transparent;
+      transition-all duration-300 min-h-[6.75rem] lg:min-h-[11rem] border border-transparent min-w-0;
   }
 
   .area-card-enabled {
@@ -671,7 +738,7 @@
   }
 
   .area-card-title {
-    @apply text-sm sm:text-base lg:text-lg font-bold text-dark mb-0;
+    @apply text-sm sm:text-base lg:text-lg font-bold text-dark mb-0 leading-snug break-words hyphens-auto max-w-full;
   }
 
   .area-card-disabled .area-card-title {

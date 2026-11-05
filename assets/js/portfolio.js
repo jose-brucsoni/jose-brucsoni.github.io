@@ -97,14 +97,28 @@ function renderProject(project, index, techCatalog) {
   media.className = `project-media ${isImageRight ? 'project-media-right' : 'project-media-left'}`;
 
   const img = document.createElement('img');
-  img.src = project.image;
-  img.className = 'project-img';
+  img.src = project.area === 'mobile' && project.mobileImage ? project.mobileImage : project.image;
+  img.className = project.area === 'mobile' ? 'phone-img' : 'project-img';
   img.setAttribute('data-i18n-alt', project.imageAltKey);
   if (project.imageAltKey && window.i18n) {
     img.alt = window.i18n.t(project.imageAltKey);
   }
 
-  media.appendChild(img);
+  if (project.area === 'mobile') {
+    const frame = document.createElement('div');
+    frame.className = 'phone-frame';
+    const notch = document.createElement('div');
+    notch.className = 'phone-notch';
+    notch.setAttribute('aria-hidden', 'true');
+    const screen = document.createElement('div');
+    screen.className = 'phone-screen';
+    screen.appendChild(img);
+    frame.appendChild(notch);
+    frame.appendChild(screen);
+    media.appendChild(frame);
+  } else {
+    media.appendChild(img);
+  }
 
   if (project.tech && project.tech.length > 0) {
     const techWrap = window.tech.renderTechTags(project.tech, techCatalog, { iconsOnly: true });
